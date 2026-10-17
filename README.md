@@ -48,7 +48,7 @@ Swift can use URLSession with the same JSON request and `Content-Type: applicati
 
 ## Scope
 
-The backend owns grading and learning transitions and stores per-account progress in Supabase. It includes profiles, attempts inside session snapshots, and revision-based save conflicts. Gemini can suggest a private provisional, concept-specific hypothesis and select one unused probe from the curated bank. Deterministic rules decide whether evidence confirms, rejects, or leaves the suspected blocker uncertain. Learner API responses omit diagnosis, hypothesis, mastery, and error-pattern fields; only the service role can read stored assessments.
+The backend owns grading and learning transitions and stores per-account progress in Supabase. It includes profiles, attempts inside session snapshots, and revision-based save conflicts. Gemini updates a private provisional, concept-specific hypothesis after each answer and selects the next unused foundation probe from the expanded bank, up to three probes. Deterministic rules decide whether evidence confirms, rejects, or leaves the suspected blocker uncertain. Learner API responses omit diagnosis, hypothesis, mastery, and error-pattern fields; only the service role can read stored assessments.
 
 CORS restricts browser access; it is not authentication. Protected endpoints verify Supabase tokens. Distributed rate limiting is not included. Configure access/quota protection before broad public use. When Gemini is configured, diagnostic answers and reasoning are sent to Google. The unauthenticated demo selector is restricted to development and localhost browser origins; do not expose a development server to untrusted networks.
 

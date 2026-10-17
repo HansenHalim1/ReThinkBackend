@@ -47,7 +47,7 @@ ALLOWED_ORIGINS=https://re-think-test.vercel.app,http://localhost:3000
 
 The backend also accepts legacy `SUPABASE_ANON_KEY` / `SUPABASE_SERVICE_ROLE_KEY` equivalents. Never expose the secret/service-role key in the web bundle, Swift binary, logs, or Git. Add keys in each Vercel project's environment settings and local ignored environment files. The dashboard link alone is not a credential.
 
-Keep Gemini settings in the backend. Gemini proposes a private provisional hypothesis and selects one curated probe; deterministic backend rules still decide the diagnosis. Deploy the backend first, apply `202610170002_private_learning_progress.sql`, then deploy the website. `/api/feedback` and progress still require sign-in. This work does not automatically push, migrate, or deploy either repository.
+Keep Gemini settings in the backend. After each diagnostic answer, Gemini updates a private provisional hypothesis and selects the next unused foundation probe from the bank, for at most three probes. Deterministic backend rules still decide the final diagnosis. Deploy the backend first, apply `202610170002_private_learning_progress.sql`, then deploy the website. `/api/feedback` and progress still require sign-in. This work does not automatically push, migrate, or deploy either repository.
 
 ## API used by both web and Swift
 

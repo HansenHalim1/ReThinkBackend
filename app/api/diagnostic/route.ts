@@ -24,7 +24,7 @@ async function handlePost(request: Request) {
   if (!session) return Response.json({ error: 'Sesi demo tidak valid.' }, { status: 400 });
   const result = await selectAdaptiveProbe(session, body.answer, body.reasoning);
   if (!result) return Response.json({ error: 'Probe adaptif tidak tersedia.' }, { status: 400 });
-  return Response.json({ questionId: result.selection.questionId, ai: result.ai }, { headers: { 'Cache-Control': 'no-store' } });
+  return Response.json({ questionId: result.selection.questionId, hypothesis: result.selection.hypothesis, ai: result.ai }, { headers: { 'Cache-Control': 'no-store' } });
 }
 export function POST(request: Request) { return cors(request, () => handlePost(request)); }
 export function OPTIONS(request: Request) {
