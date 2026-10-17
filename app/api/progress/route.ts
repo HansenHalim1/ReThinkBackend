@@ -25,13 +25,16 @@ export function POST(request: Request) {
     const existing = row ? readSaved(JSON.stringify({ version: 1, sessions: { [command.concept]: row.session } })) : null;
     if (row && !existing) throw new ApiError(503, 'Data kemajuan tidak valid.');
     const current = existing?.sessions[command.concept] || newSession(command.concept);
-    const selection = command.action === 'submit' ? await selectAdaptiveProbe(current, command.answer!, command.reasoning!) : undefined;
-    const session = applyCommand(current, command, selection);
+    const adaptive = command.action === 'submit' ? await selectAdaptiveProbe(current, command.answer!, command.reasoning!) : undefined;
+    const session = applyCommand(current, command, adaptive?.selection);
     if (!session) throw new ApiError(400, 'Jawaban atau tahap belajar tidak valid.');
     const { data, error: writeError } = await adminDatabase().rpc('save_learning_progress', { p_user_id: user.id, p_concept: command.concept, p_expected_revision: command.expectedRevision, p_session: session }).single();
     if (writeError?.message.includes('revision_conflict')) return Response.json({ error: 'Kemajuan berubah di perangkat lain. Muat ulang sebelum melanjutkan.', code: 'revision_conflict' }, { status: 409 });
     if (writeError) throw new ApiError(503, 'Kemajuan gagal disimpan. Coba lagi.');
-    return Response.json(data);
+    const responseData = data && typeof data === 'object' && !Array.isArray(data)
+      ? { ...data, ...(adaptive ? { ai: adaptive.ai } : {}) }
+      : data;
+    return Response.json(responseData);
   }));
 }
 export function OPTIONS(request: Request) { return preflight(request, ['GET', 'POST']); }

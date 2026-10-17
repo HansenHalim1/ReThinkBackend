@@ -22,9 +22,9 @@ async function handlePost(request: Request) {
   const saved = readSaved(JSON.stringify({ version: 1, sessions: { [body.concept]: body.session } }));
   const session = saved?.sessions[body.concept as keyof typeof saved.sessions];
   if (!session) return Response.json({ error: 'Sesi demo tidak valid.' }, { status: 400 });
-  const selection = await selectAdaptiveProbe(session, body.answer, body.reasoning);
-  if (!selection) return Response.json({ error: 'Probe adaptif tidak tersedia.' }, { status: 400 });
-  return Response.json(selection, { headers: { 'Cache-Control': 'no-store' } });
+  const result = await selectAdaptiveProbe(session, body.answer, body.reasoning);
+  if (!result) return Response.json({ error: 'Probe adaptif tidak tersedia.' }, { status: 400 });
+  return Response.json({ ...result.selection, ai: result.ai }, { headers: { 'Cache-Control': 'no-store' } });
 }
 export function POST(request: Request) { return cors(request, () => handlePost(request)); }
 export function OPTIONS(request: Request) {

@@ -22,11 +22,11 @@ async function handlePost(request: Request) {
   const result = grade(q, body.answer);
   if (!result) return Response.json({ error: 'Format matematika belum terbaca.' }, { status: 400 });
   const fallback = curatedFeedback(q, body.answer);
-  const respond = (feedback: string, source: string, reason?: string, model?: string) => Response.json({ feedback, source, reason, model }, { headers: { 'Cache-Control': 'no-store' } });
+  const respond = (feedback: string, source: string, reason?: string, model?: string, providerStatus?: number) => Response.json({ feedback, source, reason, model, providerStatus }, { headers: { 'Cache-Control': 'no-store' } });
   const key = process.env.GEMINI_API_KEY;
   if (!key) return respond(fallback, 'curated', 'not-configured');
   const model = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
-  if (!/^[a-z0-9.-]+$/.test(model)) return respond(fallback, 'curated', 'invalid-configuration');
+  if (!/^[a-z0-9.-]+$/.test(model)) return respond(fallback, 'curated', 'invalid-configuration', model);
   try {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
       method: 'POST', cache: 'no-store', signal: AbortSignal.timeout(18000),
@@ -37,14 +37,30 @@ async function handlePost(request: Request) {
         generationConfig: { maxOutputTokens: 1024, temperature: 0.3, responseFormat: { text: { mimeType: 'APPLICATION_JSON', schema: { type: 'object', properties: { feedback: { type: 'string' } }, required: ['feedback'], additionalProperties: false } } } },
       }),
     });
-    if (!response.ok) return respond(fallback, 'curated', response.status === 429 ? 'rate-limited' : 'provider-unavailable');
-    const data = await response.json();
-    const parts = data.candidates?.[0]?.content?.parts;
-    const text = Array.isArray(parts) ? parts.filter((p: { thought?: boolean; text?: string }) => !p.thought && typeof p.text === 'string').map((p: { text: string }) => p.text).join('') : '';
-    const generated: unknown = JSON.parse(text);
-    if (!validFeedback(generated)) return respond(fallback, 'curated', 'invalid-response');
+    if (!response.ok) {
+      const reason = response.status === 429 ? 'rate-limited' : 'provider-unavailable';
+      console.warn('[gemini:feedback] curated fallback', { reason, model, providerStatus: response.status });
+      return respond(fallback, 'curated', reason, model, response.status);
+    }
+    let generated: unknown;
+    try {
+      const data = await response.json();
+      const parts = data.candidates?.[0]?.content?.parts;
+      const text = Array.isArray(parts) ? parts.filter((p: { thought?: boolean; text?: string }) => !p.thought && typeof p.text === 'string').map((p: { text: string }) => p.text).join('') : '';
+      generated = JSON.parse(text);
+    } catch {
+      console.warn('[gemini:feedback] curated fallback', { reason: 'invalid-response', model, providerStatus: response.status });
+      return respond(fallback, 'curated', 'invalid-response', model, response.status);
+    }
+    if (!validFeedback(generated)) {
+      console.warn('[gemini:feedback] curated fallback', { reason: 'invalid-response', model, providerStatus: response.status });
+      return respond(fallback, 'curated', 'invalid-response', model, response.status);
+    }
     return respond(generated.feedback, 'gemini', undefined, model);
-  } catch { return respond(fallback, 'curated', 'provider-unavailable'); }
+  } catch (error) {
+    console.warn('[gemini:feedback] request failed', { reason: 'provider-unavailable', model, error: error instanceof Error ? error.name : 'UnknownError' });
+    return respond(fallback, 'curated', 'provider-unavailable', model);
+  }
 }
 
 export function POST(request: Request) { return cors(request, () => authenticated(request, async () => handlePost(request))); }

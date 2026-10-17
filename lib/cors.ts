@@ -2,7 +2,7 @@ function allowed(request: Request): boolean {
   const origin = request.headers.get('origin');
   if (!origin) return true; // Native Swift and server clients do not need CORS.
   if (origin === new URL(request.url).origin) return true;
-  const origins = (process.env.ALLOWED_ORIGINS || '').split(',').map(v => v.trim()).filter(Boolean);
+  const origins = (process.env.ALLOWED_ORIGINS || '').split(',').map(v => v.trim().replace(/\/+$/, '')).filter(Boolean);
   return origins.includes(origin);
 }
 function decorate(request: Request, response: Response): Response {

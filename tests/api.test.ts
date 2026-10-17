@@ -7,7 +7,7 @@ import { getConcept } from '../lib/content.ts';
 
 test('API supports browser preflight, Swift, validation, and curated fallback', async () => {
   const mock = mockSupabase();
-  process.env.ALLOWED_ORIGINS = 'https://learn.example.com,http://localhost:3000';
+  process.env.ALLOWED_ORIGINS = 'https://learn.example.com/,http://localhost:3000/';
   delete process.env.GEMINI_API_KEY;
   const url = 'http://localhost:3001/api/feedback';
   const origin = 'https://learn.example.com';
@@ -24,6 +24,9 @@ test('API supports browser preflight, Swift, validation, and curated fallback', 
     const denied = await POST(request(body, 'https://learn.example.com.evil.test'));
     assert.equal(denied.status, 403);
     assert.equal(denied.headers.get('Access-Control-Allow-Origin'), null);
+    process.env.ALLOWED_ORIGINS = 'https://learn.example.com/path/';
+    assert.equal((await POST(request(body, origin))).status, 403);
+    process.env.ALLOWED_ORIGINS = 'https://learn.example.com/,http://localhost:3000/';
     for (const site of [origin, undefined, 'http://localhost:3001']) {
       const result = await POST(request(body, site));
       assert.equal(result.status, 200);
