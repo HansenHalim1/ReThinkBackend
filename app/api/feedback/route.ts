@@ -1,3 +1,4 @@
+import { authenticated } from '../../../lib/auth.ts';
 import { cors, preflight } from '../../../lib/cors.ts';
 import { getQuestion } from '../../../lib/content.ts';
 import { grade } from '../../../lib/engine.ts';
@@ -46,5 +47,5 @@ async function handlePost(request: Request) {
   } catch { return respond(fallback, 'curated', 'provider-unavailable'); }
 }
 
-export function POST(request: Request) { return cors(request, () => handlePost(request)); }
+export function POST(request: Request) { return cors(request, () => authenticated(request, async () => handlePost(request))); }
 export function OPTIONS(request: Request) { return preflight(request, 'POST'); }

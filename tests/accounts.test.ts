@@ -1,0 +1,48 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { GET, POST, OPTIONS } from '../app/api/progress/route.ts';
+import { GET as me } from '../app/api/me/route.ts';
+import { mockSupabase, userA } from './helpers.ts';
+const url = 'https://backend.test/api/progress';
+const request = (token?: string, body?: unknown) => new Request(url, { method: body === undefined ? 'GET' : 'POST', headers: { Origin: 'https://learn.example.com', ...(token ? { Authorization: `Bearer ${token}` } : {}), 'Content-Type': 'application/json' }, body: body === undefined ? undefined : JSON.stringify(body) });
+
+test('accounts verify tokens, isolate users and reject forged progress or stale writes', async () => {
+  const mock = mockSupabase();
+  try {
+    assert.equal((await GET(request())).status, 401);
+    assert.equal((await GET(request('invalid'))).status, 401);
+    const empty = await GET(request('user-a'));
+    assert.deepEqual((await empty.json()).sessions, {});
+    assert.equal((await me(request('user-a'))).status, 200);
+    const command = { action: 'submit', concept: 'distribution', expectedRevision: 0, answer: '3x+2', reasoning: 'Percobaan' };
+    const submitted = await POST(request('user-a', { ...command, userId: 'forged', session: { mastery: 'understood' } }));
+    assert.equal(submitted.status, 200);
+    const result = await submitted.json();
+    assert.equal(result.user_id, userA);
+    assert.equal(result.session.stage, 'probe');
+    assert.equal(result.session.mastery, 'unassessed');
+    assert.equal(result.session.attempts[0].correct, false);
+    assert.equal(result.revision, 1);
+    assert.deepEqual((await (await GET(request('user-b'))).json()).sessions, {});
+    assert.equal((await POST(request('user-a', command))).status, 409);
+    assert.equal((await POST(request('user-a', { action: 'advance', concept: 'distribution', expectedRevision: 1 }))).status, 400);
+    assert.equal((await POST(request('user-a', { ...command, expectedRevision: 1, answer: 'hello' }))).status, 400);
+    assert.equal((await POST(request('user-a', { ...command, expectedRevision: -1 }))).status, 400);
+    assert.equal((await POST(request('user-a', { ...command, action: 'overwrite' }))).status, 400);
+    assert.equal((await POST(request('user-a', { ...command, answer: 'a'.repeat(5000) }))).status, 413);
+    const next = await POST(request('user-a', { ...command, expectedRevision: 1, answer: '4x+3' }));
+    assert.equal((await next.json()).session.diagnosis, 'confirmed');
+    const races = await Promise.all([POST(request('user-a', { action: 'advance', concept: 'distribution', expectedRevision: 2 })), POST(request('user-a', { action: 'advance', concept: 'distribution', expectedRevision: 2 }))]);
+    assert.deepEqual(races.map(r => r.status).sort(), [200, 409]);
+    const reset = await POST(request('user-a', { action: 'reset', concept: 'distribution', expectedRevision: 3 }));
+    assert.equal((await reset.json()).session.attempts.length, 0);
+    const preflight = await OPTIONS(new Request(url, { method: 'OPTIONS', headers: { Origin: 'https://learn.example.com', 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'authorization,content-type' } }));
+    assert.equal(preflight.status, 204);
+    assert.match(preflight.headers.get('access-control-allow-headers')!, /Authorization/);
+    const denied = await GET(new Request(url, { headers: { Origin: 'https://evil.test', Authorization: 'Bearer user-a' } }));
+    assert.equal(denied.status, 403);
+    delete process.env.SUPABASE_SECRET_KEY;
+    assert.equal((await POST(request('user-a', { action: 'reset', concept: 'inverse', expectedRevision: 0 }))).status, 503);
+    assert.equal(mock.rows.size, 1);
+  } finally { mock.restore(); }
+});

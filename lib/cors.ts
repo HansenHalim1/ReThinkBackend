@@ -16,16 +16,17 @@ export async function cors(request: Request, handler: () => Response | Promise<R
   if (!allowed(request)) return decorate(request, Response.json({ error: 'Origin tidak diizinkan.' }, { status: 403 }));
   return decorate(request, await handler());
 }
-export function preflight(request: Request, method: 'GET' | 'POST'): Promise<Response> {
+export function preflight(request: Request, methods: 'GET' | 'POST' | ('GET' | 'POST')[]): Promise<Response> {
+  const allowedMethods = Array.isArray(methods) ? methods : [methods];
   return cors(request, () => {
     const requestedMethod = request.headers.get('access-control-request-method');
     const requestedHeaders = (request.headers.get('access-control-request-headers') || '').toLowerCase().split(',').map(v => v.trim()).filter(Boolean);
-    if ((requestedMethod && requestedMethod !== method) || requestedHeaders.some(v => v !== 'content-type')) {
+    if ((requestedMethod && !allowedMethods.includes(requestedMethod as 'GET' | 'POST')) || requestedHeaders.some(v => !['content-type', 'authorization'].includes(v))) {
       return Response.json({ error: 'Preflight tidak diizinkan.' }, { status: 403 });
     }
     return new Response(null, { status: 204, headers: {
-      'Access-Control-Allow-Methods': `${method}, OPTIONS`,
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': `${allowedMethods.join(', ')}, OPTIONS`,
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       'Vary': 'Access-Control-Request-Method, Access-Control-Request-Headers',
     } });
   });

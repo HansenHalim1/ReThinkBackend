@@ -1,3 +1,4 @@
+import { mockSupabase } from './helpers.ts';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { POST, OPTIONS } from '../app/api/feedback/route.ts';
@@ -5,14 +6,14 @@ import { GET } from '../app/api/health/route.ts';
 import { getConcept } from '../lib/content.ts';
 
 test('API supports browser preflight, Swift, validation, and curated fallback', async () => {
-  const previous = { origins: process.env.ALLOWED_ORIGINS, key: process.env.GEMINI_API_KEY };
+  const mock = mockSupabase();
   process.env.ALLOWED_ORIGINS = 'https://learn.example.com,http://localhost:3000';
   delete process.env.GEMINI_API_KEY;
   const url = 'http://localhost:3001/api/feedback';
   const origin = 'https://learn.example.com';
   const questionId = getConcept('distribution').questions.diagnosis.id;
   const body = JSON.stringify({ questionId, answer: '3x+2', reasoning: '' });
-  const request = (payload: string, site?: string) => new Request(url, { method: 'POST', headers: { 'Content-Type': 'application/json', ...(site ? { Origin: site } : {}) }, body: payload });
+  const request = (payload: string, site?: string) => new Request(url, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer user-a', ...(site ? { Origin: site } : {}) }, body: payload });
   try {
     const preflight = await OPTIONS(new Request(url, { method: 'OPTIONS', headers: { Origin: origin, 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type' } }));
     assert.equal(preflight.status, 204);
@@ -41,8 +42,5 @@ test('API supports browser preflight, Swift, validation, and curated fallback', 
     const health = await GET(new Request('http://localhost:3001/api/health', { headers: { Origin: origin } }));
     assert.equal(health.headers.get('Access-Control-Allow-Origin'), origin);
     assert.equal((await health.json()).aiConfigured, false);
-  } finally {
-    if (previous.origins === undefined) delete process.env.ALLOWED_ORIGINS; else process.env.ALLOWED_ORIGINS = previous.origins;
-    if (previous.key === undefined) delete process.env.GEMINI_API_KEY; else process.env.GEMINI_API_KEY = previous.key;
-  }
+  } finally { mock.restore(); }
 });
