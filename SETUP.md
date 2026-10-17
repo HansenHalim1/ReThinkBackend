@@ -47,7 +47,7 @@ ALLOWED_ORIGINS=https://re-think-test.vercel.app,http://localhost:3000
 
 The backend also accepts legacy `SUPABASE_ANON_KEY` / `SUPABASE_SERVICE_ROLE_KEY` equivalents. Never expose the secret/service-role key in the web bundle, Swift binary, logs, or Git. Add keys in each Vercel project's environment settings and local ignored environment files. The dashboard link alone is not a credential.
 
-Keep Gemini settings in the backend. Deploy the migration, configure keys/redirects, then publish both applications as a coordinated release: `/api/feedback` now requires sign-in. This work does not automatically push or deploy either repository.
+Keep Gemini settings in the backend. Gemini now proposes a provisional hypothesis and selects an unused curated probe; deterministic backend rules still decide the diagnosis. Deploy the migration, configure keys/redirects, then publish both applications as a coordinated release. `/api/feedback` and progress still require sign-in. This work does not automatically push or deploy either repository.
 
 ## API used by both web and Swift
 
@@ -60,7 +60,7 @@ Send the Supabase access token with `Authorization: Bearer <access_token>` to:
 - `POST /api/progress` → command below; returns `{ user_id, concept, session, revision, updated_at }`.
 - `POST /api/feedback` → existing feedback request/response, now authenticated.
 
-`GET /api/health` remains public and reports configuration flags, not proof of provider/database connectivity. Browser preflights allow Content-Type and Authorization. Swift does not send a browser Origin header.
+`GET /api/health` remains public and reports configuration flags, not proof of provider/database connectivity. Browser preflights allow Content-Type and Authorization. Swift does not send a browser Origin header. `POST /api/diagnostic` only supports local demo mode during development; it is disabled in production and does not save progress.
 
 ```json
 {
@@ -76,7 +76,7 @@ Other actions: `advance`, `reinforce`, `reset` (omit answer/reasoning). Start wi
 
 401 means the token is missing/invalid/expired; refresh the Supabase session and retry once. 400 means invalid input or transition. 409 means a concurrent update: fetch latest progress and let the user review before another command. 503 means Auth/database configuration or connectivity is unavailable. No mutation is optimistically shown as saved in the frontend before the backend confirms it.
 
-The same authenticated Supabase user ID gives web and Swift the same progress. Each device manages its own session. On web sign-out, the workspace is unmounted; logging into a different account starts with that account's server state. Existing anonymous `rethink-mvp-v1` localStorage records remain untouched and are not silently assigned to a newly signed-in user. There is no guest-data import, initial assessment, or AI blocker-profiling feature in this change.
+The same authenticated Supabase user ID gives web and Swift the same progress. Each device manages its own session. On web sign-out, the workspace is unmounted; logging into a different account starts with that account's server state. Existing anonymous `rethink-mvp-v1` localStorage records remain untouched and are not silently assigned to a newly signed-in user. There is no guest-data import or general math-ability assessment. AI hypotheses remain provisional and concept-specific.
 
 ## Verification
 

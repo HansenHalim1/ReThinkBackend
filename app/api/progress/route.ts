@@ -2,6 +2,8 @@ import { adminDatabase, authenticated, ApiError, jsonBody } from '../../../lib/a
 import { cors, preflight } from '../../../lib/cors.ts';
 import { applyCommand, parseCommand } from '../../../lib/progress.ts';
 import { readSaved } from '../../../lib/storage.ts';
+import { newSession } from '../../../lib/engine.ts';
+import { selectAdaptiveProbe } from '../../../lib/diagnostic.ts';
 export const dynamic = 'force-dynamic';
 export function GET(request: Request) {
   return cors(request, () => authenticated(request, async ({ user, db }) => {
@@ -22,7 +24,9 @@ export function POST(request: Request) {
     if ((row?.revision || 0) !== command.expectedRevision) return Response.json({ error: 'Kemajuan berubah di perangkat lain. Muat ulang sebelum melanjutkan.', code: 'revision_conflict' }, { status: 409 });
     const existing = row ? readSaved(JSON.stringify({ version: 1, sessions: { [command.concept]: row.session } })) : null;
     if (row && !existing) throw new ApiError(503, 'Data kemajuan tidak valid.');
-    const session = applyCommand(existing?.sessions[command.concept], command);
+    const current = existing?.sessions[command.concept] || newSession(command.concept);
+    const selection = command.action === 'submit' ? await selectAdaptiveProbe(current, command.answer!, command.reasoning!) : undefined;
+    const session = applyCommand(current, command, selection);
     if (!session) throw new ApiError(400, 'Jawaban atau tahap belajar tidak valid.');
     const { data, error: writeError } = await adminDatabase().rpc('save_learning_progress', { p_user_id: user.id, p_concept: command.concept, p_expected_revision: command.expectedRevision, p_session: session }).single();
     if (writeError?.message.includes('revision_conflict')) return Response.json({ error: 'Kemajuan berubah di perangkat lain. Muat ulang sebelum melanjutkan.', code: 'revision_conflict' }, { status: 409 });

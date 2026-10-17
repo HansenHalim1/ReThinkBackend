@@ -23,18 +23,19 @@ test('matching errors require a probe before confirmation and complete the guide
   s = submit(s, '20+4x', '')!; assert.equal(s.stage, 'transfer');
   s = submit(s, '12+3x', '')!; assert.equal(s.mastery, 'understood'); assert.equal(s.stage, 'complete');
 });
-test('unrecognized errors remain uncertain and a correct probe rejects the suspected blocker', () => {
+test('ambiguous responses get another probe; repeated error patterns confirm and repeated correct answers reject', () => {
   let s = submit(newSession('distribution'), '7', '')!;
-  s = submit(s, '4x+3', '')!; assert.equal(s.diagnosis, 'uncertain'); assert.equal(s.stage, 'complete');
-  s = submit(newSession('inverse'), '13', '')!; s = submit(s, '4', '')!;
+  s = submit(s, '4x+3', '')!; assert.equal(s.stage, 'probe');
+  s = submit(s, '3x+5', '')!; assert.equal(s.diagnosis, 'confirmed'); assert.equal(s.stage, 'visual');
+  s = submit(newSession('inverse'), '13', '')!; s = submit(s, '4', '')!; assert.equal(s.stage, 'probe'); s = submit(s, '4', '')!;
   assert.equal(s.diagnosis, 'rejected'); assert.equal(s.stage, 'retry');
 });
 test('independent failure stops transfer, transfer failure is procedural only', () => {
   let s = submit(newSession('inverse'), '3', '')!;
-  s = submit(s, '19', '')!; assert.equal(s.stage, 'complete'); assert.equal(s.mastery, 'needs-reinforcement');
+  s = submit(s, '4', '')!; s = submit(s, '19', '')!; assert.equal(s.stage, 'complete'); assert.equal(s.mastery, 'needs-reinforcement');
   assert.equal(reinforce(s).stage, 'visual');
   s = submit(newSession('inverse'), '3', '')!;
-  s = submit(s, '5', '')!; s = submit(s, '17', '')!;
+  s = submit(s, '4', '')!; s = submit(s, '5', '')!; s = submit(s, '17', '')!;
   assert.equal(s.mastery, 'procedural-only');
 });
 test('invalid math does not record attempts or advance stages', () => {
