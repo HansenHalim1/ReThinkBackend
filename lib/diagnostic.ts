@@ -1,5 +1,6 @@
 import { getProbeQuestions, getQuestion, type DiagnosticHypothesis } from './content.ts';
 import { currentQuestion, grade, submit, type AdaptiveSelection, type Session } from './engine.ts';
+import { geminiFailureReason } from './gemini.ts';
 
 const hypotheses: DiagnosticHypothesis[] = ['possible-slip', 'possible-conceptual-gap', 'possible-understanding', 'uncertain'];
 
@@ -33,7 +34,7 @@ export async function selectAdaptiveProbe(session: Session, answer: string, reas
         generationConfig: { maxOutputTokens: 256, temperature: 0.2, responseFormat: { text: { mimeType: 'APPLICATION_JSON', schema: { type: 'object', properties: { hypothesis: { type: 'string', enum: hypotheses }, nextProbeId: { type: 'string', enum: available.map(q => q.id) } }, required: ['hypothesis', 'nextProbeId'], additionalProperties: false } } } },
       }),
     });
-    if (!response.ok) return fallbackResult(response.status === 429 ? 'rate-limited' : 'provider-unavailable', model, response.status);
+    if (!response.ok) return fallbackResult(geminiFailureReason(response.status), model, response.status);
     let value: unknown;
     try {
       const data = await response.json();

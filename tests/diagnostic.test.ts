@@ -2,6 +2,13 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { selectAdaptiveProbe } from '../lib/diagnostic.ts';
 import { newSession } from '../lib/engine.ts';
+import { geminiFailureReason } from '../lib/gemini.ts';
+
+test('Gemini authentication failures are not labeled as timeouts', () => {
+  assert.equal(geminiFailureReason(401), 'invalid-api-key');
+  assert.equal(geminiFailureReason(429), 'rate-limited');
+  assert.equal(geminiFailureReason(503), 'provider-unavailable');
+});
 
 test('adaptive diagnosis sends evidence to Gemini and accepts only a banked probe', async () => {
   const previousKey = process.env.GEMINI_API_KEY;

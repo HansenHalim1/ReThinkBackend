@@ -23,12 +23,14 @@ test('matching errors require a probe before confirmation and complete the guide
   s = submit(s, '20+4x', '')!; assert.equal(s.stage, 'transfer');
   s = submit(s, '12+3x', '')!; assert.equal(s.mastery, 'understood'); assert.equal(s.stage, 'complete');
 });
-test('ambiguous responses get another probe; repeated error patterns confirm and repeated correct answers reject', () => {
-  let s = submit(newSession('distribution'), '7', '')!;
-  s = submit(s, '4x+3', '')!; assert.equal(s.stage, 'probe');
-  s = submit(s, '3x+5', '')!; assert.equal(s.diagnosis, 'confirmed'); assert.equal(s.stage, 'visual');
-  s = submit(newSession('inverse'), '13', '')!; s = submit(s, '4', '')!; assert.equal(s.stage, 'probe'); s = submit(s, '4', '')!;
+test('one probe confirms repeated errors, rejects repeated correct answers, and leaves mixed evidence uncertain', () => {
+  let s = submit(newSession('distribution'), '3x+2', '')!;
+  s = submit(s, '4x+3', '')!;
+  assert.equal(s.diagnosis, 'confirmed'); assert.equal(s.stage, 'visual');
+  s = submit(newSession('inverse'), '3', '')!; s = submit(s, '4', '')!;
   assert.equal(s.diagnosis, 'rejected'); assert.equal(s.stage, 'retry');
+  s = submit(newSession('inverse'), '13', '')!; s = submit(s, '4', '')!;
+  assert.equal(s.diagnosis, 'uncertain'); assert.equal(s.stage, 'complete');
 });
 test('independent failure stops transfer, transfer failure is procedural only', () => {
   let s = submit(newSession('inverse'), '3', '')!;

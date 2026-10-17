@@ -1,12 +1,6 @@
 export type ConceptId = 'distribution' | 'inverse';
 export type QuestionRole = 'diagnosis' | 'probe' | 'practice' | 'retry' | 'transfer';
 export type DiagnosticHypothesis = 'possible-slip' | 'possible-conceptual-gap' | 'possible-understanding' | 'uncertain';
-export const diagnosticHypothesisLabels: Record<DiagnosticHypothesis, string> = {
-  'possible-slip': 'Mungkin terpeleset; perlu satu bukti lagi',
-  'possible-conceptual-gap': 'Mungkin ada konsep yang perlu diperkuat',
-  'possible-understanding': 'Ada tanda pemahaman; sedang dicek',
-  uncertain: 'Bukti awal belum cukup',
-};
 export type Question = {
   id: string; concept: ConceptId; role: QuestionRole; prompt: string; math?: string;
   expected: string; kind: 'expression' | 'number'; knownErrors: string[]; knownErrorTypes?: string[]; hint: string;

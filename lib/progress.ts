@@ -14,7 +14,7 @@ export function applyCommand(current: Session | undefined, command: ProgressComm
   switch (command.action) {
     case 'submit': return submit(session, command.answer!, command.reasoning!, new Date().toISOString(), selection);
     case 'advance': return ['visual', 'worked'].includes(session.stage) ? advance(session) : null;
-    case 'reinforce': return session.stage === 'complete' && session.mastery !== 'understood' ? reinforce(session) : null;
+    case 'reinforce': return session.stage === 'complete' ? reinforce(session) : null;
     case 'reset': return newSession(command.concept);
   }
 }

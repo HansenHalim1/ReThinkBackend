@@ -3,6 +3,7 @@ import { cors, preflight } from '../../../lib/cors.ts';
 import { getQuestion } from '../../../lib/content.ts';
 import { grade } from '../../../lib/engine.ts';
 import { curatedFeedback, validFeedback } from '../../../lib/feedback.ts';
+import { geminiFailureReason } from '../../../lib/gemini.ts';
 export const runtime = 'nodejs';
 export const maxDuration = 30;
 async function handlePost(request: Request) {
@@ -38,7 +39,7 @@ async function handlePost(request: Request) {
       }),
     });
     if (!response.ok) {
-      const reason = response.status === 429 ? 'rate-limited' : 'provider-unavailable';
+      const reason = geminiFailureReason(response.status);
       console.warn('[gemini:feedback] curated fallback', { reason, model, providerStatus: response.status });
       return respond(fallback, 'curated', reason, model, response.status);
     }

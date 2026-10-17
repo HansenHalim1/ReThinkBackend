@@ -29,9 +29,10 @@ export function mockSupabase() {
     }
     if (url.pathname === '/rest/v1/learning_progress') {
       const owner = url.searchParams.get('user_id')?.slice(3);
-      if (!uid || owner !== uid) return reply([], 200);
+      const serviceRole = request.headers.get('apikey') === 'sb_secret_test';
+      if (!owner || (!serviceRole && (!uid || owner !== uid))) return reply([], 200);
       const concept = url.searchParams.get('concept')?.slice(3);
-      return reply([...rows.values()].filter(row => row.user_id === uid && (!concept || row.concept === concept)));
+      return reply([...rows.values()].filter(row => row.user_id === owner && (!concept || row.concept === concept)));
     }
     if (url.pathname === '/rest/v1/profiles') return reply(uid ? [{ display_name: uid === userA ? 'Siswa A' : 'Siswa B', created_at: '2026-10-17T00:00:00Z' }] : []);
     throw Error(`Unexpected network request: ${url.origin}${url.pathname}`);

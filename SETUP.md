@@ -4,14 +4,14 @@ Target project: https://supabase.com/dashboard/project/hhovzaaeolcfynyetabf
 
 ## Activate the database
 
-Apply `supabase/migrations/202610170001_accounts_and_progress.sql` to this project using Supabase migrations or the SQL Editor. It creates:
+Apply migrations in filename order using Supabase migrations or the SQL Editor. It creates:
 
 - `profiles`: one display name per Auth user, including a signup trigger and backfill for existing users.
 - `learning_progress`: a validated learning-session snapshot and revision per user/concept. Attempts are retained inside each session JSON, matching the existing engine's 100-attempt cap.
-- Own-account read policies; users may update only their own display name. Anonymous clients have no table access.
-- A service-role-only `save_learning_progress` function with atomic revision checks. Browser/Swift clients cannot directly write progress or claim mastery.
+- Users may update only their own display name. Progress rows are readable only by the backend service role; browser and Swift clients must use the authenticated backend API.
+- Service-role-only progress reads/writes and a `save_learning_progress` function with atomic revision checks. Browser/Swift clients cannot directly read progress, write progress, or claim mastery.
 
-The migration is additive and intended to be applied once via migration tracking. It does not modify Auth configuration or existing application tables. Database rows cascade when the corresponding Auth user is deleted.
+The second migration removes direct client reads without changing stored progress. Deploy the backend version that reads with the service role before applying it; older backend deployments will no longer be able to load progress. Rollback requires restoring `SELECT` plus the `progress_read_own` policy, which makes each user's full assessment JSON readable from that user's Supabase client again. Database rows cascade when the corresponding Auth user is deleted.
 
 ## Configure Authentication
 
@@ -47,7 +47,7 @@ ALLOWED_ORIGINS=https://re-think-test.vercel.app,http://localhost:3000
 
 The backend also accepts legacy `SUPABASE_ANON_KEY` / `SUPABASE_SERVICE_ROLE_KEY` equivalents. Never expose the secret/service-role key in the web bundle, Swift binary, logs, or Git. Add keys in each Vercel project's environment settings and local ignored environment files. The dashboard link alone is not a credential.
 
-Keep Gemini settings in the backend. Gemini now proposes a provisional hypothesis and selects an unused curated probe; deterministic backend rules still decide the diagnosis. Deploy the migration, configure keys/redirects, then publish both applications as a coordinated release. `/api/feedback` and progress still require sign-in. This work does not automatically push or deploy either repository.
+Keep Gemini settings in the backend. Gemini proposes a private provisional hypothesis and selects one curated probe; deterministic backend rules still decide the diagnosis. Deploy the backend first, apply `202610170002_private_learning_progress.sql`, then deploy the website. `/api/feedback` and progress still require sign-in. This work does not automatically push, migrate, or deploy either repository.
 
 ## API used by both web and Swift
 
@@ -72,7 +72,7 @@ Send the Supabase access token with `Authorization: Bearer <access_token>` to:
 }
 ```
 
-Other actions: `advance`, `reinforce`, `reset` (omit answer/reasoning). Start with expectedRevision 0 when no row exists. Always use the latest returned revision. Backend verification determines the owner; do not send a user ID. Grading and state transitions are calculated on the server; client-supplied mastery or session fields are ignored.
+Other actions: `advance`, `reinforce`, `reset` (omit answer/reasoning). Start with expectedRevision 0 when no row exists. Always use the latest returned revision. Backend verification determines the owner; do not send a user ID. Grading and state transitions are calculated on the server; client-supplied mastery or session fields are ignored. Progress API responses omit diagnosis, hypothesis, mastery, and error-pattern fields.
 
 401 means the token is missing/invalid/expired; refresh the Supabase session and retry once. 400 means invalid input or transition. 409 means a concurrent update: fetch latest progress and let the user review before another command. 503 means Auth/database configuration or connectivity is unavailable. No mutation is optimistically shown as saved in the frontend before the backend confirms it.
 

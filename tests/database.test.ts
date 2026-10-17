@@ -14,6 +14,7 @@ test('Postgres migration enforces profile ownership, progress permissions and re
       grant usage on schema auth to authenticated; grant execute on function auth.uid() to authenticated;`);
     await db.query('insert into auth.users(id,raw_user_meta_data) values ($1,$2)', [userA, { display_name: 'Existing user' }]);
     await db.exec(await readFile(new URL('../supabase/migrations/202610170001_accounts_and_progress.sql', import.meta.url), 'utf8'));
+    await db.exec(await readFile(new URL('../supabase/migrations/202610170002_private_learning_progress.sql', import.meta.url), 'utf8'));
     await db.query('insert into auth.users(id,raw_user_meta_data) values ($1,$2)', [userB, { display_name: 'B'.repeat(100) }]);
     const profiles = await db.query<{ display_name: string }>('select display_name from public.profiles order by id');
     assert.equal(profiles.rows[0].display_name, 'Existing user');
@@ -29,13 +30,13 @@ test('Postgres migration enforces profile ownership, progress permissions and re
     await assert.rejects(db.query(save, [userA, 'distribution', 1, session]), /revision_conflict/);
     await db.exec('reset role; set role authenticated');
     await db.query("select set_config('request.jwt.claim.sub', $1, false)", [userB]);
-    assert.equal((await db.query('select * from public.learning_progress')).rows.length, 0);
+    await assert.rejects(db.query('select * from public.learning_progress'), /permission denied/);
     assert.equal((await db.query('select * from public.profiles')).rows.length, 1);
     assert.equal((await db.query('update public.profiles set display_name=$1 where id=$2 returning id', ['Hijacked', userA])).rows.length, 0);
     await assert.rejects(db.query(save, [userB, 'distribution', 0, session]), /permission denied/);
     await assert.rejects(db.query('insert into public.learning_progress values($1,$2,$3,1,now())', [userB, 'distribution', session]), /permission denied/);
     await db.query("select set_config('request.jwt.claim.sub', $1, false)", [userA]);
-    assert.equal((await db.query('select * from public.learning_progress')).rows.length, 1);
+    await assert.rejects(db.query('select * from public.learning_progress'), /permission denied/);
     await db.exec('reset role; set role anon');
     await assert.rejects(db.query('select * from public.learning_progress'), /permission denied/);
     await db.exec('reset role');
