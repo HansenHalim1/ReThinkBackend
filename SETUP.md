@@ -81,3 +81,19 @@ The same authenticated Supabase user ID gives web and Swift the same progress. E
 ## Verification
 
 Run `npm test`, `npm run typecheck`, and `npm run build`. Tests include actual migration/RLS/trigger/cascade/revision behavior in embedded PostgreSQL (PGlite) and mocked Supabase HTTP integration for token rejection, user isolation, forged-state rejection and concurrency. These tests do not apply the migration or create accounts in the live project.
+
+## SMA curriculum (kelas 10–12)
+
+Apply `supabase/migrations/202610180001_sma_curriculum.sql` after the first two migrations. Paste the entire file into the Supabase SQL Editor and run it once. It adds a private `curriculum_progress` table plus service-role-only `save_curriculum_progress` RPC. Existing profiles and pretest sessions are untouched. The migration must be applied before enabling the new frontend's signed-in SMA progress. No additional environment variables are required.
+
+Deploy the backend before the frontend. The new `/api/curriculum` endpoint is additive; older clients keep using the existing APIs. This repository prepares the migration but does not apply it to the live Supabase project.
+
+Both website and Swift clients use the same Supabase Bearer access token:
+
+- `GET /api/curriculum` returns `{ unlocked, modules, progress }`. Modules contain the shared kelas 10–12 catalogue, explanations, formulas, examples, and quiz options. Answer keys and quiz explanations are omitted until submission. Progress contains `{ moduleId, completed, attempts, revision }` for the authenticated account only.
+- `POST /api/curriculum` accepts `{ moduleId, answerId, expectedRevision }`. Start with revision `0`. It returns `{ correct, explanation, progress }` after saving. Completion is retained once a correct answer has been recorded. Server grading ignores client-supplied completion, correctness, owner IDs, or session snapshots.
+- `403` means both foundation sessions have not reached `complete`; diagnosis/mastery do not affect this gate. `409` means a stale revision: fetch progress again before retrying. `503` can mean the new migration is missing.
+
+The RPC checks and locks both pretest rows in the same transaction as the save. Browser and Swift credentials cannot access this table or invoke its write function directly. Deleting an Auth account cascades to its curriculum progress. The material IDs and questions in `lib/curriculum.ts` must match the frontend copy; adding IDs also requires a constraint migration.
+
+The roadmap contains 18 introductory lessons and one checkpoint per material. These completion flags do not claim validated mastery. The grade ordering is ReThink's learning sequence; schools may distribute Fase F topics differently.

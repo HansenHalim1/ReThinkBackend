@@ -61,3 +61,7 @@ npm run build
 ```
 
 Tests cover math/learning behavior, authenticated HTTP flows, cross-account isolation, concurrent saves, and the actual migration/RLS policies in embedded PostgreSQL. No live Gemini call is required by the tests.
+
+## SMA curriculum
+
+`GET/POST /api/curriculum` provides the kelas 10–12 catalogue and account-owned checkpoint progress for web and Swift. Access requires both existing foundation pretests to finish. The backend grades answers and persists completion with optimistic revision checks. Apply `supabase/migrations/202610180001_sma_curriculum.sql` before deploying the updated frontend; see [SETUP.md](SETUP.md#sma-curriculum-kelas-1012). Existing endpoints and pretest data remain compatible.

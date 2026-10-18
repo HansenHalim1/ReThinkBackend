@@ -15,6 +15,7 @@ test('Postgres migration enforces profile ownership, progress permissions and re
     await db.query('insert into auth.users(id,raw_user_meta_data) values ($1,$2)', [userA, { display_name: 'Existing user' }]);
     await db.exec(await readFile(new URL('../supabase/migrations/202610170001_accounts_and_progress.sql', import.meta.url), 'utf8'));
     await db.exec(await readFile(new URL('../supabase/migrations/202610170002_private_learning_progress.sql', import.meta.url), 'utf8'));
+    await db.exec(await readFile(new URL('../supabase/migrations/202610180001_sma_curriculum.sql', import.meta.url), 'utf8'));
     await db.query('insert into auth.users(id,raw_user_meta_data) values ($1,$2)', [userB, { display_name: 'B'.repeat(100) }]);
     const profiles = await db.query<{ display_name: string }>('select display_name from public.profiles order by id');
     assert.equal(profiles.rows[0].display_name, 'Existing user');
@@ -28,7 +29,22 @@ test('Postgres migration enforces profile ownership, progress permissions and re
     const second = await db.query<{ revision: number }>(save, [userA, 'distribution', 1, session]);
     assert.equal(second.rows[0].revision, 2);
     await assert.rejects(db.query(save, [userA, 'distribution', 1, session]), /revision_conflict/);
+    const saveMaterial = 'select * from public.save_curriculum_progress($1,$2,$3,$4)';
+    await assert.rejects(db.query(saveMaterial, [userA, 'x-exponents', 0, true]), /pretests_required/);
+    await db.query(save, [userA, 'distribution', 2, { ...session, stage: 'complete' }]);
+    await db.query(save, [userA, 'inverse', 0, { ...newSession('inverse'), stage: 'complete' }]);
+    await assert.rejects(db.query(saveMaterial, [userA, 'unknown', 0, true]), /check constraint/);
+    const material = await db.query<{ completed: boolean }>(saveMaterial, [userA, 'x-exponents', 0, false]);
+    assert.equal(material.rows[0].completed, false);
+    await assert.rejects(db.query(saveMaterial, [userA, 'x-exponents', 0, true]), /revision_conflict/);
+    await db.query(saveMaterial, [userA, 'x-exponents', 1, true]);
+    const repeated = await db.query<{ completed: boolean; attempts: number }>(saveMaterial, [userA, 'x-exponents', 2, false]);
+    assert.equal(repeated.rows[0].completed, true);
+    assert.equal(repeated.rows[0].attempts, 3);
+    await assert.rejects(db.query(saveMaterial, [userB, 'x-exponents', 0, true]), /pretests_required/);
     await db.exec('reset role; set role authenticated');
+    await assert.rejects(db.query('select * from public.curriculum_progress'), /permission denied/);
+    await assert.rejects(db.query(saveMaterial, [userA, 'x-exponents', 3, true]), /permission denied/);
     await db.query("select set_config('request.jwt.claim.sub', $1, false)", [userB]);
     await assert.rejects(db.query('select * from public.learning_progress'), /permission denied/);
     assert.equal((await db.query('select * from public.profiles')).rows.length, 1);
@@ -42,5 +58,6 @@ test('Postgres migration enforces profile ownership, progress permissions and re
     await db.exec('reset role');
     await db.query('delete from auth.users where id=$1', [userA]);
     assert.equal((await db.query('select * from public.learning_progress')).rows.length, 0);
+    assert.equal((await db.query('select * from public.curriculum_progress')).rows.length, 0);
   } finally { await db.close(); }
 });
