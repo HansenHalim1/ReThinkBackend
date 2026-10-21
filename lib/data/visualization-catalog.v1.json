@@ -1,0 +1,1878 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "2026.10.21-v1",
+  "visualizations": [
+    {
+      "id": "distribution-visual-v1",
+      "version": 1,
+      "topicId": "distribution",
+      "title": "Pengali untuk setiap bagian",
+      "question": "Mengapa 3(x + 2) bukan 3x + 2?",
+      "takeaway": "Pengali berlaku pada semua suku di dalam kurung.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Banyak kelompok",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Satu kelompok berisi x dan dua satuan.",
+          "result": "1(x + 2) = 1x + 2",
+          "svgFile": "visuals/distribution-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Dua kelompok berarti dua bagian x dan empat satuan.",
+          "result": "2(x + 2) = 2x + 4",
+          "svgFile": "visuals/distribution-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Tiga kelompok menghasilkan tiga bagian x dan enam satuan.",
+          "result": "3(x + 2) = 3x + 6",
+          "svgFile": "visuals/distribution-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Setiap kelompok tambahan menambah x dan dua satuan.",
+          "result": "4(x + 2) = 4x + 8",
+          "svgFile": "visuals/distribution-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "inverse-visual-v1",
+      "version": 1,
+      "topicId": "inverse",
+      "title": "Menjaga persamaan seimbang",
+      "question": "Bagaimana menemukan x tanpa mengubah keseimbangan?",
+      "takeaway": "Untuk x + a = 7, lakukan pengurangan a pada kedua ruas.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Bilangan yang ditambahkan",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Pada x ditambah satu sama dengan tujuh, kurangi satu pada kedua sisi.",
+          "result": "Periksa: 6 + 1 = 7",
+          "svgFile": "visuals/inverse-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Jika tambahannya dua, kurangi dua pada kedua sisi.",
+          "result": "Periksa: 5 + 2 = 7",
+          "svgFile": "visuals/inverse-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 4,
+          "caption": "Operasi kebalikan harus dilakukan pada kedua sisi persamaan.",
+          "result": "Periksa: 3 + 4 = 7",
+          "svgFile": "visuals/inverse-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 6,
+          "caption": "Periksa nilai x dengan memasukkannya ke persamaan semula.",
+          "result": "Periksa: 1 + 6 = 7",
+          "svgFile": "visuals/inverse-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-exponents-visual-v1",
+      "version": 1,
+      "topicId": "x-exponents",
+      "title": "Pangkat menghitung faktor",
+      "question": "Apa yang berubah ketika pangkat bertambah satu?",
+      "takeaway": "Eksponen menghitung banyak faktor, bukan penambahan biasa.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Pangkat n",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Dua pangkat nol bernilai satu.",
+          "result": "2^0 = 1; naik satu pangkat → dikali 2",
+          "svgFile": "visuals/x-exponents-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Dua pangkat satu bernilai dua.",
+          "result": "2^1 = 2; naik satu pangkat → dikali 2",
+          "svgFile": "visuals/x-exponents-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Dua pangkat tiga berarti tiga faktor dua, bukan dua kali tiga.",
+          "result": "2^3 = 8; naik satu pangkat → dikali 2",
+          "svgFile": "visuals/x-exponents-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 5,
+          "caption": "Setiap kenaikan satu pada pangkat menggandakan hasil sebelumnya.",
+          "result": "2^5 = 32; naik satu pangkat → dikali 2",
+          "svgFile": "visuals/x-exponents-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-linear-visual-v1",
+      "version": 1,
+      "topicId": "x-linear",
+      "title": "Dua garis, satu solusi",
+      "question": "Titik mana yang memenuhi kedua persamaan?",
+      "takeaway": "Solusi SPLDV adalah pasangan yang memenuhi semua persamaan.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Jumlah x + y",
+        "min": 4,
+        "max": 12,
+        "step": 1,
+        "initial": 4
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 4,
+          "caption": "Garis pertama menyatakan jumlah x dan y. Garis kedua menjaga selisihnya dua.",
+          "result": "Titik potong (3, 1) memenuhi keduanya",
+          "svgFile": "visuals/x-linear-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 6,
+          "caption": "Mengubah jumlah memindahkan garis pertama dan titik potongnya.",
+          "result": "Titik potong (4, 2) memenuhi keduanya",
+          "svgFile": "visuals/x-linear-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 8,
+          "caption": "Titik potong memenuhi kedua persamaan sekaligus.",
+          "result": "Titik potong (5, 3) memenuhi keduanya",
+          "svgFile": "visuals/x-linear-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 12,
+          "caption": "Periksa koordinat pada kedua persamaan, bukan hanya salah satunya.",
+          "result": "Titik potong (7, 5) memenuhi keduanya",
+          "svgFile": "visuals/x-linear-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-inequalities-visual-v1",
+      "version": 1,
+      "topicId": "x-inequalities",
+      "title": "Satu daerah, beberapa batas",
+      "question": "Kapan titik (x, 2) berada di daerah solusi?",
+      "takeaway": "Solusi sistem pertidaksamaan adalah irisan semua daerah.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Koordinat x",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Daerah berwarna memenuhi x ditambah y paling besar enam, dengan koordinat tidak negatif.",
+          "result": "(0, 2): 0 + 2 = 2 → di daerah solusi",
+          "svgFile": "visuals/x-inequalities-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Titik dua koma dua berada di dalam semua batas.",
+          "result": "(2, 2): 2 + 2 = 4 → di daerah solusi",
+          "svgFile": "visuals/x-inequalities-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 4,
+          "caption": "Titik empat koma dua berada tepat pada batas yang disertakan.",
+          "result": "(4, 2): 4 + 2 = 6 → di daerah solusi",
+          "svgFile": "visuals/x-inequalities-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 6,
+          "caption": "Titik enam koma dua melanggar batas jumlah, sehingga tidak termasuk solusi.",
+          "result": "(6, 2): 6 + 2 = 8 → di luar daerah solusi",
+          "svgFile": "visuals/x-inequalities-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-quadratic-visual-v1",
+      "version": 1,
+      "topicId": "x-quadratic",
+      "title": "Puncak parabola bergerak",
+      "question": "Apa arti h pada y = (x − h)²?",
+      "takeaway": "Pergeseran di dalam argumen harus dibaca dengan tanda yang tepat.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Pergeseran h",
+        "min": -2,
+        "max": 3,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Parabola awal memiliki puncak di nol koma nol.",
+          "result": "y = (x − (0))² + 0; puncak (0, 0)",
+          "svgFile": "visuals/x-quadratic-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Mengurangi satu di dalam argumen menggeser grafik ke kanan.",
+          "result": "y = (x − (1))² + 0; puncak (1, 0)",
+          "svgFile": "visuals/x-quadratic-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "Puncaknya sekarang berada di dua koma nol.",
+          "result": "y = (x − (2))² + 0; puncak (2, 0)",
+          "svgFile": "visuals/x-quadratic-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 3,
+          "caption": "Bentuk parabola tetap; koordinat puncak mengikuti h.",
+          "result": "y = (x − (3))² + 0; puncak (3, 0)",
+          "svgFile": "visuals/x-quadratic-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-exponential-functions-visual-v1",
+      "version": 1,
+      "topicId": "x-exponential-functions",
+      "title": "Pertumbuhan yang berlipat",
+      "question": "Apa bedanya bertambah tetap dan berlipat tetap?",
+      "takeaway": "Faktor pertumbuhan tetap menghasilkan perubahan eksponensial.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Periode t",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Model dimulai dengan seratus satuan pada periode nol.",
+          "result": "N(0) = 100 × 2^0 = 100",
+          "svgFile": "visuals/x-exponential-functions-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Setelah satu periode, nilainya menjadi dua kali lipat.",
+          "result": "N(1) = 100 × 2^1 = 200",
+          "svgFile": "visuals/x-exponential-functions-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Tiga periode berarti mengalikan dua sebanyak tiga kali.",
+          "result": "N(3) = 100 × 2^3 = 800",
+          "svgFile": "visuals/x-exponential-functions-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 5,
+          "caption": "Grafik makin curam karena pertambahan bergantung pada nilai terakhir.",
+          "result": "N(5) = 100 × 2^5 = 3.200",
+          "svgFile": "visuals/x-exponential-functions-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-trigonometry-visual-v1",
+      "version": 1,
+      "topicId": "x-trigonometry",
+      "title": "Sisi berubah, rasio menjelaskan",
+      "question": "Bagaimana sudut menentukan sisi pada segitiga siku-siku?",
+      "takeaway": "Tentukan sudut acuan sebelum memilih sisi depan dan samping.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Sudut θ (derajat)",
+        "min": 15,
+        "max": 75,
+        "step": 15,
+        "initial": 15
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 15,
+          "caption": "Sisi miring dibuat satu. Sisi depan dan samping dibaca terhadap sudut yang ditandai.",
+          "result": "sin θ = 0,259; cos θ = 0,966; tan θ = 0,268",
+          "svgFile": "visuals/x-trigonometry-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 30,
+          "caption": "Sinus adalah sisi depan dibagi sisi miring.",
+          "result": "sin θ = 0,5; cos θ = 0,866; tan θ = 0,577",
+          "svgFile": "visuals/x-trigonometry-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 45,
+          "caption": "Pada sudut empat puluh lima derajat, sisi depan dan samping sama panjang.",
+          "result": "sin θ = 0,707; cos θ = 0,707; tan θ = 1",
+          "svgFile": "visuals/x-trigonometry-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 60,
+          "caption": "Saat sudut membesar, sinus naik dan kosinus turun pada rentang sudut lancip.",
+          "result": "sin θ = 0,866; cos θ = 0,5; tan θ = 1,732",
+          "svgFile": "visuals/x-trigonometry-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-statistics-visual-v1",
+      "version": 1,
+      "topicId": "x-statistics",
+      "title": "Satu nilai mengubah ringkasan",
+      "question": "Bagaimana pencilan memengaruhi mean dan median?",
+      "takeaway": "Gunakan ukuran pusat bersama informasi sebaran dan konteks.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Nilai data kelima",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "initial": 8
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 8,
+          "caption": "Empat nilai pertama tetap. Nilai kelima bisa diubah.",
+          "result": "Data 4, 6, 8, 10, 8 → mean 7,2, median 8",
+          "svgFile": "visuals/x-statistics-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 10,
+          "caption": "Mean menggunakan semua nilai, sedangkan median adalah nilai tengah setelah diurutkan.",
+          "result": "Data 4, 6, 8, 10, 10 → mean 7,6, median 8",
+          "svgFile": "visuals/x-statistics-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 16,
+          "caption": "Nilai besar menarik mean ke kanan.",
+          "result": "Data 4, 6, 8, 10, 16 → mean 8,8, median 8",
+          "svgFile": "visuals/x-statistics-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 20,
+          "caption": "Bandingkan mean dan median sebelum menyimpulkan pusat data.",
+          "result": "Data 4, 6, 8, 10, 20 → mean 9,6, median 8",
+          "svgFile": "visuals/x-statistics-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-quartiles-visual-v1",
+      "version": 1,
+      "topicId": "x-quartiles",
+      "title": "Membaca kotak dan pencilan",
+      "question": "Mengapa IQR tidak langsung mengikuti nilai terbesar?",
+      "takeaway": "Whisker memakai aturan satu koma lima IQR; pencilan tidak otomatis salah.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Nilai terbesar",
+        "min": 12,
+        "max": 40,
+        "step": 2,
+        "initial": 12
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 12,
+          "caption": "Kotak memuat lima puluh persen data tengah. Garis di dalamnya adalah median.",
+          "result": "Nilai terbesar 12; batas atas 16,5 → masih dalam whisker",
+          "svgFile": "visuals/x-quartiles-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 16,
+          "caption": "Q satu empat dan Q tiga sembilan, sehingga IQR bernilai lima.",
+          "result": "Nilai terbesar 16; batas atas 16,5 → masih dalam whisker",
+          "svgFile": "visuals/x-quartiles-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 24,
+          "caption": "Nilai di atas enam belas setengah ditandai sebagai calon pencilan.",
+          "result": "Nilai terbesar 24; batas atas 16,5 → calon pencilan",
+          "svgFile": "visuals/x-quartiles-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 40,
+          "caption": "Nilai ekstrem dapat bergerak jauh sementara kotak data tengah tetap.",
+          "result": "Nilai terbesar 40; batas atas 16,5 → calon pencilan",
+          "svgFile": "visuals/x-quartiles-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-scatterplots-visual-v1",
+      "version": 1,
+      "topicId": "x-scatterplots",
+      "title": "Baca pasangan, bukan sebab-akibat",
+      "question": "Apa yang bisa disimpulkan dari pola titik?",
+      "takeaway": "Diagram pencar menunjukkan asosiasi; penjelasan kausal memerlukan bukti lain.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Kemiringan pola",
+        "min": -2,
+        "max": 2,
+        "step": 1,
+        "initial": -2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": -2,
+          "caption": "Pola turun menunjukkan hubungan negatif pada pasangan data.",
+          "result": "Arah negatif pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/x-scatterplots-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 0,
+          "caption": "Ketika tidak ada arah linear jelas, jangan memaksakan garis naik.",
+          "result": "Arah tidak linear jelas pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/x-scatterplots-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 1,
+          "caption": "Pola naik menunjukkan hubungan positif.",
+          "result": "Arah positif pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/x-scatterplots-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "caption": "Hubungan kuat tetap tidak membuktikan bahwa satu variabel menyebabkan yang lain.",
+          "result": "Arah positif pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/x-scatterplots-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "x-probability-visual-v1",
+      "version": 1,
+      "topicId": "x-probability",
+      "title": "Kejadian dibanding semua hasil",
+      "question": "Bagaimana komposisi kantong menentukan peluang?",
+      "takeaway": "Rumus perbandingan jumlah berlaku jika hasil elementer sama mungkin.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Banyak bola merah",
+        "min": 1,
+        "max": 9,
+        "step": 1,
+        "initial": 2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 2,
+          "caption": "Setiap bola sama mungkin dipilih dan jumlah seluruh bola sepuluh.",
+          "result": "P(merah) = 2/10 = 0,2; P(biru) = 8/10",
+          "svgFile": "visuals/x-probability-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 4,
+          "caption": "Peluang merah adalah banyak bola merah dibagi sepuluh.",
+          "result": "P(merah) = 4/10 = 0,4; P(biru) = 6/10",
+          "svgFile": "visuals/x-probability-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 6,
+          "caption": "Menambah bola merah meningkatkan peluang merah.",
+          "result": "P(merah) = 6/10 = 0,6; P(biru) = 4/10",
+          "svgFile": "visuals/x-probability-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 8,
+          "caption": "Peluang merah dan biru bersama-sama berjumlah satu.",
+          "result": "P(merah) = 8/10 = 0,8; P(biru) = 2/10",
+          "svgFile": "visuals/x-probability-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-functions-visual-v1",
+      "version": 1,
+      "topicId": "xi-functions",
+      "title": "Domain menyaring masukan",
+      "question": "Mengapa x = 2 dilarang untuk 1/(x − 2)?",
+      "takeaway": "Periksa domain sebelum menghitung atau menggambar sebuah titik.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Masukan x",
+        "min": 0,
+        "max": 4,
+        "step": 0.5,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Masukan nol menghasilkan penyebut negatif dua.",
+          "result": "f(0) = 1/(0 − 2) = -0,5",
+          "svgFile": "visuals/xi-functions-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Mendekati dua membuat besar hasil berubah tajam.",
+          "result": "f(1) = 1/(1 − 2) = -1",
+          "svgFile": "visuals/xi-functions-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "Pada dua, penyebut nol. Fungsi tidak terdefinisi di titik ini.",
+          "result": "x = 2: penyebut nol → tidak terdefinisi",
+          "svgFile": "visuals/xi-functions-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 3,
+          "caption": "Di sisi kanan dua, keluaran positif. Dua cabang tidak tersambung melalui titik terlarang.",
+          "result": "f(3) = 1/(3 − 2) = 1",
+          "svgFile": "visuals/xi-functions-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-composition-visual-v1",
+      "version": 1,
+      "topicId": "xi-composition",
+      "title": "Jalankan fungsi dalam dahulu",
+      "question": "Mengapa urutan fungsi dapat mengubah hasil?",
+      "takeaway": "f komposisi g berarti f(g(x)), sehingga g dijalankan lebih dahulu.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Masukan x",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Jalankan g terlebih dahulu: tambahkan tiga.",
+          "result": "f(g(0)) = 6, tetapi g(f(0)) = 3",
+          "svgFile": "visuals/xi-composition-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Keluaran g menjadi masukan f, yang mengalikan dua.",
+          "result": "f(g(1)) = 8, tetapi g(f(1)) = 5",
+          "svgFile": "visuals/xi-composition-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Pada masukan tiga, keluaran akhirnya dua belas.",
+          "result": "f(g(3)) = 12, tetapi g(f(3)) = 9",
+          "svgFile": "visuals/xi-composition-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 5,
+          "caption": "Urutan sebaliknya memberi hasil lain; komposisi biasanya tidak komutatif.",
+          "result": "f(g(5)) = 16, tetapi g(f(5)) = 13",
+          "svgFile": "visuals/xi-composition-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-inverse-functions-visual-v1",
+      "version": 1,
+      "topicId": "xi-inverse-functions",
+      "title": "Pergi lalu kembali",
+      "question": "Bagaimana invers mengembalikan masukan awal?",
+      "takeaway": "Invers fungsi berbeda dari kebalikan pecahan satu dibagi fungsi.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Masukan x",
+        "min": -2,
+        "max": 4,
+        "step": 1,
+        "initial": -2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": -2,
+          "caption": "Fungsi pertama mengalikan dua lalu menambahkan satu.",
+          "result": "f⁻¹(f(-2)) = (-3 − 1)/2 = -2",
+          "svgFile": "visuals/xi-inverse-functions-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 0,
+          "caption": "Invers membatalkan tambah satu, lalu membagi dua.",
+          "result": "f⁻¹(f(0)) = (1 − 1)/2 = 0",
+          "svgFile": "visuals/xi-inverse-functions-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "Keluaran invers kembali sama dengan masukan awal.",
+          "result": "f⁻¹(f(2)) = (5 − 1)/2 = 2",
+          "svgFile": "visuals/xi-inverse-functions-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Domain dan range bertukar; contoh linear ini satu-ke-satu pada bilangan real.",
+          "result": "f⁻¹(f(4)) = (9 − 1)/2 = 4",
+          "svgFile": "visuals/xi-inverse-functions-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-transformations-visual-v1",
+      "version": 1,
+      "topicId": "xi-transformations",
+      "title": "Geser tanpa mengubah bentuk",
+      "question": "Bagaimana pergeseran mengubah letak grafik?",
+      "takeaway": "Pada y = (x − h)² + 2, puncaknya adalah (h, 2).",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Pergeseran horizontal h",
+        "min": -2,
+        "max": 3,
+        "step": 1,
+        "initial": -2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": -2,
+          "caption": "Parabola contoh berada dua satuan di atas grafik dasar.",
+          "result": "y = (x − (-2))² + 2; puncak (-2, 2)",
+          "svgFile": "visuals/xi-transformations-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 0,
+          "caption": "Nilai h nol mempertahankan puncak pada sumbu vertikal.",
+          "result": "y = (x − (0))² + 2; puncak (0, 2)",
+          "svgFile": "visuals/xi-transformations-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "h positif menggeser grafik ke kanan.",
+          "result": "y = (x − (2))² + 2; puncak (2, 2)",
+          "svgFile": "visuals/xi-transformations-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 3,
+          "caption": "Jarak vertikal tetap dua; bentuk parabola tidak berubah.",
+          "result": "y = (x − (3))² + 2; puncak (3, 2)",
+          "svgFile": "visuals/xi-transformations-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-circles-visual-v1",
+      "version": 1,
+      "topicId": "xi-circles",
+      "title": "Juring adalah bagian lingkaran",
+      "question": "Bagaimana sudut pusat menentukan panjang busur?",
+      "takeaway": "Dengan jari-jari tetap, panjang busur sebanding dengan sudut pusat.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Sudut pusat (derajat)",
+        "min": 30,
+        "max": 300,
+        "step": 30,
+        "initial": 60
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 60,
+          "caption": "Busur berwarna dan juring menghadap sudut pusat yang sama.",
+          "result": "Bagian putaran 60/360; busur = 1,33π; luas juring = 2,67π",
+          "svgFile": "visuals/xi-circles-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 90,
+          "caption": "Sembilan puluh derajat adalah seperempat putaran.",
+          "result": "Bagian putaran 90/360; busur = 2π; luas juring = 4π",
+          "svgFile": "visuals/xi-circles-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 180,
+          "caption": "Seratus delapan puluh derajat adalah setengah lingkaran.",
+          "result": "Bagian putaran 180/360; busur = 4π; luas juring = 8π",
+          "svgFile": "visuals/xi-circles-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 270,
+          "caption": "Bagian putaran yang sama mengalikan keliling untuk busur dan luas untuk juring.",
+          "result": "Bagian putaran 270/360; busur = 6π; luas juring = 12π",
+          "svgFile": "visuals/xi-circles-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-bivariate-visual-v1",
+      "version": 1,
+      "topicId": "xi-bivariate",
+      "title": "Pola hubungan perlu konteks",
+      "question": "Apakah arah pola cukup membuktikan sebab-akibat?",
+      "takeaway": "Pertahankan pasangan data dan periksa cara data dikumpulkan.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Kemiringan pola",
+        "min": -2,
+        "max": 2,
+        "step": 1,
+        "initial": -2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": -2,
+          "caption": "Setiap titik menyatakan dua pengukuran dari pengamatan yang sama.",
+          "result": "Arah negatif pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/xi-bivariate-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 0,
+          "caption": "Pola tanpa arah linear tetap dapat menyimpan struktur lain.",
+          "result": "Arah tidak linear jelas pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/xi-bivariate-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 1,
+          "caption": "Kemiringan positif menunjukkan asosiasi pada data contoh.",
+          "result": "Arah positif pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/xi-bivariate-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "caption": "Variabel perancu dapat menjelaskan pola; hubungan bukan bukti sebab-akibat.",
+          "result": "Arah positif pada contoh; asosiasi ≠ sebab-akibat",
+          "svgFile": "visuals/xi-bivariate-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xi-regression-visual-v1",
+      "version": 1,
+      "topicId": "xi-regression",
+      "title": "Prediksi dan residu",
+      "question": "Apa arti selisih titik pengamatan terhadap garis?",
+      "takeaway": "Residu bertanda menunjukkan arah kesalahan prediksi; regresi bukan bukti kausal.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Gradien model b",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Garis model dipakai untuk memprediksi keluaran dari masukan.",
+          "result": "ŷ = 10 + 1x; pada x = 4 → ŷ = 14, residu = 10",
+          "svgFile": "visuals/xi-regression-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Titik pengamatan tetap, tetapi prediksi berubah saat gradien berubah.",
+          "result": "ŷ = 10 + 2x; pada x = 4 → ŷ = 18, residu = 6",
+          "svgFile": "visuals/xi-regression-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Residu adalah nilai teramati dikurangi nilai prediksi.",
+          "result": "ŷ = 10 + 3x; pada x = 4 → ŷ = 22, residu = 2",
+          "svgFile": "visuals/xi-regression-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Garis yang dekat dengan satu titik belum tentu paling cocok untuk seluruh data.",
+          "result": "ŷ = 10 + 4x; pada x = 4 → ŷ = 26, residu = -2",
+          "svgFile": "visuals/xi-regression-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-sequences-visual-v1",
+      "version": 1,
+      "topicId": "xii-sequences",
+      "title": "Tambah selisih yang sama",
+      "question": "Bagaimana beda tetap menentukan suku berikutnya?",
+      "takeaway": "Barisan aritmetika memiliki selisih tetap, bukan rasio tetap.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Beda d",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Suku pertama selalu dua.",
+          "result": "U₅ = 2 + 4(1) = 6; S₅ = 20",
+          "svgFile": "visuals/xii-sequences-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Beda dua berarti setiap suku bertambah dua.",
+          "result": "U₅ = 2 + 4(2) = 10; S₅ = 30",
+          "svgFile": "visuals/xii-sequences-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Suku kelima dihitung dari empat kali penambahan beda.",
+          "result": "U₅ = 2 + 4(3) = 14; S₅ = 40",
+          "svgFile": "visuals/xii-sequences-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Jumlah suku berbeda dari nilai satu suku; perhatikan apa yang ditanyakan.",
+          "result": "U₅ = 2 + 4(4) = 18; S₅ = 50",
+          "svgFile": "visuals/xii-sequences-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-geometric-series-visual-v1",
+      "version": 1,
+      "topicId": "xii-geometric-series",
+      "title": "Kalikan rasio yang sama",
+      "question": "Bagaimana rasio tetap mengubah jumlah suku?",
+      "takeaway": "Contoh ini deret berhingga; rumus tak hingga memerlukan nilai mutlak rasio kurang dari satu.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Rasio r",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Rasio satu membuat keempat suku sama besar.",
+          "result": "1 + 1 + 1 + 1 = 4 (empat suku)",
+          "svgFile": "visuals/xii-geometric-series-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Rasio dua menggandakan setiap suku sebelumnya.",
+          "result": "1 + 2 + 4 + 8 = 15 (empat suku)",
+          "svgFile": "visuals/xii-geometric-series-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Rasio tiga mempercepat pertumbuhan suku-suku.",
+          "result": "1 + 3 + 9 + 27 = 40 (empat suku)",
+          "svgFile": "visuals/xii-geometric-series-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "caption": "Jumlah empat suku adalah penjumlahan semua batang, bukan hanya batang terakhir.",
+          "result": "1 + 2 + 4 + 8 = 15 (empat suku)",
+          "svgFile": "visuals/xii-geometric-series-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-interest-visual-v1",
+      "version": 1,
+      "topicId": "xii-interest",
+      "title": "Bunga di atas saldo yang berubah",
+      "question": "Mengapa tunggal dan majemuk akhirnya berbeda?",
+      "takeaway": "Ini model pembelajaran, dengan satuan waktu dan suku bunga yang harus sesuai.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Tahun",
+        "min": 0,
+        "max": 8,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Kedua model dimulai dari seratus satuan dengan bunga sepuluh persen per tahun.",
+          "result": "Tahun 0: tunggal 100; majemuk 100 satuan",
+          "svgFile": "visuals/xii-interest-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Pada tahun pertama, hasil kedua model sama.",
+          "result": "Tahun 1: tunggal 110; majemuk 110 satuan",
+          "svgFile": "visuals/xii-interest-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 4,
+          "caption": "Pada model majemuk, bunga berikutnya dihitung atas saldo yang sudah bertambah.",
+          "result": "Tahun 4: tunggal 140; majemuk 146,41 satuan",
+          "svgFile": "visuals/xii-interest-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 8,
+          "caption": "Selisih makin besar ketika waktu bertambah, dengan asumsi bunga tetap dan tanpa biaya.",
+          "result": "Tahun 8: tunggal 180; majemuk 214,36 satuan",
+          "svgFile": "visuals/xii-interest-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-annuities-visual-v1",
+      "version": 1,
+      "topicId": "xii-annuities",
+      "title": "Pembayaran bukan seluruhnya pokok",
+      "question": "Bagaimana pembayaran tetap mengurangi utang?",
+      "takeaway": "Setiap pembayaran menutup bunga lebih dahulu, lalu mengurangi pokok.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Pembayaran tiap periode",
+        "min": 20,
+        "max": 100,
+        "step": 20,
+        "initial": 20
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 20,
+          "caption": "Bunga periode pertama adalah dua persen dari saldo awal lima ratus.",
+          "result": "Periode 1: bunga 10; pokok 10; saldo 490. Saldo minimum 0.",
+          "svgFile": "visuals/xii-annuities-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 40,
+          "caption": "Pembayaran lebih besar menyisakan lebih banyak bagian untuk pokok.",
+          "result": "Periode 1: bunga 10; pokok 30; saldo 470. Saldo minimum 0.",
+          "svgFile": "visuals/xii-annuities-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 60,
+          "caption": "Bunga berikutnya dihitung dari saldo tersisa, bukan saldo awal terus-menerus.",
+          "result": "Periode 1: bunga 10; pokok 50; saldo 450. Saldo minimum 0.",
+          "svgFile": "visuals/xii-annuities-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 100,
+          "caption": "Grafik berhenti di nol saat lunas; pembayaran terakhir dibatasi oleh tagihan yang tersisa.",
+          "result": "Periode 1: bunga 10; pokok 90; saldo 410. Saldo minimum 0.",
+          "svgFile": "visuals/xii-annuities-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-counting-visual-v1",
+      "version": 1,
+      "topicId": "xii-counting",
+      "title": "Pasangkan setiap pilihan",
+      "question": "Kapan banyak pilihan dikalikan?",
+      "takeaway": "Aturan ini menghitung pasangan baju-celana yang berbeda, bukan penjumlahan pilihan.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Pilihan baju",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Satu baju dapat dipasangkan dengan tiga celana.",
+          "result": "1 baju × 3 celana = 3 pasangan",
+          "svgFile": "visuals/xii-counting-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Dua baju menghasilkan dua kelompok pasangan.",
+          "result": "2 baju × 3 celana = 6 pasangan",
+          "svgFile": "visuals/xii-counting-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Setiap tambahan baju menambah tiga pasangan baru.",
+          "result": "3 baju × 3 celana = 9 pasangan",
+          "svgFile": "visuals/xii-counting-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Aturan perkalian menghitung tahapan yang semuanya dilakukan.",
+          "result": "4 baju × 3 celana = 12 pasangan",
+          "svgFile": "visuals/xii-counting-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-combinatorics-visual-v1",
+      "version": 1,
+      "topicId": "xii-combinatorics",
+      "title": "Urutan dapat menggandakan hitungan",
+      "question": "Apa bedanya tim dua orang dan dua jabatan?",
+      "takeaway": "Permutasi membedakan urutan; kombinasi hanya memilih anggota.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Banyak siswa",
+        "min": 3,
+        "max": 6,
+        "step": 1,
+        "initial": 3
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 3,
+          "caption": "Ketua dan wakil adalah jabatan berbeda, sehingga urutan pemilihan penting.",
+          "result": "P(3,2) = 6; C(3,2) = 3",
+          "svgFile": "visuals/xii-combinatorics-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 4,
+          "caption": "Ada n pilihan pertama dan n kurang satu pilihan kedua.",
+          "result": "P(4,2) = 12; C(4,2) = 6",
+          "svgFile": "visuals/xii-combinatorics-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 5,
+          "caption": "Untuk tim tanpa jabatan, setiap pasangan dihitung dua kali jika urutannya dibedakan.",
+          "result": "P(5,2) = 20; C(5,2) = 10",
+          "svgFile": "visuals/xii-combinatorics-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 6,
+          "caption": "Bagi dua untuk tim dua orang tanpa urutan; jangan membagi jika jabatannya berbeda.",
+          "result": "P(6,2) = 30; C(6,2) = 15",
+          "svgFile": "visuals/xii-combinatorics-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-compound-probability-visual-v1",
+      "version": 1,
+      "topicId": "xii-compound-probability",
+      "title": "Jangan hitung irisan dua kali",
+      "question": "Bagaimana mencari peluang A atau B?",
+      "takeaway": "Peluang gabungan adalah jumlah peluang dikurangi peluang irisan.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Batas bawah kejadian B",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "initial": 6
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 6,
+          "caption": "A adalah angka genap pada dadu adil. B ditentukan oleh batas bawah yang dipilih.",
+          "result": "P(A ∪ B) = 3/6; irisan 1/6 dihitung satu kali",
+          "svgFile": "visuals/xii-compound-probability-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 5,
+          "caption": "Angka enam berada pada kedua kejadian dan hanya boleh dihitung sekali.",
+          "result": "P(A ∪ B) = 4/6; irisan 1/6 dihitung satu kali",
+          "svgFile": "visuals/xii-compound-probability-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Gabungkan anggota kedua kejadian, lalu hilangkan hitungan ganda pada irisan.",
+          "result": "P(A ∪ B) = 5/6; irisan 2/6 dihitung satu kali",
+          "svgFile": "visuals/xii-compound-probability-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 1,
+          "caption": "Jika B memuat semua hasil, peluang gabungan menjadi satu.",
+          "result": "P(A ∪ B) = 6/6; irisan 3/6 dihitung satu kali",
+          "svgFile": "visuals/xii-compound-probability-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "xii-conditional-probability-visual-v1",
+      "version": 1,
+      "topicId": "xii-conditional-probability",
+      "title": "Informasi mengubah ruang acuan",
+      "question": "Apa yang berubah setelah satu merah diambil?",
+      "takeaway": "Model ini bersyarat pada merah pertama, dan pengambilan dilakukan tanpa pengembalian.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Merah sebelum pengambilan",
+        "min": 2,
+        "max": 8,
+        "step": 1,
+        "initial": 2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 2,
+          "caption": "Mula-mula ada sepuluh bola. Diketahui bola pertama merah dan tidak dikembalikan.",
+          "result": "Setelah satu merah keluar: P(merah berikutnya) = 1/9 ≈ 0,111",
+          "svgFile": "visuals/xii-conditional-probability-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 3,
+          "caption": "Sekarang penyebutnya sembilan, bukan sepuluh.",
+          "result": "Setelah satu merah keluar: P(merah berikutnya) = 2/9 ≈ 0,222",
+          "svgFile": "visuals/xii-conditional-probability-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 5,
+          "caption": "Pembilangnya juga berkurang satu karena sebuah merah sudah keluar.",
+          "result": "Setelah satu merah keluar: P(merah berikutnya) = 4/9 ≈ 0,444",
+          "svgFile": "visuals/xii-conditional-probability-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 8,
+          "caption": "Ubah komposisi awal dan bandingkan peluang sebelum dan sesudah informasi tersebut.",
+          "result": "Setelah satu merah keluar: P(merah berikutnya) = 7/9 ≈ 0,778",
+          "svgFile": "visuals/xii-conditional-probability-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-polynomials-visual-v1",
+      "version": 1,
+      "topicId": "advanced-polynomials",
+      "title": "Sisa menjadi uji faktor",
+      "question": "Kapan x − a benar-benar menjadi faktor?",
+      "takeaway": "Teorema faktor berlaku ketika nilai polinomial pada a sama dengan nol.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Nilai a",
+        "min": -2,
+        "max": 3,
+        "step": 0.5,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Sisa pembagian polinomial oleh x kurang a sama dengan nilai P(a).",
+          "result": "P(0) = -2 → x − (0) bukan faktor",
+          "svgFile": "visuals/advanced-polynomials-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 3,
+          "caption": "Sisa yang bukan nol berarti x kurang a bukan faktor.",
+          "result": "P(3) = 4 → x − (3) bukan faktor",
+          "svgFile": "visuals/advanced-polynomials-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "Pada a sama dengan dua, grafik memotong sumbu dan sisanya nol.",
+          "result": "P(2) = 0 → x − (2) adalah faktor",
+          "svgFile": "visuals/advanced-polynomials-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": -1,
+          "caption": "Pada a sama dengan negatif satu, sisanya juga nol dan faktor lain ditemukan.",
+          "result": "P(-1) = 0 → x − (-1) adalah faktor",
+          "svgFile": "visuals/advanced-polynomials-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-matrices-visual-v1",
+      "version": 1,
+      "topicId": "advanced-matrices",
+      "title": "Matriks mengubah suatu daerah",
+      "question": "Apa arti determinan pada transformasi sederhana?",
+      "takeaway": "Contoh matriks diagonal ini mengalikan koordinat x dengan k dan mempertahankan y.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Skala horizontal k",
+        "min": 0,
+        "max": 3,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Matriks diagonal dengan skala satu mempertahankan persegi satuan.",
+          "result": "(x,y) → (1x,y); det A = 1; luas dikali 1",
+          "svgFile": "visuals/advanced-matrices-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Skala horizontal dua menggandakan luas tanpa mengubah tinggi.",
+          "result": "(x,y) → (2x,y); det A = 2; luas dikali 2",
+          "svgFile": "visuals/advanced-matrices-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 0,
+          "caption": "Skala nol meruntuhkan daerah menjadi garis: determinan nol dan invers tidak ada.",
+          "result": "(x,y) → (0x,y); det A = 0 → singular, tanpa invers",
+          "svgFile": "visuals/advanced-matrices-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 3,
+          "caption": "Skala horizontal tiga menghasilkan luas tiga kali luas semula.",
+          "result": "(x,y) → (3x,y); det A = 3; luas dikali 3",
+          "svgFile": "visuals/advanced-matrices-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-vectors-visual-v1",
+      "version": 1,
+      "topicId": "advanced-vectors",
+      "title": "Komponen membentuk perpindahan",
+      "question": "Bagaimana panjang vektor muncul dari komponen?",
+      "takeaway": "Komponen memiliki tanda dan arah; panjang vektor selalu tidak negatif.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Komponen vertikal",
+        "min": 0,
+        "max": 4,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Vektor contoh selalu bergerak tiga satuan ke kanan.",
+          "result": "|u| = √(3² + 0²) = 3",
+          "svgFile": "visuals/advanced-vectors-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Komponen vertikal membentuk segitiga siku-siku bersama komponen horizontal.",
+          "result": "|u| = √(3² + 2²) = 3,606",
+          "svgFile": "visuals/advanced-vectors-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 4,
+          "caption": "Pada komponen tiga dan empat, panjangnya lima.",
+          "result": "|u| = √(3² + 4²) = 5",
+          "svgFile": "visuals/advanced-vectors-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 3,
+          "caption": "Jika komponen berubah, hitung ulang panjang dengan jumlah kuadrat komponen.",
+          "result": "|u| = √(3² + 3²) = 4,243",
+          "svgFile": "visuals/advanced-vectors-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-trigonometry-visual-v1",
+      "version": 1,
+      "topicId": "advanced-trigonometry",
+      "title": "Satu putaran, semua kuadran",
+      "question": "Bagaimana lingkaran satuan memberi tanda sinus dan kosinus?",
+      "takeaway": "Satu putaran sama dengan dua pi radian; mode sudut harus konsisten.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Sudut (derajat)",
+        "min": 0,
+        "max": 360,
+        "step": 30,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Koordinat titik pada lingkaran satuan adalah kosinus dan sinus sudutnya.",
+          "result": "Titik (cos θ, sin θ) = (1, 0)",
+          "svgFile": "visuals/advanced-trigonometry-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 90,
+          "caption": "Pada sembilan puluh derajat, titik berada di puncak lingkaran.",
+          "result": "Titik (cos θ, sin θ) = (0, 1)",
+          "svgFile": "visuals/advanced-trigonometry-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 180,
+          "caption": "Pada seratus delapan puluh derajat, kosinus negatif satu dan sinus nol.",
+          "result": "Titik (cos θ, sin θ) = (-1, 0)",
+          "svgFile": "visuals/advanced-trigonometry-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 270,
+          "caption": "Pada dua ratus tujuh puluh derajat, sinus negatif satu. Tanda mengikuti kuadran.",
+          "result": "Titik (cos θ, sin θ) = (0, -1)",
+          "svgFile": "visuals/advanced-trigonometry-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-rational-log-functions-visual-v1",
+      "version": 1,
+      "topicId": "advanced-rational-log-functions",
+      "title": "Penyebut memberi batas domain",
+      "question": "Bagaimana asimtot bergerak ketika rumus berubah?",
+      "takeaway": "Contoh fungsi rasional ini mempunyai asimtot vertikal, bukan titik keluaran pada penyebut nol.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Pergeseran a",
+        "min": -2,
+        "max": 2,
+        "step": 1,
+        "initial": -2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": -2,
+          "caption": "Penyebut x kurang a tidak boleh nol. Garis putus-putus menandai nilai yang dilarang.",
+          "result": "f(x) = 1/(x − (-2)); domain x ≠ -2",
+          "svgFile": "visuals/advanced-rational-log-functions-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": -1,
+          "caption": "Mengubah a memindahkan kedua cabang grafik.",
+          "result": "f(x) = 1/(x − (-1)); domain x ≠ -1",
+          "svgFile": "visuals/advanced-rational-log-functions-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 0,
+          "caption": "Untuk a nol, fungsinya satu dibagi x dan nol dikeluarkan dari domain.",
+          "result": "f(x) = 1/(x − (0)); domain x ≠ 0",
+          "svgFile": "visuals/advanced-rational-log-functions-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "caption": "Jangan menghubungkan cabang kiri dan kanan melalui asimtot.",
+          "result": "f(x) = 1/(x − (2)); domain x ≠ 2",
+          "svgFile": "visuals/advanced-rational-log-functions-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-conics-visual-v1",
+      "version": 1,
+      "topicId": "advanced-conics",
+      "title": "Dari lingkaran menuju elips",
+      "question": "Apa yang berubah ketika semisumbu utama membesar?",
+      "takeaway": "Pada contoh ini b tetap dua dan sumbu utama sejajar sumbu horizontal.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Semisumbu horizontal a",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "initial": 2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 2,
+          "caption": "Ketika kedua semisumbu sama, bentuknya lingkaran dan kedua fokus berimpit.",
+          "result": "x²/4 + y²/4 = 1; c = √(4 − 4) = 0",
+          "svgFile": "visuals/advanced-conics-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 3,
+          "caption": "Semisumbu horizontal yang lebih besar meregangkan elips.",
+          "result": "x²/9 + y²/4 = 1; c = √(9 − 4) = 2,236",
+          "svgFile": "visuals/advanced-conics-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 4,
+          "caption": "Fokus menjauh dari pusat dengan c kuadrat sama dengan a kuadrat kurang b kuadrat.",
+          "result": "x²/16 + y²/4 = 1; c = √(16 − 4) = 3,464",
+          "svgFile": "visuals/advanced-conics-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 5,
+          "caption": "Penyebut persamaan adalah kuadrat semisumbu, bukan panjang semisumbunya langsung.",
+          "result": "x²/25 + y²/4 = 1; c = √(25 − 4) = 4,583",
+          "svgFile": "visuals/advanced-conics-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-binomial-visual-v1",
+      "version": 1,
+      "topicId": "advanced-binomial",
+      "title": "Hitung banyak keberhasilan",
+      "question": "Bagaimana peluang satu percobaan mengubah sebaran jumlah sukses?",
+      "takeaway": "Binomial memerlukan jumlah percobaan tetap, independensi, dan peluang sukses yang tetap.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Peluang sukses p",
+        "min": 0,
+        "max": 1,
+        "step": 0.1,
+        "initial": 0.2
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0.2,
+          "caption": "Ada empat percobaan bebas dengan peluang sukses yang sama pada setiap percobaan.",
+          "result": "X ~ Binomial(4, 0,2); E(X) = 0,8; jumlah peluang = 1",
+          "svgFile": "visuals/advanced-binomial-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 0.4,
+          "caption": "Setiap batang adalah peluang tepat k keberhasilan.",
+          "result": "X ~ Binomial(4, 0,4); E(X) = 1,6; jumlah peluang = 1",
+          "svgFile": "visuals/advanced-binomial-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 0.6,
+          "caption": "Ketika p naik, pusat sebaran bergerak ke jumlah keberhasilan yang lebih besar.",
+          "result": "X ~ Binomial(4, 0,6); E(X) = 2,4; jumlah peluang = 1",
+          "svgFile": "visuals/advanced-binomial-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 0.8,
+          "caption": "Nilai harapan adalah empat kali p, tetapi hasil satu rangkaian tidak harus sama dengan nilai harapan.",
+          "result": "X ~ Binomial(4, 0,8); E(X) = 3,2; jumlah peluang = 1",
+          "svgFile": "visuals/advanced-binomial-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-normal-visual-v1",
+      "version": 1,
+      "topicId": "advanced-normal",
+      "title": "Pusat berubah, skor baku ikut berubah",
+      "question": "Apa arti z terhadap mean yang dipilih?",
+      "takeaway": "Peluang normal adalah luas interval; peluang tepat satu titik adalah nol.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Mean μ",
+        "min": -2,
+        "max": 2,
+        "step": 0.5,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Kurva normal contoh memiliki simpangan baku satu.",
+          "result": "μ = 0; untuk x = 1 → z = 1. Luas kiri μ = 1/2.",
+          "svgFile": "visuals/advanced-normal-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Menggeser mean memindahkan pusat kurva, tanpa mengubah simpangan baku.",
+          "result": "μ = 1; untuk x = 1 → z = 0. Luas kiri μ = 1/2.",
+          "svgFile": "visuals/advanced-normal-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": -1,
+          "caption": "Untuk nilai x tetap satu, skor bakunya bergantung pada letak mean.",
+          "result": "μ = -1; untuk x = 1 → z = 2. Luas kiri μ = 1/2.",
+          "svgFile": "visuals/advanced-normal-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "caption": "Setengah luas selalu berada di kiri mean; tinggi kurva bukan peluang pada satu titik.",
+          "result": "μ = 2; untuk x = 1 → z = -1. Luas kiri μ = 1/2.",
+          "svgFile": "visuals/advanced-normal-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-limits-visual-v1",
+      "version": 1,
+      "topicId": "advanced-limits",
+      "title": "Mendekati titik yang hilang",
+      "question": "Bagaimana limit ada walau fungsi tidak terdefinisi di titik?",
+      "takeaway": "Mendekati suatu titik berbeda dari membagi dengan nol di titik tersebut.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Kedekatan k; h = 10⁻ᵏ",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "initial": 1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 1,
+          "caption": "Untuk x bukan satu, bentuk pecahan dapat disederhanakan menjadi x ditambah satu.",
+          "result": "h = 0,1; f(1+h) = 2,1 → 2; f(1) tidak terdefinisi",
+          "svgFile": "visuals/advanced-limits-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "caption": "Titik contoh mendekati satu, sementara keluarannya mendekati dua.",
+          "result": "h = 0,01; f(1+h) = 2,01 → 2; f(1) tidak terdefinisi",
+          "svgFile": "visuals/advanced-limits-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "caption": "Titik kosong di satu koma dua tetap tidak menjadi nilai fungsi asal.",
+          "result": "h = 0,001; f(1+h) = 2,001 → 2; f(1) tidak terdefinisi",
+          "svgFile": "visuals/advanced-limits-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Limitnya dua, walaupun nilai pada x sama dengan satu tidak terdefinisi.",
+          "result": "h = 0,0001; f(1+h) = 2,0001 → 2; f(1) tidak terdefinisi",
+          "svgFile": "visuals/advanced-limits-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-derivatives-visual-v1",
+      "version": 1,
+      "topicId": "advanced-derivatives",
+      "title": "Sekan mendekati garis singgung",
+      "question": "Bagaimana gradien rata-rata mendekati turunan?",
+      "takeaway": "Turunan adalah limit gradien, bukan memasukkan nol langsung ke penyebut.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Tahap pendekatan",
+        "min": 0,
+        "max": 3,
+        "step": 1,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Dua titik pada kurva menentukan gradien rata-rata.",
+          "result": "h = 1; gradien sekan = 2 + h = 3 → 2",
+          "svgFile": "visuals/advanced-derivatives-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Dekatkan titik kedua ke titik pertama.",
+          "result": "h = 0,5; gradien sekan = 2 + h = 2,5 → 2",
+          "svgFile": "visuals/advanced-derivatives-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "Gradien sekan mendekati dua saat jarak mendekati nol.",
+          "result": "h = 0,1; gradien sekan = 2 + h = 2,1 → 2",
+          "svgFile": "visuals/advanced-derivatives-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 3,
+          "caption": "Garis singgung pada x sama dengan satu mempunyai gradien dua.",
+          "result": "h = 0,01; gradien sekan = 2 + h = 2,01 → 2",
+          "svgFile": "visuals/advanced-derivatives-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-derivative-applications-visual-v1",
+      "version": 1,
+      "topicId": "advanced-derivative-applications",
+      "title": "Garis singgung mengikuti titik",
+      "question": "Mengapa titik yang berbeda memberi gradien berbeda?",
+      "takeaway": "Untuk f(x) = x², garis singgung di a memiliki gradien dua a.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Titik singgung a",
+        "min": -2,
+        "max": 2,
+        "step": 0.5,
+        "initial": -1
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": -1,
+          "caption": "Pada parabola kuadrat, titik di kiri nol memiliki gradien negatif.",
+          "result": "a = -1; f′(a) = -2; garis y = (-2)x − 1",
+          "svgFile": "visuals/advanced-derivative-applications-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 0,
+          "caption": "Di puncak, garis singgung mendatar.",
+          "result": "a = 0; f′(a) = 0; garis y = (0)x − 0",
+          "svgFile": "visuals/advanced-derivative-applications-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 1,
+          "caption": "Di kanan nol, garis singgung menanjak.",
+          "result": "a = 1; f′(a) = 2; garis y = (2)x − 1",
+          "svgFile": "visuals/advanced-derivative-applications-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "caption": "Gunakan titik pada kurva dan gradien turunannya untuk menyusun persamaan garis.",
+          "result": "a = 2; f′(a) = 4; garis y = (4)x − 4",
+          "svgFile": "visuals/advanced-derivative-applications-visual-v1-step-4.svg"
+        }
+      ]
+    },
+    {
+      "id": "advanced-integrals-visual-v1",
+      "version": 1,
+      "topicId": "advanced-integrals",
+      "title": "Luas sebagai akumulasi",
+      "question": "Bagaimana luas bertambah ketika batas kanan bergerak?",
+      "takeaway": "Integral bertanda sama dengan luas geometris pada contoh positif ini; jika fungsi berubah tanda, bedakan keduanya.",
+      "interaction": "stage-selector",
+      "width": 640,
+      "height": 240,
+      "parameter": {
+        "label": "Batas kanan b",
+        "min": 0,
+        "max": 4,
+        "step": 0.5,
+        "initial": 0
+      },
+      "stages": [
+        {
+          "index": 0,
+          "value": 0,
+          "caption": "Pada batas nol, belum ada luas yang terkumpul.",
+          "result": "∫ dari 0 ke 0 atas x dx = 0²/2 = 0 satuan luas",
+          "svgFile": "visuals/advanced-integrals-visual-v1-step-1.svg"
+        },
+        {
+          "index": 1,
+          "value": 1,
+          "caption": "Di bawah y sama dengan x, daerahnya segitiga dengan alas dan tinggi sama.",
+          "result": "∫ dari 0 ke 1 atas x dx = 1²/2 = 0,5 satuan luas",
+          "svgFile": "visuals/advanced-integrals-visual-v1-step-2.svg"
+        },
+        {
+          "index": 2,
+          "value": 2,
+          "caption": "Pada batas dua, luasnya dua satuan persegi.",
+          "result": "∫ dari 0 ke 2 atas x dx = 2²/2 = 2 satuan luas",
+          "svgFile": "visuals/advanced-integrals-visual-v1-step-3.svg"
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "caption": "Pada batas empat, luasnya delapan. Fungsi di interval contoh tidak negatif.",
+          "result": "∫ dari 0 ke 4 atas x dx = 4²/2 = 8 satuan luas",
+          "svgFile": "visuals/advanced-integrals-visual-v1-step-4.svg"
+        }
+      ]
+    }
+  ]
+}

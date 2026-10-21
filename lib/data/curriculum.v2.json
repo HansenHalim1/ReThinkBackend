@@ -1,0 +1,3241 @@
+{
+  "schemaVersion": 2,
+  "contentVersion": "2026.10.21-v2",
+  "alignmentNote": "Topic-level mapping checked against the 2025 CP decision; grade placements are ReThink suggestions. Editorial pilot, not exhaustive CP coverage.",
+  "materials": [
+    {
+      "id": "x-exponents",
+      "grade": 10,
+      "title": "Eksponen dan logaritma",
+      "summary": "Dari perkalian berulang ke pangkat yang belum diketahui.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menggunakan aturan pangkat",
+        "Menghubungkan eksponen dengan logaritma"
+      ],
+      "explanation": [
+        "Eksponen menyatakan perkalian berulang: 2³ berarti 2 × 2 × 2. Ketika dua pangkat dengan basis sama dikalikan, banyaknya faktor dijumlahkan. Aturan ini berlaku untuk perkalian, bukan penjumlahan.",
+        "Logaritma membalik pertanyaan eksponen. Jika 2³ = 8, maka log₂ 8 = 3. Untuk logaritma real, basis harus positif dan bukan 1, serta bilangan yang dilogaritmakan harus positif.",
+        "Pangkat pecahan menyatakan akar: untuk a > 0, a^(m/n) = (akar pangkat n dari a)^m. Bedakan a^(−n) = 1/a^n dari −a^n; tanda kurung menentukan basisnya."
+      ],
+      "formulas": [
+        "aᵐ × aⁿ = aᵐ⁺ⁿ",
+        "(aᵐ)ⁿ = aᵐⁿ",
+        "logₐ b = c ⇔ aᶜ = b; a > 0, a ≠ 1, b > 0"
+      ],
+      "example": {
+        "problem": "Tentukan log₂ 32.",
+        "steps": [
+          "Ubah pertanyaan menjadi 2 pangkat berapa yang menghasilkan 32.",
+          "2 × 2 × 2 × 2 × 2 = 32.",
+          "Jadi log₂ 32 = 5."
+        ]
+      },
+      "quiz": {
+        "prompt": "Berapakah nilai 3² × 3³?",
+        "options": [
+          {
+            "id": "a",
+            "text": "3⁶"
+          },
+          {
+            "id": "b",
+            "text": "3⁵"
+          },
+          {
+            "id": "c",
+            "text": "6⁵"
+          },
+          {
+            "id": "d",
+            "text": "9⁶"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Basisnya sama, sehingga pangkat dijumlahkan: 3² × 3³ = 3²⁺³ = 3⁵."
+      },
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "distribution",
+        "inverse"
+      ],
+      "bankTopicIds": [
+        "e-exponents"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan 16^(3/4).",
+          "steps": [
+            "Akar pangkat empat dari 16 adalah 2.",
+            "Pangkatkan hasilnya tiga: 2³ = 8.",
+            "Jadi 16^(3/4) = 8; basis positif memenuhi syarat aturan."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan menjumlahkan pangkat pada penjumlahan seperti a² + a³."
+      ]
+    },
+    {
+      "id": "x-linear",
+      "grade": 10,
+      "title": "Sistem persamaan linear",
+      "summary": "Temukan satu solusi yang memenuhi beberapa persamaan.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menyelesaikan SPLDV dengan eliminasi",
+        "Memeriksa solusi pada kedua persamaan"
+      ],
+      "explanation": [
+        "Sistem persamaan meminta nilai variabel yang membuat semua persamaan benar sekaligus. Setiap persamaan dua variabel dapat dilihat sebagai garis; titik potongnya memenuhi keduanya.",
+        "Eliminasi menghilangkan satu variabel dengan menjumlahkan atau mengurangkan persamaan. Gunakan operasi yang menjaga kesetaraan, lalu substitusikan hasilnya untuk menemukan variabel lain. Untuk tiga variabel, lakukan eliminasi bertahap hingga tersisa sistem dua variabel.",
+        "Materi SPLDV ini adalah penguat prasyarat. Sistem pertidaksamaan dua variabel dipelajari pada materi tersendiri: hasilnya daerah, bukan hanya satu titik. Periksa setiap solusi pada semua persamaan asal."
+      ],
+      "formulas": [
+        "ax + by = c",
+        "Solusi (x, y) harus memenuhi setiap persamaan"
+      ],
+      "example": {
+        "problem": "Selesaikan x + y = 7 dan x − y = 1.",
+        "steps": [
+          "Jumlahkan kedua persamaan: 2x = 8.",
+          "Bagi kedua sisi dengan 2: x = 4.",
+          "Substitusikan: 4 + y = 7, jadi y = 3. Periksa: 4 − 3 = 1."
+        ]
+      },
+      "quiz": {
+        "prompt": "Jika x + y = 9 dan x − y = 3, berapakah x?",
+        "options": [
+          {
+            "id": "a",
+            "text": "3"
+          },
+          {
+            "id": "b",
+            "text": "4"
+          },
+          {
+            "id": "c",
+            "text": "6"
+          },
+          {
+            "id": "d",
+            "text": "12"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Jumlahkan kedua persamaan: 2x = 12. Jadi x = 6 dan y = 3."
+      },
+      "track": "general",
+      "phase": "prerequisite",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "inverse"
+      ],
+      "bankTopicIds": [],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": null,
+        "section": "ReThink prerequisite support",
+        "kind": "prerequisite-support",
+        "verification": "topic-level"
+      },
+      "additionalExamples": [
+        {
+          "problem": "Selesaikan 2x + y = 8 dan x + y = 5.",
+          "steps": [
+            "Kurangi persamaan kedua dari yang pertama: x = 3.",
+            "Substitusikan ke x + y = 5 sehingga y = 2.",
+            "Periksa: 2(3) + 2 = 8 dan 3 + 2 = 5."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Melakukan operasi hanya pada satu ruas merusak kesetaraan."
+      ]
+    },
+    {
+      "id": "x-inequalities",
+      "grade": 10,
+      "title": "Sistem pertidaksamaan linear dua variabel",
+      "summary": "Temukan daerah yang memenuhi beberapa batas sekaligus.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "e-inequalities"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "objectives": [
+        "Menggambar garis batas dan memilih sisi yang memenuhi",
+        "Memeriksa irisan daerah solusi"
+      ],
+      "explanation": [
+        "Pertidaksamaan linear dua variabel menggambarkan setengah bidang. Garis ax + by = c menjadi batas; tanda ≤ atau ≥ menyertakan garis, sedangkan < atau > tidak menyertakannya.",
+        "Uji titik yang tidak terletak pada garis untuk menentukan sisi yang benar. Solusi sistem adalah irisan semua daerah, termasuk syarat konteks seperti x ≥ 0 dan y ≥ 0.",
+        "Berbeda dari SPLDV, solusi tidak harus satu titik. Periksa pasangan pada setiap pertidaksamaan; memenuhi salah satu saja belum cukup."
+      ],
+      "formulas": [
+        "ax + by ≤ c",
+        "Solusi sistem = irisan daerah tiap pertidaksamaan"
+      ],
+      "example": {
+        "problem": "Tentukan apakah (2, 3) memenuhi x + y ≤ 6, x ≥ 0, y ≥ 0.",
+        "steps": [
+          "Hitung x + y = 2 + 3 = 5.",
+          "5 ≤ 6 benar, dan kedua koordinat tidak negatif.",
+          "Jadi (2, 3) berada di daerah solusi."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Apakah titik (2, 3) termasuk solusi x + y < 5?",
+          "steps": [
+            "Jumlah koordinatnya 5.",
+            "Tanda < tidak menyertakan garis batas x + y = 5.",
+            "Jadi titik tersebut tidak termasuk solusi."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Garis putus-putus untuk tanda ketat; jangan memasukkan titik batas."
+      ],
+      "quiz": {
+        "prompt": "Pasangan mana memenuhi x + y ≤ 5, x ≥ 0, dan y ≥ 0?",
+        "options": [
+          {
+            "id": "a",
+            "text": "(4, 3)"
+          },
+          {
+            "id": "b",
+            "text": "(−1, 2)"
+          },
+          {
+            "id": "c",
+            "text": "(2, 2)"
+          },
+          {
+            "id": "d",
+            "text": "(2, −1)"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "(2,2) tidak negatif dan jumlahnya 4 ≤ 5. Pilihan lain melanggar setidaknya satu syarat."
+      }
+    },
+    {
+      "id": "x-quadratic",
+      "grade": 10,
+      "title": "Persamaan dan fungsi kuadrat",
+      "summary": "Kenali akar, parabola, dan titik balik.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menentukan akar persamaan kuadrat",
+        "Menghubungkan akar dengan grafik fungsi"
+      ],
+      "explanation": [
+        "Persamaan kuadrat memiliki pangkat variabel tertinggi dua. Akarnya adalah nilai x yang membuat bentuk kuadrat bernilai nol. Jika bentuknya dapat difaktorkan, gunakan sifat hasil kali nol: setidaknya satu faktor bernilai nol.",
+        "Grafik y = ax² + bx + c berupa parabola. Untuk a > 0 grafik terbuka ke atas; untuk a < 0 terbuka ke bawah. Diskriminan memberi tahu banyaknya akar real, sedangkan sumbu simetri melewati titik balik.",
+        "Diskriminan D = b² − 4ac menentukan jenis akar. Untuk koefisien real: D > 0 memberi dua akar real berbeda, D = 0 memberi akar real kembar, dan D < 0 memberi dua akar kompleks konjugat. Definisikan i² = −1; x² + 1 = 0 mempunyai akar x = i dan x = −i."
+      ],
+      "formulas": [
+        "ax² + bx + c = 0; a ≠ 0",
+        "D = b² − 4ac",
+        "x = (−b ± √D) / (2a)",
+        "Sumbu simetri: x = −b / (2a)",
+        "D = b² − 4ac; i² = −1",
+        "x = (−b ± √D)/(2a), a ≠ 0; untuk D < 0 gunakan akar kompleks"
+      ],
+      "example": {
+        "problem": "Cari akar x² − 5x + 6 = 0.",
+        "steps": [
+          "Cari dua bilangan yang hasil kalinya 6 dan jumlahnya −5: −2 dan −3.",
+          "Faktorkan: (x − 2)(x − 3) = 0.",
+          "Jadi x = 2 atau x = 3. Keduanya membuat fungsi bernilai nol."
+        ]
+      },
+      "quiz": {
+        "prompt": "Apa akar-akar dari x² − 7x + 12 = 0?",
+        "options": [
+          {
+            "id": "a",
+            "text": "2 dan 6"
+          },
+          {
+            "id": "b",
+            "text": "−3 dan −4"
+          },
+          {
+            "id": "c",
+            "text": "1 dan 12"
+          },
+          {
+            "id": "d",
+            "text": "3 dan 4"
+          }
+        ],
+        "correctOption": "d",
+        "explanation": "x² − 7x + 12 = (x − 3)(x − 4), sehingga akarnya 3 dan 4."
+      },
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "distribution",
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "e-quadratic-roots",
+        "e-quadratic-graphs"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan akar x² − 2x + 5 = 0.",
+          "steps": [
+            "a = 1, b = −2, c = 5 sehingga D = 4 − 20 = −16.",
+            "Gunakan akar D = 4i pada rumus kuadrat: x = (2 ± 4i)/2.",
+            "Diperoleh x = 1 ± 2i; grafik real tidak memotong sumbu x."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "D < 0 berarti tidak ada akar real, bukan tidak ada akar sama sekali."
+      ]
+    },
+    {
+      "id": "x-exponential-functions",
+      "grade": 10,
+      "title": "Persamaan dan fungsi eksponensial",
+      "summary": "Hubungkan perubahan berlipat dengan persamaan dan grafik.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-exponents"
+      ],
+      "bankTopicIds": [
+        "e-exponential-functions"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "objectives": [
+        "Menyelesaikan persamaan dengan basis sama",
+        "Menafsirkan faktor pertumbuhan dan peluruhan"
+      ],
+      "explanation": [
+        "Fungsi eksponensial real berbentuk f(x) = A bˣ dengan A > 0 dan b > 0, b ≠ 1. Variabel berada pada pangkat. Untuk b > 1 fungsi tumbuh, sedangkan 0 < b < 1 memberi peluruhan.",
+        "Jika bᵘ = bᵛ dengan basis positif bukan 1, maka u = v. Ubah kedua ruas ke basis yang sama bila memungkinkan; logaritma membantu ketika basis tidak mudah disamakan.",
+        "Faktor 1,2 berarti bertambah 20% tiap periode, bukan bertambah 1,2 unit. Model perlu menyebut satuan waktu dan mengasumsikan faktor tetap."
+      ],
+      "formulas": [
+        "bᵘ = bᵛ ⇒ u = v; b > 0, b ≠ 1",
+        "N(t) = N₀(1 + r)ᵗ"
+      ],
+      "example": {
+        "problem": "Selesaikan 2^(x+1) = 16.",
+        "steps": [
+          "Tulis 16 = 2⁴.",
+          "Samakan pangkat: x + 1 = 4.",
+          "Maka x = 3; substitusi menghasilkan 2⁴ = 16."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Model M(t) = 200(0,9)ᵗ. Berapa M(2)?",
+          "steps": [
+            "Faktor 0,9 berarti tersisa 90% tiap periode.",
+            "M(2) = 200 × 0,9² = 200 × 0,81.",
+            "Nilai M(2) = 162."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Bedakan pertumbuhan dengan faktor tetap dari kenaikan dengan selisih tetap."
+      ],
+      "quiz": {
+        "prompt": "Jika N(t) = 100 × 2ᵗ, berapa N(3)?",
+        "options": [
+          {
+            "id": "a",
+            "text": "300"
+          },
+          {
+            "id": "b",
+            "text": "600"
+          },
+          {
+            "id": "c",
+            "text": "800"
+          },
+          {
+            "id": "d",
+            "text": "1600"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "N(3) = 100 × 2³ = 800."
+      }
+    },
+    {
+      "id": "x-trigonometry",
+      "grade": 10,
+      "title": "Perbandingan trigonometri",
+      "summary": "Hubungkan sudut dengan perbandingan sisi segitiga.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan sisi depan, samping, dan miring",
+        "Menggunakan sinus, kosinus, dan tangen"
+      ],
+      "explanation": [
+        "Pada segitiga siku-siku, sisi miring berhadapan dengan sudut siku-siku. Sisi depan dan samping ditentukan terhadap sudut yang sedang dibahas. Jika sudut acuannya berubah, nama kedua sisi itu dapat bertukar.",
+        "Sinus, kosinus, dan tangen adalah perbandingan sisi. Segitiga dengan sudut sama memiliki perbandingan yang sama walaupun ukurannya berbeda. Gunakan satuan sudut yang konsisten saat memakai kalkulator.",
+        "Rasio sinus, kosinus, dan tangen di sini memakai segitiga siku-siku dengan sudut lancip. Sebutkan sudut acuan sebelum menamai sisi depan dan samping. Perluasan ke sudut umum dan radian ada di jalur tingkat lanjut."
+      ],
+      "formulas": [
+        "sin θ = depan / miring",
+        "cos θ = samping / miring",
+        "tan θ = depan / samping"
+      ],
+      "example": {
+        "problem": "Sebuah segitiga siku-siku memiliki sisi depan 3, samping 4, dan miring 5 terhadap sudut θ. Tentukan sin θ.",
+        "steps": [
+          "Pilih dua sisi untuk sinus: depan dan miring.",
+          "Substitusikan panjangnya: sin θ = 3 / 5.",
+          "Panjang sisi samping tidak dipakai pada perbandingan sinus."
+        ]
+      },
+      "quiz": {
+        "prompt": "Sisi depan sudut θ adalah 6 dan sisi sampingnya 8. Berapa tan θ?",
+        "options": [
+          {
+            "id": "a",
+            "text": "3/4"
+          },
+          {
+            "id": "b",
+            "text": "4/3"
+          },
+          {
+            "id": "c",
+            "text": "3/5"
+          },
+          {
+            "id": "d",
+            "text": "4/5"
+          }
+        ],
+        "correctOption": "a",
+        "explanation": "Tangen membandingkan sisi depan dengan samping: 6/8 = 3/4."
+      },
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "e-trigonometry"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.3",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Segitiga siku-siku mempunyai sisi depan 3 dan miring 5. Tentukan sin θ dan cos θ.",
+          "steps": [
+            "Sisi samping = √(5² − 3²) = 4.",
+            "sin θ = depan/miring = 3/5.",
+            "cos θ = samping/miring = 4/5; periksa jumlah kuadrat kedua rasio sama dengan 1."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Sisi depan dan samping berubah ketika sudut acuannya berubah."
+      ]
+    },
+    {
+      "id": "x-statistics",
+      "grade": 10,
+      "title": "Statistika dan penyajian data",
+      "summary": "Baca sebaran data, bukan hanya satu angka rata-rata.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menghitung mean dan median",
+        "Membaca ukuran penyebaran sederhana"
+      ],
+      "explanation": [
+        "Mean membagi jumlah semua nilai dengan banyaknya data. Median adalah nilai tengah setelah data diurutkan. Untuk banyak data genap, median adalah rata-rata dua nilai tengah. Modus adalah nilai yang paling sering muncul.",
+        "Ukuran pusat perlu dibaca bersama sebaran data. Jangkauan adalah selisih nilai terbesar dan terkecil. Nilai yang sangat ekstrem dapat menggeser mean, sehingga median kadang lebih mewakili pusat data.",
+        "Pilih diagram sesuai jenis data: batang untuk kategori, histogram untuk data numerik berinterval, dan box plot untuk ringkasan sebaran. Periksa satuan, ukuran sampel, dan sumbu terpotong sebelum menerima kesimpulan. Mean saja tidak menggambarkan keseluruhan sebaran.",
+        "Dot plot mempertahankan nilai pengamatan dan pengulangannya; histogram mengelompokkan nilai pada interval. Tabel data dapat ditulis sebagai matriks dengan baris pengamatan dan kolom variabel, tetapi angka kategori tidak otomatis boleh dirata-ratakan."
+      ],
+      "formulas": [
+        "Mean = jumlah nilai / banyak data",
+        "Jangkauan = maksimum − minimum"
+      ],
+      "example": {
+        "problem": "Tentukan median data 8, 2, 6, 4, 10.",
+        "steps": [
+          "Urutkan data: 2, 4, 6, 8, 10.",
+          "Ada lima nilai, sehingga median berada pada urutan ketiga.",
+          "Median = 6; mean juga 30/5 = 6 pada contoh ini."
+        ]
+      },
+      "quiz": {
+        "prompt": "Berapa mean dari data 4, 6, 8, dan 10?",
+        "options": [
+          {
+            "id": "a",
+            "text": "6"
+          },
+          {
+            "id": "b",
+            "text": "8"
+          },
+          {
+            "id": "c",
+            "text": "7"
+          },
+          {
+            "id": "d",
+            "text": "28"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Jumlah data adalah 28, banyak data 4. Mean = 28/4 = 7."
+      },
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [],
+      "bankTopicIds": [
+        "e-data-displays"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Dua batang bernilai 98 dan 100 ditampilkan pada sumbu vertikal mulai 97. Apakah yang kedua dua kali lebih besar?",
+          "steps": [
+            "Nilai aslinya adalah 98 dan 100, bukan tinggi relatif terhadap 97.",
+            "Rasio nilai = 100/98 ≈ 1,02.",
+            "Kesimpulan dua kali lebih besar menyesatkan; bedakan selisih 2 dari rasio sekitar 1,02."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Tinggi batang pada sumbu terpotong tidak boleh langsung dipakai untuk membandingkan rasio."
+      ]
+    },
+    {
+      "id": "x-quartiles",
+      "grade": 10,
+      "title": "Kuartil, IQR, dan box plot",
+      "summary": "Baca pusat, penyebaran, dan calon pencilan pada data.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-statistics"
+      ],
+      "bankTopicIds": [
+        "e-quartiles"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "objectives": [
+        "Menentukan kuartil dengan konvensi yang dinyatakan",
+        "Menafsirkan IQR dan calon pencilan"
+      ],
+      "explanation": [
+        "Urutkan data sebelum menghitung median dan kuartil. Pada materi ini, Q₁ dan Q₃ adalah median separuh bawah dan atas; untuk banyak data ganjil, median keseluruhan tidak disertakan pada kedua separuh.",
+        "Jangkauan interkuartil IQR = Q₃ − Q₁ mengukur lebar 50% data tengah. Box plot menampilkan ringkasan lima angka; aturan whisker harus dijelaskan karena tidak semua diagram memakai konvensi sama.",
+        "Aturan 1,5 IQR menandai calon pencilan, bukan otomatis data salah. Perangkat lunak dapat memakai konvensi kuartil berbeda; sebutkan metode sebelum membandingkan hasil."
+      ],
+      "formulas": [
+        "IQR = Q₃ − Q₁",
+        "Batas calon pencilan: Q₁ − 1,5 IQR dan Q₃ + 1,5 IQR"
+      ],
+      "example": {
+        "problem": "Tentukan Q₁, Q₃, dan IQR data 2, 4, 6, 8, 10, 12, 14, 16.",
+        "steps": [
+          "Separuh bawah 2,4,6,8 memiliki median Q₁ = 5.",
+          "Separuh atas 10,12,14,16 memiliki median Q₃ = 13.",
+          "IQR = 13 − 5 = 8."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Q₁ = 4, Q₃ = 10. Apakah nilai 21 calon pencilan atas?",
+          "steps": [
+            "IQR = 6.",
+            "Batas atas = 10 + 1,5(6) = 19.",
+            "21 > 19, jadi ditandai sebagai calon pencilan."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan mencampur metode kuartil atau menghapus pencilan tanpa memeriksa konteks."
+      ],
+      "quiz": {
+        "prompt": "Jika Q₁ = 4 dan Q₃ = 10, berapa IQR?",
+        "options": [
+          {
+            "id": "a",
+            "text": "4"
+          },
+          {
+            "id": "b",
+            "text": "6"
+          },
+          {
+            "id": "c",
+            "text": "7"
+          },
+          {
+            "id": "d",
+            "text": "14"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "IQR = Q₃ − Q₁ = 10 − 4 = 6."
+      }
+    },
+    {
+      "id": "x-scatterplots",
+      "grade": 10,
+      "title": "Diagram pencar dan hubungan numerik",
+      "summary": "Amati arah, bentuk, dan kekuatan hubungan dua variabel.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "E",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-linear",
+        "x-statistics"
+      ],
+      "bankTopicIds": [
+        "e-scatterplots"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "5.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          118,
+          119
+        ]
+      },
+      "objectives": [
+        "Membaca pasangan data pada diagram pencar",
+        "Membedakan arah hubungan dan klaim sebab-akibat"
+      ],
+      "explanation": [
+        "Setiap titik diagram pencar adalah satu pasangan pengamatan (x,y), bukan dua pengamatan terpisah. Pertahankan pasangan saat mengurutkan atau memindahkan data.",
+        "Arah positif berarti y cenderung meningkat ketika x meningkat. Amati juga kelengkungan, pencilan, dan variasi di sekitar pola; hubungan kuat tidak selalu linear.",
+        "Diagram pencar menunjukkan asosiasi. Klaim bahwa x menyebabkan y memerlukan bukti desain studi dan pertimbangan variabel lain; garis tren saja tidak cukup."
+      ],
+      "formulas": [
+        "Titik data: (xᵢ, yᵢ)",
+        "Arah positif: x naik, y cenderung naik"
+      ],
+      "example": {
+        "problem": "Data pasangan (1,2), (2,4), (3,6), (4,8). Jelaskan polanya.",
+        "steps": [
+          "Setiap pasangan memenuhi y = 2x.",
+          "Titik membentuk garis naik tanpa penyimpangan pada data contoh ini.",
+          "Ada hubungan linear positif; data saja tidak membuktikan sebab-akibat."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Penjualan es krim dan kasus kepanasan sama-sama naik. Apa batas kesimpulannya?",
+          "steps": [
+            "Kedua variabel tampak berasosiasi.",
+            "Cuaca panas dapat memengaruhi keduanya sebagai variabel perancu.",
+            "Jangan menyimpulkan es krim menyebabkan kepanasan hanya dari asosiasi."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Korelasi nol tidak selalu berarti tidak ada hubungan; pola bisa melengkung."
+      ],
+      "quiz": {
+        "prompt": "Pada diagram pencar, titik cenderung turun dari kiri ke kanan. Hubungannya adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "Positif"
+          },
+          {
+            "id": "b",
+            "text": "Negatif"
+          },
+          {
+            "id": "c",
+            "text": "Pasti sebab-akibat"
+          },
+          {
+            "id": "d",
+            "text": "Selalu tidak berhubungan"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Pola turun menunjukkan asosiasi negatif: y cenderung lebih kecil ketika x lebih besar."
+      }
+    },
+    {
+      "id": "x-probability",
+      "grade": 10,
+      "title": "Peluang dasar",
+      "summary": "Bedakan semua kemungkinan dengan kejadian yang dicari.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menyusun ruang sampel sederhana",
+        "Menghitung peluang pada hasil yang sama mungkin"
+      ],
+      "explanation": [
+        "Ruang sampel memuat semua hasil yang mungkin. Kejadian adalah kumpulan hasil yang memenuhi syarat tertentu. Untuk hasil yang sama mungkin, peluang diperoleh dari banyak hasil yang diinginkan dibagi banyak seluruh hasil.",
+        "Nilai peluang berada antara 0 dan 1. Peluang 0 menyatakan kejadian mustahil, sedangkan 1 menyatakan kejadian pasti. Komplemen kejadian A adalah semua hasil yang tidak termasuk A.",
+        "Peluang dasar ini adalah penguat prasyarat untuk Fase F. Rumus banyak kejadian dibagi banyak hasil hanya berlaku bila hasil elementer sama mungkin. Peluang empiris mendekati model melalui banyak percobaan, tetapi sampel kecil dapat menyimpang."
+      ],
+      "formulas": [
+        "P(A) = n(A) / n(S), untuk hasil yang sama mungkin",
+        "P(bukan A) = 1 − P(A)"
+      ],
+      "example": {
+        "problem": "Dadu adil dilempar sekali. Berapa peluang mendapat bilangan genap?",
+        "steps": [
+          "Ruang sampel: 1, 2, 3, 4, 5, 6.",
+          "Bilangan genap: 2, 4, 6, sebanyak tiga hasil.",
+          "P(genap) = 3/6 = 1/2."
+        ]
+      },
+      "quiz": {
+        "prompt": "Pada satu lemparan dadu adil, berapa peluang mendapat angka lebih dari 4?",
+        "options": [
+          {
+            "id": "a",
+            "text": "1/6"
+          },
+          {
+            "id": "b",
+            "text": "1/3"
+          },
+          {
+            "id": "c",
+            "text": "1/2"
+          },
+          {
+            "id": "d",
+            "text": "2/3"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Angka yang memenuhi adalah 5 dan 6, jadi peluangnya 2/6 = 1/3."
+      },
+      "track": "general",
+      "phase": "prerequisite",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-statistics"
+      ],
+      "bankTopicIds": [],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": null,
+        "section": "ReThink prerequisite support",
+        "kind": "prerequisite-support",
+        "verification": "topic-level"
+      },
+      "additionalExamples": [
+        {
+          "problem": "Dadu adil dilempar. Tentukan peluang muncul bilangan prima.",
+          "steps": [
+            "Ruang sampel: 1, 2, 3, 4, 5, 6.",
+            "Bilangan prima yang mungkin: 2, 3, 5, ada tiga hasil.",
+            "Peluang = 3/6 = 1/2; angka 1 bukan bilangan prima."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Tidak semua hasil dapat diasumsikan sama mungkin tanpa model percobaan yang jelas."
+      ]
+    },
+    {
+      "id": "xi-functions",
+      "grade": 11,
+      "title": "Fungsi dan domain",
+      "summary": "Pahami aturan yang memasangkan setiap masukan ke satu keluaran.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menghitung nilai fungsi",
+        "Menentukan batasan domain sederhana"
+      ],
+      "explanation": [
+        "Fungsi memasangkan setiap anggota domain dengan tepat satu keluaran. Notasi f(x) menyatakan nilai keluaran saat masukannya x; f(x) bukan berarti f dikalikan x.",
+        "Domain adalah himpunan masukan yang diizinkan. Pada fungsi pecahan, penyebut tidak boleh nol. Pada akar kuadrat dalam bilangan real, bagian di dalam akar harus tidak negatif. Periksa batasan ini sebelum menghitung.",
+        "Domain dibatasi oleh aturan dan konteks. Untuk fungsi real, penyebut tidak nol dan bilangan di dalam akar kuadrat tidak negatif. Kodomain adalah himpunan tujuan yang dinyatakan; range adalah keluaran yang benar-benar tercapai."
+      ],
+      "formulas": [
+        "f(x) = 2x + 3 ⇒ f(a) = 2a + 3",
+        "f(x) = 1/(x − a) ⇒ x ≠ a"
+      ],
+      "example": {
+        "problem": "Jika f(x) = 2x + 3, tentukan f(4).",
+        "steps": [
+          "Ganti setiap x dengan 4.",
+          "Hitung 2 × 4 + 3.",
+          "Diperoleh f(4) = 11."
+        ]
+      },
+      "quiz": {
+        "prompt": "Nilai mana yang harus dikeluarkan dari domain f(x) = 1/(x − 2)?",
+        "options": [
+          {
+            "id": "a",
+            "text": "0"
+          },
+          {
+            "id": "b",
+            "text": "−2"
+          },
+          {
+            "id": "c",
+            "text": "1"
+          },
+          {
+            "id": "d",
+            "text": "2"
+          }
+        ],
+        "correctOption": "d",
+        "explanation": "Untuk x = 2, penyebut menjadi nol. Maka domainnya semua bilangan real kecuali 2."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "g-functions"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan domain real f(x) = √(x − 2).",
+          "steps": [
+            "Syarat akar kuadrat real: x − 2 ≥ 0.",
+            "Selesaikan menjadi x ≥ 2.",
+            "Domain adalah [2, ∞); 2 termasuk karena √0 terdefinisi."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan menyamakan kodomain yang dinyatakan dengan range tanpa memeriksa fungsi."
+      ]
+    },
+    {
+      "id": "xi-composition",
+      "grade": 11,
+      "title": "Komposisi dan invers fungsi",
+      "summary": "Rangkai dua aturan, lalu telusuri kembali arahnya.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menentukan urutan komposisi fungsi",
+        "Menemukan invers fungsi linear"
+      ],
+      "explanation": [
+        "Komposisi menjalankan satu fungsi lalu memasukkan hasilnya ke fungsi lain. Pada (f ∘ g)(x), kerjakan g terlebih dahulu. Urutan penting: f ∘ g umumnya berbeda dari g ∘ f.",
+        "Fungsi invers mengembalikan keluaran ke masukan semula. Suatu fungsi memiliki invers pada domain yang membuatnya satu-satu. Untuk mencari invers fungsi linear, tulis y = f(x), selesaikan x dalam y, lalu tukar nama variabel.",
+        "Komposisi mengikuti urutan operasi dan syarat domain. Agar (f ∘ g)(x) terdefinisi, x harus berada pada domain g dan g(x) harus berada pada domain f. Materi invers fungsi terpisah membahas kapan urutan dapat dibalik."
+      ],
+      "formulas": [
+        "(f ∘ g)(x) = f(g(x))",
+        "f(x) = ax + b ⇒ f⁻¹(x) = (x − b)/a; a ≠ 0"
+      ],
+      "example": {
+        "problem": "Jika f(x) = 2x dan g(x) = x + 3, tentukan (f ∘ g)(4).",
+        "steps": [
+          "Hitung g(4) = 4 + 3 = 7.",
+          "Masukkan hasilnya ke f: f(7) = 2 × 7.",
+          "Jadi (f ∘ g)(4) = 14."
+        ]
+      },
+      "quiz": {
+        "prompt": "Jika f(x) = 3x − 6, berapakah f⁻¹(9)?",
+        "options": [
+          {
+            "id": "a",
+            "text": "1"
+          },
+          {
+            "id": "b",
+            "text": "5"
+          },
+          {
+            "id": "c",
+            "text": "9"
+          },
+          {
+            "id": "d",
+            "text": "21"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Selesaikan 3x − 6 = 9: 3x = 15 dan x = 5. Invers mengembalikan 9 ke masukan 5."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xi-functions",
+        "inverse"
+      ],
+      "bankTopicIds": [
+        "g-composition"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "f(x) = √x dan g(x) = x − 3. Tentukan (f ∘ g)(x) dan domainnya.",
+          "steps": [
+            "Masukkan g(x) ke f: (f ∘ g)(x) = √(x − 3).",
+            "Akar real memerlukan x − 3 ≥ 0.",
+            "Domain komposisi adalah x ≥ 3, bukan seluruh domain g."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "f(g(x)) umumnya berbeda dari g(f(x)); domain juga perlu diperiksa."
+      ]
+    },
+    {
+      "id": "xi-inverse-functions",
+      "grade": 11,
+      "title": "Invers fungsi dan pembatasan domain",
+      "summary": "Balikkan pemetaan dengan memastikan keluarannya tidak ambigu.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xi-functions",
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "g-inverse-functions"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "objectives": [
+        "Menentukan invers fungsi linear",
+        "Membatasi domain agar fungsi satu-ke-satu"
+      ],
+      "explanation": [
+        "Invers fungsi mengembalikan keluaran ke masukan. Agar invers menjadi fungsi pada range asal, setiap keluaran harus berasal dari tepat satu masukan: fungsi asal perlu satu-ke-satu.",
+        "Untuk mencari rumus invers, tulis y = f(x), selesaikan x dalam y, lalu nyatakan kembali dengan variabel masukan yang dipilih. Domain dan range saling bertukar.",
+        "f(x) = x² tidak satu-ke-satu pada seluruh bilangan real. Pada domain x ≥ 0, inversnya √x dengan domain masukan ≥ 0. Notasi f⁻¹ berbeda dari 1/f."
+      ],
+      "formulas": [
+        "f⁻¹(f(x)) = x pada domain f",
+        "Jika f(x) = ax + b, a ≠ 0, maka f⁻¹(x) = (x − b)/a"
+      ],
+      "example": {
+        "problem": "Tentukan invers f(x) = 3x − 6 pada bilangan real.",
+        "steps": [
+          "Tulis y = 3x − 6.",
+          "Selesaikan x = (y + 6)/3.",
+          "Jadi f⁻¹(x) = (x + 6)/3; komposisinya mengembalikan x."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Pada domain x ≤ 0, apa invers f(x) = x²?",
+          "steps": [
+            "Keluaran f adalah y ≥ 0.",
+            "Cabang masukan yang diizinkan adalah x = −√y.",
+            "Jadi f⁻¹(y) = −√y, bukan akar positif."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Rumus invers tanpa domain dapat menghasilkan dua kemungkinan dan bukan fungsi."
+      ],
+      "quiz": {
+        "prompt": "Invers f(x) = 2x + 5 adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "2x − 5"
+          },
+          {
+            "id": "b",
+            "text": "(x + 5)/2"
+          },
+          {
+            "id": "c",
+            "text": "(x − 5)/2"
+          },
+          {
+            "id": "d",
+            "text": "1/(2x + 5)"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Dari y = 2x + 5 diperoleh x = (y − 5)/2, sehingga f⁻¹(x) = (x − 5)/2."
+      }
+    },
+    {
+      "id": "xi-transformations",
+      "grade": 11,
+      "title": "Transformasi grafik fungsi",
+      "summary": "Lihat bagaimana pergeseran mengubah grafik.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan translasi horizontal dan vertikal",
+        "Mengenali refleksi grafik"
+      ],
+      "explanation": [
+        "Menambahkan konstanta di luar fungsi menggeser seluruh keluaran. Grafik y = f(x) + k bergeser ke atas k satuan jika k positif. Mengubah masukan memiliki arah berbeda: y = f(x − h) bergeser ke kanan h satuan.",
+        "Tanda minus di luar fungsi mencerminkan grafik terhadap sumbu x. Tanda minus pada masukan mencerminkan terhadap sumbu y. Menelusuri satu titik yang sudah dikenal membantu memeriksa arah transformasi.",
+        "Transformasi di luar fungsi mengubah keluaran, sedangkan perubahan di dalam argumen mengubah masukan. Pada y = a f(b(x − h)) + k dengan b ≠ 0, titik (u, v) berpindah menjadi (u/b + h, av + k)."
+      ],
+      "formulas": [
+        "y = f(x − h) + k: geser (h, k)",
+        "y = −f(x): refleksi terhadap sumbu x",
+        "y = f(−x): refleksi terhadap sumbu y"
+      ],
+      "example": {
+        "problem": "Dari y = x² menjadi y = (x − 2)² + 3, ke mana titik puncaknya berpindah?",
+        "steps": [
+          "Puncak awal adalah (0, 0).",
+          "Bentuk x − 2 menggeser grafik dua satuan ke kanan.",
+          "Tambahan +3 menggesernya tiga satuan ke atas. Puncak baru (2, 3)."
+        ]
+      },
+      "quiz": {
+        "prompt": "Grafik y = f(x) − 4 adalah grafik awal yang digeser…",
+        "options": [
+          {
+            "id": "a",
+            "text": "4 satuan ke kiri"
+          },
+          {
+            "id": "b",
+            "text": "4 satuan ke kanan"
+          },
+          {
+            "id": "c",
+            "text": "4 satuan ke bawah"
+          },
+          {
+            "id": "d",
+            "text": "4 satuan ke atas"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Pengurangan 4 terjadi pada nilai keluaran, sehingga setiap titik bergeser 4 satuan ke bawah."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xi-functions",
+        "x-quadratic"
+      ],
+      "bankTopicIds": [
+        "g-transformations"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Grafik y = x² digeser 2 ke kanan dan 3 ke atas. Tentukan persamaannya.",
+          "steps": [
+            "Pergeseran ke kanan mengganti x dengan x − 2.",
+            "Pergeseran ke atas menambahkan 3 pada keluaran.",
+            "Persamaan baru y = (x − 2)² + 3, dengan puncak (2, 3)."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "f(x − h) bergeser ke kanan untuk h positif; tanda di dalam argumen sering tertukar."
+      ]
+    },
+    {
+      "id": "xi-circles",
+      "grade": 11,
+      "title": "Lingkaran, busur, dan juring",
+      "summary": "Hubungkan sudut pusat dengan bagian lingkaran.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menghitung panjang busur dan luas juring",
+        "Menghubungkan sudut pusat dan sudut keliling"
+      ],
+      "explanation": [
+        "Busur adalah bagian keliling lingkaran; juring adalah daerah yang dibatasi dua jari-jari dan sebuah busur. Jika sudut pusatnya θ derajat, bagian yang diambil adalah θ/360 dari lingkaran penuh.",
+        "Sudut keliling yang menghadap busur sama besarnya setengah sudut pusat. Pastikan busur yang dibandingkan benar-benar sama. Panjang busur memiliki satuan panjang, sedangkan luas juring memiliki satuan luas.",
+        "Selain busur dan juring, perhatikan hubungan sudut dan tali busur. Sudut keliling yang menghadap busur sama besarnya setengah sudut pusatnya. Pada segiempat siklik, jumlah sudut berhadapan adalah 180°."
+      ],
+      "formulas": [
+        "Panjang busur = (θ/360°) × 2πr",
+        "Luas juring = (θ/360°) × πr²",
+        "Sudut pusat = 2 × sudut keliling pada busur sama",
+        "Sudut keliling = ½ sudut pusat pada busur yang sama",
+        "Sudut berhadapan segiempat siklik berjumlah 180°"
+      ],
+      "example": {
+        "problem": "Tentukan luas juring dengan sudut pusat 90° dan jari-jari 4 cm.",
+        "steps": [
+          "Bagian lingkaran = 90/360 = 1/4.",
+          "Luas lingkaran penuh = π × 4² = 16π cm².",
+          "Luas juring = 1/4 × 16π = 4π cm²."
+        ]
+      },
+      "quiz": {
+        "prompt": "Sudut pusat yang menghadap suatu busur adalah 100°. Berapa sudut keliling pada busur yang sama?",
+        "options": [
+          {
+            "id": "a",
+            "text": "25°"
+          },
+          {
+            "id": "b",
+            "text": "50°"
+          },
+          {
+            "id": "c",
+            "text": "100°"
+          },
+          {
+            "id": "d",
+            "text": "200°"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Sudut keliling besarnya setengah sudut pusat: 100°/2 = 50°."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-trigonometry"
+      ],
+      "bankTopicIds": [
+        "g-circles"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.3",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Sudut pusat AOB sebesar 100°. Berapa sudut keliling ACB yang menghadap busur kecil AB yang sama?",
+          "steps": [
+            "Pastikan C berada pada busur lainnya sehingga menghadap busur kecil AB.",
+            "Sudut keliling pada busur sama adalah setengah sudut pusat.",
+            "Sudut ACB = 100°/2 = 50°."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Sudut pusat dan keliling harus menghadap busur yang sama sebelum memakai hubungan setengah."
+      ]
+    },
+    {
+      "id": "xi-bivariate",
+      "grade": 11,
+      "title": "Statistika bivariat dan korelasi",
+      "summary": "Baca hubungan dua variabel melalui diagram pencar.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Mengenali arah hubungan dua variabel",
+        "Membedakan korelasi dan sebab akibat",
+        "Membedakan asosiasi dari sebab-akibat",
+        "Membandingkan proporsi bersyarat data kategorikal"
+      ],
+      "explanation": [
+        "Data bivariat mencatat dua variabel pada setiap objek, misalnya waktu belajar dan nilai tes. Diagram pencar menampilkan setiap pasangan sebagai satu titik sehingga pola hubungan lebih mudah terlihat.",
+        "Pola naik menunjukkan hubungan positif; pola turun menunjukkan hubungan negatif. Titik yang tersebar tanpa pola linear menunjukkan hubungan linear lemah. Korelasi tidak membuktikan sebab akibat karena faktor lain dapat memengaruhi keduanya.",
+        "Asosiasi tidak membuktikan sebab-akibat. Variabel perancu dapat menjelaskan hubungan yang terlihat. Untuk data kategorikal, bandingkan proporsi bersyarat dengan penyebut kelompok yang sesuai, bukan hanya jumlah mentah."
+      ],
+      "formulas": [
+        "−1 ≤ r ≤ 1 untuk koefisien korelasi Pearson",
+        "r mendekati 1: hubungan linear positif kuat",
+        "r mendekati −1: hubungan linear negatif kuat"
+      ],
+      "example": {
+        "problem": "Diagram pencar menunjukkan titik-titik cenderung turun dari kiri ke kanan. Apa artinya?",
+        "steps": [
+          "Saat nilai variabel pertama meningkat, variabel kedua cenderung menurun.",
+          "Arah hubungan ini disebut korelasi negatif.",
+          "Pola itu belum membuktikan bahwa variabel pertama menyebabkan perubahan variabel kedua."
+        ]
+      },
+      "quiz": {
+        "prompt": "Nilai r = 0,92 menunjukkan…",
+        "options": [
+          {
+            "id": "a",
+            "text": "hubungan linear positif kuat"
+          },
+          {
+            "id": "b",
+            "text": "hubungan linear negatif kuat"
+          },
+          {
+            "id": "c",
+            "text": "tidak ada hubungan linear"
+          },
+          {
+            "id": "d",
+            "text": "hubungan sebab akibat yang pasti"
+          }
+        ],
+        "correctOption": "a",
+        "explanation": "Nilai r dekat dengan +1 berarti hubungan linear positif kuat. Nilai ini tidak memastikan sebab akibat."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-scatterplots",
+        "x-statistics"
+      ],
+      "bankTopicIds": [
+        "g-bivariate-statistics"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Kelas A: 18 dari 20 lulus. Kelas B: 24 dari 30 lulus. Kelas mana memiliki proporsi kelulusan lebih tinggi?",
+          "steps": [
+            "Proporsi A = 18/20 = 90%.",
+            "Proporsi B = 24/30 = 80%.",
+            "Proporsi A lebih tinggi walaupun jumlah siswa lulus B lebih banyak."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jumlah yang lebih besar tidak selalu berarti proporsi yang lebih besar."
+      ]
+    },
+    {
+      "id": "xi-regression",
+      "grade": 11,
+      "title": "Regresi linear",
+      "summary": "Gunakan pola data untuk membuat perkiraan.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Menggunakan persamaan garis regresi",
+        "Membatasi interpretasi prediksi"
+      ],
+      "explanation": [
+        "Regresi linear merangkum kecenderungan data dengan garis perkiraan ŷ = a + bx. Koefisien b menyatakan perubahan keluaran yang diperkirakan untuk setiap kenaikan satu satuan x; a adalah perkiraan keluaran ketika x = 0.",
+        "Prediksi di dalam rentang data disebut interpolasi. Prediksi jauh di luar rentang data, atau ekstrapolasi, lebih tidak pasti karena pola mungkin berubah. Hasil regresi adalah perkiraan, bukan kepastian untuk setiap orang atau kejadian.",
+        "Garis regresi merangkum hubungan linear untuk prediksi, bukan bukti kausal. Residu adalah nilai teramati dikurangi prediksi. Periksa pola residu dan hindari ekstrapolasi jauh di luar rentang data."
+      ],
+      "formulas": [
+        "ŷ = a + bx",
+        "Perubahan prediksi = b × perubahan x"
+      ],
+      "example": {
+        "problem": "Model perkiraan nilai tes adalah ŷ = 50 + 4x, dengan x jam latihan. Prediksi untuk x = 3?",
+        "steps": [
+          "Substitusikan x = 3.",
+          "Hitung ŷ = 50 + 4 × 3.",
+          "Prediksi nilainya 62; hasil sebenarnya dapat berbeda."
+        ]
+      },
+      "quiz": {
+        "prompt": "Pada model ŷ = 20 + 5x, berapa kenaikan prediksi jika x bertambah 2?",
+        "options": [
+          {
+            "id": "a",
+            "text": "5"
+          },
+          {
+            "id": "b",
+            "text": "20"
+          },
+          {
+            "id": "c",
+            "text": "10"
+          },
+          {
+            "id": "d",
+            "text": "30"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Gradien b = 5. Untuk kenaikan x sebesar 2, perubahan prediksi adalah 5 × 2 = 10."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xi-bivariate",
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "g-bivariate-statistics"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Model ŷ = 2x + 1. Pada x = 3, y teramati 9. Tentukan residunya.",
+          "steps": [
+            "Prediksi model = 2(3) + 1 = 7.",
+            "Residu = y teramati − ŷ = 9 − 7.",
+            "Residu 2 berarti pengamatan dua satuan di atas prediksi."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan menganggap regresi sebagai hubungan sebab-akibat atau jaminan prediksi di luar data."
+      ]
+    },
+    {
+      "id": "xii-sequences",
+      "grade": 12,
+      "title": "Barisan dan deret",
+      "summary": "Bedakan pola suku dengan jumlah seluruh suku.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan barisan aritmetika dan geometri",
+        "Menghitung suku ke-n dan jumlah sederhana"
+      ],
+      "explanation": [
+        "Barisan aritmetika memiliki beda tetap antarsuku, sedangkan barisan geometri memiliki rasio tetap. Periksa selisih atau pembagian dua suku berurutan untuk mengenali polanya.",
+        "Barisan membahas urutan suku; deret menjumlahkan suku-sukunya. Dalam rumus suku ke-n, pengulangan beda atau rasio terjadi n − 1 kali karena suku pertama sudah dihitung sebagai a.",
+        "Barisan aritmetika memiliki selisih tetap; deret adalah jumlah suku barisan. Bedakan Uₙ dan Sₙ. Barisan dengan rasio tetap dibahas lebih dalam pada materi barisan dan deret geometri."
+      ],
+      "formulas": [
+        "Aritmetika: Uₙ = a + (n − 1)d",
+        "Sₙ = n(2a + (n − 1)d)/2",
+        "Geometri: Uₙ = arⁿ⁻¹",
+        "Sₙ = a(rⁿ − 1)/(r − 1); r ≠ 1"
+      ],
+      "example": {
+        "problem": "Tentukan suku ke-6 dari 3, 7, 11, 15, …",
+        "steps": [
+          "Suku pertama a = 3 dan beda d = 4.",
+          "Gunakan U₆ = 3 + (6 − 1) × 4.",
+          "U₆ = 23. Ini suku keenam, bukan jumlah enam suku."
+        ]
+      },
+      "quiz": {
+        "prompt": "Berapa jumlah lima suku pertama barisan 2, 4, 6, 8, …?",
+        "options": [
+          {
+            "id": "a",
+            "text": "10"
+          },
+          {
+            "id": "b",
+            "text": "20"
+          },
+          {
+            "id": "c",
+            "text": "30"
+          },
+          {
+            "id": "d",
+            "text": "32"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Lima sukunya adalah 2, 4, 6, 8, 10. Jumlahnya 30."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-exponents"
+      ],
+      "bankTopicIds": [
+        "g-arithmetic-sequences"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Barisan 5, 8, 11, … . Tentukan jumlah 10 suku pertama.",
+          "steps": [
+            "a = 5, d = 3, sehingga U₁₀ = 5 + 9(3) = 32.",
+            "S₁₀ = 10(5 + 32)/2.",
+            "Jumlah sepuluh suku adalah 185."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Rumus suku ke-n tidak langsung memberikan jumlah n suku."
+      ]
+    },
+    {
+      "id": "xii-geometric-series",
+      "grade": 12,
+      "title": "Barisan dan deret geometri",
+      "summary": "Bedakan rasio tetap, jumlah berhingga, dan jumlah tak hingga.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-exponents",
+        "xii-sequences"
+      ],
+      "bankTopicIds": [
+        "g-geometric-sequences"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "objectives": [
+        "Menentukan suku dengan rasio tetap",
+        "Menghitung jumlah geometri dan memeriksa konvergensi"
+      ],
+      "explanation": [
+        "Barisan geometri mempunyai rasio tetap r antara suku berurutan ketika suku pembaginya tidak nol. Suku ke-n adalah ar^(n−1); rasio negatif membuat tanda suku berganti.",
+        "Deret geometri menjumlahkan suku-suku tersebut. Rumus jumlah berhingga memakai penyebut 1 − r untuk r ≠ 1; jika r = 1, jumlahnya na.",
+        "Jumlah tak hingga a/(1 − r) berlaku untuk |r| < 1. Untuk a ≠ 0 dan |r| ≥ 1, suku tidak menuju nol sehingga deret tidak konvergen."
+      ],
+      "formulas": [
+        "Uₙ = ar^(n−1)",
+        "Sₙ = a(1 − rⁿ)/(1 − r), r ≠ 1",
+        "S∞ = a/(1 − r), |r| < 1"
+      ],
+      "example": {
+        "problem": "Hitung 3 + 6 + 12 + 24.",
+        "steps": [
+          "a = 3, r = 2, dan n = 4.",
+          "S₄ = 3(1 − 2⁴)/(1 − 2).",
+          "S₄ = 45; penjumlahan langsung memberi hasil sama."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Barisan 2, −6, 18, … . Tentukan U₄.",
+          "steps": [
+            "Rasio r = −3.",
+            "U₄ = 2(−3)³.",
+            "Hasil U₄ = −54; tanda berganti pada tiap suku."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Rumus jumlah tak hingga tidak boleh dipakai jika |r| ≥ 1."
+      ],
+      "quiz": {
+        "prompt": "Jumlah tak hingga 4 + 2 + 1 + … adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "4"
+          },
+          {
+            "id": "b",
+            "text": "6"
+          },
+          {
+            "id": "c",
+            "text": "8"
+          },
+          {
+            "id": "d",
+            "text": "Tidak konvergen"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "r = 1/2 memenuhi |r| < 1, sehingga S∞ = 4/(1 − 1/2) = 8."
+      }
+    },
+    {
+      "id": "xii-interest",
+      "grade": 12,
+      "title": "Bunga tunggal dan majemuk",
+      "summary": "Bandingkan pertumbuhan yang tetap dan berlipat.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan dasar perhitungan bunga",
+        "Menghitung nilai akhir dalam model sederhana"
+      ],
+      "explanation": [
+        "Pada bunga tunggal, bunga setiap periode dihitung dari modal awal. Pada bunga majemuk, bunga periode berikutnya dihitung dari saldo yang sudah bertambah, sehingga pertumbuhan mengikuti pola geometri.",
+        "Samakan satuan tingkat bunga dengan periode waktunya. Model dasar di sini mengabaikan biaya, pajak, dan perubahan tingkat bunga. Persentase 10% ditulis 0,10 saat digunakan dalam perhitungan.",
+        "Samakan satuan periode dengan suku bunga. Model majemuk tahunan tidak memakai suku bunga bulanan tanpa konversi yang sesuai. Besaran akhir model belum tentu sama dengan hasil investasi nyata karena biaya dan perubahan tingkat bunga."
+      ],
+      "formulas": [
+        "Bunga tunggal: Mₙ = M₀(1 + ni)",
+        "Bunga majemuk: Mₙ = M₀(1 + i)ⁿ"
+      ],
+      "example": {
+        "problem": "Modal 100 satuan bertumbuh dengan bunga majemuk 10% per tahun selama dua tahun.",
+        "steps": [
+          "Tahun pertama: 100 × 1,10 = 110.",
+          "Tahun kedua: 110 × 1,10 = 121.",
+          "Nilai akhir 121; pada bunga tunggal nilainya 120."
+        ]
+      },
+      "quiz": {
+        "prompt": "Modal 200 mendapat bunga tunggal 5% per tahun selama 3 tahun. Nilai akhirnya?",
+        "options": [
+          {
+            "id": "a",
+            "text": "210"
+          },
+          {
+            "id": "b",
+            "text": "230"
+          },
+          {
+            "id": "c",
+            "text": "231,525"
+          },
+          {
+            "id": "d",
+            "text": "250"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "M = 200(1 + 3 × 0,05) = 200 × 1,15 = 230."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-exponents",
+        "xii-geometric-series"
+      ],
+      "bankTopicIds": [
+        "g-interest"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Modal Rp1.000.000 tumbuh 10% per tahun secara majemuk selama 2 tahun. Tentukan nilai akhirnya.",
+          "steps": [
+            "Tahun pertama: 1.000.000 × 1,1 = 1.100.000.",
+            "Tahun kedua: 1.100.000 × 1,1 = 1.210.000.",
+            "Nilai akhir Rp1.210.000; bunga tahun kedua dihitung atas saldo terbaru."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Pada bunga majemuk, bunga tidak selalu dihitung dari modal awal."
+      ]
+    },
+    {
+      "id": "xii-annuities",
+      "grade": 12,
+      "title": "Anuitas dan pinjaman",
+      "summary": "Lihat pembagian pembayaran tetap menjadi bunga dan pokok.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan angsuran pokok dan bunga",
+        "Menghitung sisa pokok pada satu periode"
+      ],
+      "explanation": [
+        "Anuitas adalah pembayaran berkala dengan total tetap dalam model tingkat bunga tetap. Untuk pinjaman, setiap pembayaran terdiri atas bunga periode berjalan dan angsuran pokok.",
+        "Bunga dihitung dari sisa pokok. Saat sisa pokok turun, bagian bunga mengecil sehingga bagian pembayaran yang mengurangi pokok membesar. Pada anuitas biasa, pembayaran dilakukan pada akhir setiap periode.",
+        "Pada anuitas biasa, pembayaran tetap dilakukan di akhir periode. Tiap pembayaran terdiri dari bunga saldo berjalan dan pelunasan pokok. Model mengasumsikan bunga per periode tetap dan tidak memasukkan biaya tambahan."
+      ],
+      "formulas": [
+        "Bunga periode = i × sisa pokok awal periode",
+        "Angsuran pokok = pembayaran − bunga",
+        "A = Pi / (1 − (1 + i)⁻ⁿ); i > 0, pembayaran akhir periode"
+      ],
+      "example": {
+        "problem": "Sisa pokok 1.000, bunga 1% per bulan, pembayaran akhir bulan 110. Berapa pokok tersisa?",
+        "steps": [
+          "Bunga bulan ini = 1% × 1.000 = 10.",
+          "Bagian pembayaran untuk pokok = 110 − 10 = 100.",
+          "Sisa pokok baru = 1.000 − 100 = 900."
+        ]
+      },
+      "quiz": {
+        "prompt": "Sisa pokok 500, bunga periode 2%, dan pembayaran 60. Berapa angsuran pokoknya?",
+        "options": [
+          {
+            "id": "a",
+            "text": "10"
+          },
+          {
+            "id": "b",
+            "text": "50"
+          },
+          {
+            "id": "c",
+            "text": "60"
+          },
+          {
+            "id": "d",
+            "text": "70"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Bunga = 0,02 × 500 = 10. Angsuran pokok = 60 − 10 = 50."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xii-interest",
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "g-annuities"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Saldo pinjaman Rp2.000.000, bunga 1% per bulan, pembayaran pertama Rp300.000 di akhir bulan. Tentukan saldo baru.",
+          "steps": [
+            "Bunga bulan pertama = 1% × 2.000.000 = 20.000.",
+            "Pelunasan pokok = 300.000 − 20.000 = 280.000.",
+            "Saldo sesudah pembayaran = 2.000.000 − 280.000 = 1.720.000."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Seluruh pembayaran bukan pelunasan pokok; sebagian membayar bunga."
+      ]
+    },
+    {
+      "id": "xii-counting",
+      "grade": 12,
+      "title": "Kaidah pencacahan",
+      "summary": "Hitung kemungkinan dengan aturan penjumlahan dan perkalian.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Memilih aturan untuk pilihan alternatif atau bertahap",
+        "Memperhatikan larangan pengulangan"
+      ],
+      "explanation": [
+        "Aturan perkalian digunakan ketika sebuah hasil dibuat melalui beberapa tahap. Jika tahap pertama memiliki m pilihan dan setiap pilihan dilanjutkan dengan n pilihan, ada m × n hasil.",
+        "Aturan penjumlahan digunakan untuk pilihan alternatif yang tidak tumpang tindih. Jika kategori bertumpang tindih, hasil yang termasuk keduanya harus dikurangi agar tidak dihitung dua kali. Selalu baca apakah pengulangan diizinkan.",
+        "Gunakan aturan perkalian untuk tahap-tahap yang semuanya dijalankan, dan aturan penjumlahan untuk pilihan alternatif yang saling lepas. Tentukan dahulu apakah pengulangan diperbolehkan."
+      ],
+      "formulas": [
+        "Tahap berurutan: m × n",
+        "Pilihan terpisah: m + n",
+        "n(A ∪ B) = n(A) + n(B) − n(A ∩ B)"
+      ],
+      "example": {
+        "problem": "Ada 3 pilihan baju dan 2 pilihan celana. Berapa pasangan pakaian berbeda?",
+        "steps": [
+          "Setiap baju dapat dipasangkan dengan dua celana.",
+          "Ada tiga kelompok yang masing-masing berisi dua pasangan.",
+          "Jumlah pasangan = 3 × 2 = 6."
+        ]
+      },
+      "quiz": {
+        "prompt": "Kode dua digit dibuat dari 1, 2, 3, 4 tanpa pengulangan. Ada berapa kode?",
+        "options": [
+          {
+            "id": "a",
+            "text": "4"
+          },
+          {
+            "id": "b",
+            "text": "8"
+          },
+          {
+            "id": "c",
+            "text": "12"
+          },
+          {
+            "id": "d",
+            "text": "16"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Digit pertama memiliki 4 pilihan, digit kedua tinggal 3. Jumlah kode = 4 × 3 = 12."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-probability"
+      ],
+      "bankTopicIds": [
+        "g-counting"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Berapa kode dua digit dari 1, 2, 3 tanpa pengulangan?",
+          "steps": [
+            "Digit pertama memiliki 3 pilihan.",
+            "Digit kedua memiliki 2 pilihan karena satu digit sudah dipakai.",
+            "Total kode = 3 × 2 = 6."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Pilihan tiap tahap tidak selalu tetap jika pengulangan dilarang."
+      ]
+    },
+    {
+      "id": "xii-combinatorics",
+      "grade": 12,
+      "title": "Permutasi dan kombinasi",
+      "summary": "Tentukan apakah urutan membuat hasil menjadi berbeda.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan pemilihan dan penyusunan",
+        "Menghitung permutasi dan kombinasi sederhana"
+      ],
+      "explanation": [
+        "Permutasi menghitung susunan ketika urutan penting. Memilih ketua dan wakil berbeda dari memilih dua anggota tim: menukar jabatan mengubah hasil, sedangkan menukar urutan nama anggota tidak.",
+        "Kombinasi menghitung pilihan tanpa memperhatikan urutan. Pembagian dengan r! menghapus hitungan berulang dari susunan anggota yang sama. Rumus dasar ini digunakan untuk objek berbeda tanpa pengulangan.",
+        "Permutasi membedakan urutan atau jabatan; kombinasi hanya memilih anggota. Rumus nPr dan nCr standar mengasumsikan objek berbeda dan pemilihan tanpa pengulangan."
+      ],
+      "formulas": [
+        "n! = n × (n − 1) × … × 1; 0! = 1",
+        "P(n,r) = n!/(n − r)!",
+        "C(n,r) = n!/(r!(n − r)!)"
+      ],
+      "example": {
+        "problem": "Dari 5 siswa, pilih 2 anggota tim tanpa jabatan. Berapa tim yang mungkin?",
+        "steps": [
+          "Urutan tidak penting: tim Ani–Budi sama dengan Budi–Ani.",
+          "Gunakan C(5,2) = (5 × 4)/(2 × 1).",
+          "Ada 10 tim berbeda."
+        ]
+      },
+      "quiz": {
+        "prompt": "Dari 4 siswa dipilih satu ketua dan satu wakil yang berbeda. Ada berapa susunan?",
+        "options": [
+          {
+            "id": "a",
+            "text": "6"
+          },
+          {
+            "id": "b",
+            "text": "8"
+          },
+          {
+            "id": "c",
+            "text": "12"
+          },
+          {
+            "id": "d",
+            "text": "16"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Jabatan membuat urutan penting: 4 pilihan ketua × 3 pilihan wakil = 12."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xii-counting"
+      ],
+      "bankTopicIds": [
+        "g-counting"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Dari 5 siswa, pilih ketua dan wakil. Berapa susunan jabatan?",
+          "steps": [
+            "Ada 5 pilihan untuk ketua.",
+            "Setelah ketua dipilih, ada 4 pilihan untuk wakil.",
+            "Total 5 × 4 = 20; menukar jabatan memberi susunan berbeda."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan memakai kombinasi ketika jabatan atau urutan dibedakan."
+      ]
+    },
+    {
+      "id": "xii-compound-probability",
+      "grade": 12,
+      "title": "Peluang majemuk dan bersyarat",
+      "summary": "Hubungkan kejadian, irisan, dan informasi tambahan.",
+      "duration": "10–15 menit",
+      "objectives": [
+        "Membedakan kejadian saling lepas dan saling bebas",
+        "Menghitung peluang bersyarat sederhana"
+      ],
+      "explanation": [
+        "Kejadian saling lepas tidak dapat terjadi bersamaan; irisannya kosong. Kejadian saling bebas tidak saling mengubah peluang. Kedua istilah ini memiliki arti berbeda dan tidak dapat dipertukarkan.",
+        "Peluang bersyarat membatasi ruang sampel pada informasi yang sudah diketahui. Saat mengambil objek tanpa pengembalian, komposisi ruang sampel berubah sehingga peluang pengambilan berikutnya ikut berubah.",
+        "Untuk gabungan, P(A ∪ B) = P(A) + P(B) − P(A ∩ B). Kejadian saling lepas tidak beririsan; kejadian saling bebas memenuhi aturan perkalian. Frekuensi harapan suatu kejadian dalam n percobaan adalah nP(A), bukan kepastian hasil nyata."
+      ],
+      "formulas": [
+        "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+        "Saling bebas: P(A ∩ B) = P(A)P(B)",
+        "P(A | B) = P(A ∩ B)/P(B); P(B) > 0",
+        "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+        "Frekuensi harapan = n × P(A)"
+      ],
+      "example": {
+        "problem": "Koin adil dan dadu adil dilempar. Berapa peluang mendapat gambar dan angka 6?",
+        "steps": [
+          "P(gambar) = 1/2 dan P(6) = 1/6.",
+          "Kedua percobaan saling bebas.",
+          "P(gambar dan 6) = 1/2 × 1/6 = 1/12."
+        ]
+      },
+      "quiz": {
+        "prompt": "Kantong berisi 3 bola merah dan 2 biru. Setelah satu merah diambil tanpa dikembalikan, peluang bola berikutnya merah adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "3/5"
+          },
+          {
+            "id": "b",
+            "text": "2/5"
+          },
+          {
+            "id": "c",
+            "text": "1/2"
+          },
+          {
+            "id": "d",
+            "text": "3/4"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Tersisa 2 merah dan 2 biru, total 4 bola. Peluang merah berikutnya = 2/4 = 1/2."
+      },
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-probability",
+        "xii-combinatorics"
+      ],
+      "bankTopicIds": [
+        "g-compound-probability"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Dadu adil: A = genap, B = lebih dari 4. Tentukan P(A ∪ B).",
+          "steps": [
+            "A = {2,4,6}, B = {5,6}; irisan adalah {6}.",
+            "P(A ∪ B) = 3/6 + 2/6 − 1/6.",
+            "Hasil = 4/6 = 2/3; angka 6 tidak dihitung dua kali."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Saling lepas berbeda dari saling bebas; jangan tertukar saat memilih rumus."
+      ]
+    },
+    {
+      "id": "xii-conditional-probability",
+      "grade": 12,
+      "title": "Peluang bersyarat dan independensi",
+      "summary": "Perbarui ruang sampel saat informasi baru diketahui.",
+      "duration": "15–20 menit",
+      "track": "general",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xii-compound-probability",
+        "xii-combinatorics"
+      ],
+      "bankTopicIds": [
+        "g-conditional-probability"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "6.4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          119,
+          120
+        ]
+      },
+      "objectives": [
+        "Menghitung peluang bersyarat dari irisan",
+        "Menguji independensi dan membedakannya dari saling lepas"
+      ],
+      "explanation": [
+        "Peluang P(A|B) dihitung di dalam kejadian B yang sudah diketahui terjadi. Karena itu penyebutnya P(B), bukan selalu seluruh ruang sampel awal; diperlukan P(B) > 0.",
+        "A dan B saling bebas jika P(A ∩ B) = P(A)P(B). Jika P(B) > 0, ini setara dengan P(A|B) = P(A). Pengambilan tanpa pengembalian umumnya mengubah peluang berikutnya.",
+        "Kejadian saling lepas memiliki irisan kosong. Dua kejadian saling lepas dengan peluang positif tidak saling bebas, karena mengetahui salah satunya terjadi meniadakan yang lain."
+      ],
+      "formulas": [
+        "P(A|B) = P(A ∩ B)/P(B), P(B) > 0",
+        "Independensi: P(A ∩ B) = P(A)P(B)"
+      ],
+      "example": {
+        "problem": "P(A ∩ B) = 0,12 dan P(B) = 0,3. Tentukan P(A|B).",
+        "steps": [
+          "Batasi ruang acuan pada B.",
+          "Bagi 0,12 dengan 0,3.",
+          "P(A|B) = 0,4."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Dadu adil: A = muncul 1, B = muncul 2. Apakah saling lepas dan saling bebas?",
+          "steps": [
+            "Irisan A dan B kosong, jadi saling lepas.",
+            "P(A)P(B) = 1/36, sedangkan P(A ∩ B) = 0.",
+            "Keduanya tidak saling bebas."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan mengganti penyebut peluang bersyarat dengan peluang gabungan."
+      ],
+      "quiz": {
+        "prompt": "Jika P(A) = 0,4, P(B) = 0,5, dan P(A ∩ B) = 0,2, maka…",
+        "options": [
+          {
+            "id": "a",
+            "text": "A dan B saling lepas"
+          },
+          {
+            "id": "b",
+            "text": "A dan B saling bebas"
+          },
+          {
+            "id": "c",
+            "text": "P(A|B) = 0,2"
+          },
+          {
+            "id": "d",
+            "text": "P(A ∪ B) = 0,9"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "0,4 × 0,5 = 0,2 sama dengan peluang irisan, sehingga A dan B saling bebas."
+      }
+    },
+    {
+      "id": "advanced-polynomials",
+      "grade": 11,
+      "title": "Polinomial, faktor, dan sisa",
+      "summary": "Gunakan substitusi dan pembagian untuk memahami akar polinomial.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-quadratic"
+      ],
+      "bankTopicIds": [
+        "a-polynomials"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menghitung sisa pembagian oleh x − a",
+        "Menghubungkan akar dan faktor"
+      ],
+      "explanation": [
+        "Polinomial tersusun dari pangkat bulat tak negatif variabel dengan koefisien. Derajatnya adalah pangkat tertinggi yang koefisiennya tidak nol.",
+        "Pembagian P(x) oleh x − a menghasilkan sisa P(a). Jika P(a) = 0, maka x − a adalah faktor. Hasil bagi membantu menurunkan derajat untuk mencari faktor berikutnya.",
+        "Akar polinomial tidak selalu real. Cari faktor yang bisa dibuktikan, lalu periksa dengan mengalikan kembali; mencoba angka tanpa verifikasi belum membuktikan faktorisasi."
+      ],
+      "formulas": [
+        "P(x) = (x − a)Q(x) + P(a)",
+        "P(a) = 0 ⇔ (x − a) faktor P(x)"
+      ],
+      "example": {
+        "problem": "Tentukan sisa pembagian P(x) = x³ − 2x + 4 oleh x − 2.",
+        "steps": [
+          "Gunakan teorema sisa: hitung P(2).",
+          "P(2) = 8 − 4 + 4.",
+          "Sisa = 8, suatu konstanta dengan derajat lebih rendah dari pembagi."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Apakah x + 2 faktor x² + x − 2?",
+          "steps": [
+            "Pembagi x + 2 berbentuk x − (−2).",
+            "P(−2) = 4 − 2 − 2 = 0.",
+            "Jadi x + 2 faktor; faktor lainnya x − 1."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Untuk pembagi x + a, substitusikan −a, bukan a."
+      ],
+      "quiz": {
+        "prompt": "Sisa pembagian x³ + x + 1 oleh x − 1 adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "1"
+          },
+          {
+            "id": "b",
+            "text": "2"
+          },
+          {
+            "id": "c",
+            "text": "3"
+          },
+          {
+            "id": "d",
+            "text": "0"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Substitusikan x = 1: 1 + 1 + 1 = 3."
+      }
+    },
+    {
+      "id": "advanced-matrices",
+      "grade": 11,
+      "title": "Matriks dan transformasi linear",
+      "summary": "Hubungkan operasi baris-kolom dengan pemetaan titik.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-linear",
+        "distribution"
+      ],
+      "bankTopicIds": [
+        "a-matrices"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Mengalikan matriks berukuran sesuai",
+        "Menentukan determinan dan syarat invers matriks 2×2"
+      ],
+      "explanation": [
+        "Matriks adalah susunan bilangan dalam baris dan kolom. Perkalian AB terdefinisi jika jumlah kolom A sama dengan jumlah baris B; setiap elemen hasil adalah hasil kali titik baris A dan kolom B.",
+        "Untuk matriks 2×2 [[a,b],[c,d]], determinannya ad − bc. Invers ada jika determinan tidak nol. Perkalian matriks umumnya tidak komutatif: AB dapat berbeda dari BA.",
+        "Matriks 2×2 dapat memetakan vektor posisi di bidang. Transformasi linear mempertahankan titik asal; translasi memerlukan representasi tambahan dan bukan sekadar perkalian matriks 2×2 pada vektor posisi."
+      ],
+      "formulas": [
+        "det [[a,b],[c,d]] = ad − bc",
+        "A⁻¹ = (1/det A)[[d,−b],[−c,a]], det A ≠ 0"
+      ],
+      "example": {
+        "problem": "Matriks A = [[2,0],[0,3]] memetakan titik (1,2). Tentukan bayangannya.",
+        "steps": [
+          "Komponen pertama = 2(1) + 0(2) = 2.",
+          "Komponen kedua = 0(1) + 3(2) = 6.",
+          "Bayangan adalah (2,6); kedua sumbu mengalami skala berbeda."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Apakah [[1,2],[2,4]] mempunyai invers?",
+          "steps": [
+            "Determinan = 1(4) − 2(2) = 0.",
+            "Baris kedua merupakan dua kali baris pertama.",
+            "Matriks singular dan tidak mempunyai invers."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Perkalian matriks bukan perkalian elemen yang posisinya sama."
+      ],
+      "quiz": {
+        "prompt": "Determinan [[2,1],[3,4]] adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "5"
+          },
+          {
+            "id": "b",
+            "text": "8"
+          },
+          {
+            "id": "c",
+            "text": "11"
+          },
+          {
+            "id": "d",
+            "text": "−5"
+          }
+        ],
+        "correctOption": "a",
+        "explanation": "Determinan = 2×4 − 1×3 = 5."
+      }
+    },
+    {
+      "id": "advanced-vectors",
+      "grade": 11,
+      "title": "Vektor bidang dan geometri",
+      "summary": "Nyatakan perpindahan, panjang, dan sudut dengan komponen.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-linear",
+        "x-trigonometry"
+      ],
+      "bankTopicIds": [
+        "a-vectors"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menghitung komponen dan panjang vektor",
+        "Menafsirkan hasil kali titik untuk sudut"
+      ],
+      "explanation": [
+        "Vektor menyatakan besar dan arah. Vektor dari A ke B diperoleh dengan mengurangi koordinat B dengan A; penjumlahan komponen sesuai dengan menyambung perpindahan.",
+        "Panjang vektor (u₁,u₂) adalah √(u₁² + u₂²). Hasil kali titik u·v = u₁v₁ + u₂v₂ juga sama dengan |u||v| cos θ untuk vektor tak nol.",
+        "Dua vektor tak nol tegak lurus jika hasil kali titiknya nol. Vektor nol tidak mempunyai arah sudut yang terdefinisi; jangan membagi dengan panjang nol."
+      ],
+      "formulas": [
+        "AB = (xB − xA, yB − yA)",
+        "|u| = √(u₁² + u₂²)",
+        "u·v = |u||v| cos θ"
+      ],
+      "example": {
+        "problem": "A = (1,2), B = (4,6). Tentukan AB dan panjangnya.",
+        "steps": [
+          "AB = (4−1,6−2) = (3,4).",
+          "|AB| = √(3²+4²).",
+          "Panjang = 5 satuan."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan (3,−1) + 2(−1,4).",
+          "steps": [
+            "Kalikan vektor kedua: 2(−1,4) = (−2,8).",
+            "Jumlahkan komponen: (3−2,−1+8).",
+            "Hasilnya (1,7)."
+          ]
+        },
+        {
+          "problem": "Buktikan titik M = (A+B)/2 adalah titik tengah ruas AB dengan vektor posisi.",
+          "steps": [
+            "AM = M−A = (B−A)/2.",
+            "MB = B−M = (B−A)/2.",
+            "AM = MB dengan arah yang sama, sehingga M membagi AB menjadi dua ruas sama panjang."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "AB dan BA mempunyai arah berlawanan; jangan tertukar urutan pengurangan."
+      ],
+      "quiz": {
+        "prompt": "Jika u = (2,1) dan v = (1,−2), berapa u·v?",
+        "options": [
+          {
+            "id": "a",
+            "text": "−4"
+          },
+          {
+            "id": "b",
+            "text": "0"
+          },
+          {
+            "id": "c",
+            "text": "2"
+          },
+          {
+            "id": "d",
+            "text": "4"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "u·v = 2(1) + 1(−2) = 0, sehingga kedua vektor tak nol tegak lurus."
+      }
+    },
+    {
+      "id": "advanced-trigonometry",
+      "grade": 11,
+      "title": "Lingkaran satuan dan fungsi trigonometri",
+      "summary": "Perluas rasio segitiga ke sudut umum, radian, dan periodisitas.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-trigonometry",
+        "xi-functions"
+      ],
+      "bankTopicIds": [
+        "a-advanced-trigonometry"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menghubungkan radian dan koordinat lingkaran satuan",
+        "Menggunakan identitas dasar dan periode"
+      ],
+      "explanation": [
+        "Pada lingkaran satuan, titik bersudut θ mempunyai koordinat (cos θ, sin θ). Pendekatan ini memperluas definisi ke semua sudut, dengan tanda sesuai kuadran.",
+        "Satu putaran adalah 2π radian atau 360°. Fungsi sinus dan kosinus berperiode 2π; tangen berperiode π dan tidak terdefinisi saat cos θ = 0.",
+        "Identitas sin² θ + cos² θ = 1 mengikuti persamaan lingkaran satuan. Aturan turunan trigonometri di kalkulus menggunakan sudut dalam radian.",
+        "Aturan sinus menghubungkan sisi dengan sinus sudut di hadapannya. Aturan kosinus memperluas Pythagoras untuk sudut sembarang. Pastikan pasangan sisi-sudut benar dan periksa kemungkinan dua segitiga pada kasus sisi-sisi-sudut tertentu."
+      ],
+      "formulas": [
+        "180° = π radian",
+        "sin² θ + cos² θ = 1",
+        "tan θ = sin θ/cos θ, cos θ ≠ 0",
+        "a/sin A = b/sin B = c/sin C",
+        "c² = a² + b² − 2ab cos C"
+      ],
+      "example": {
+        "problem": "Tentukan sin(150°).",
+        "steps": [
+          "150° berada di kuadran II, tempat sinus positif.",
+          "Sudut acuannya 180° − 150° = 30°.",
+          "sin(150°) = sin(30°) = 1/2."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Berapa periode y = sin(2x) untuk x dalam radian?",
+          "steps": [
+            "Periode sin u adalah 2π.",
+            "Agar argumen 2x bertambah 2π, x bertambah π.",
+            "Periode y = sin(2x) adalah π."
+          ]
+        },
+        {
+          "problem": "Dua sisi segitiga 3 dan 4 mengapit sudut 60°. Tentukan sisi ketiga.",
+          "steps": [
+            "Gunakan aturan kosinus karena sudut berada di antara dua sisi diketahui.",
+            "c² = 3² + 4² − 2(3)(4)cos 60° = 25 − 12 = 13.",
+            "Sisi ketiga c = √13."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan mencampur mode derajat dan radian dalam perhitungan."
+      ],
+      "quiz": {
+        "prompt": "Berapa cos π?",
+        "options": [
+          {
+            "id": "a",
+            "text": "−1"
+          },
+          {
+            "id": "b",
+            "text": "0"
+          },
+          {
+            "id": "c",
+            "text": "1/2"
+          },
+          {
+            "id": "d",
+            "text": "1"
+          }
+        ],
+        "correctOption": "a",
+        "explanation": "Sudut π radian menunjuk titik (−1,0) pada lingkaran satuan, sehingga cos π = −1."
+      }
+    },
+    {
+      "id": "advanced-rational-log-functions",
+      "grade": 11,
+      "title": "Fungsi rasional, logaritma, dan nilai mutlak",
+      "summary": "Tentukan domain dan bedakan titik yang hilang dari perilaku asimtot.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xi-functions",
+        "x-exponents"
+      ],
+      "bankTopicIds": [
+        "a-rational-log-functions"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 1",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menerapkan syarat domain fungsi real",
+        "Menganalisis lubang dan bentuk potongan nilai mutlak"
+      ],
+      "explanation": [
+        "Fungsi rasional adalah perbandingan polinomial dengan penyebut tidak nol. Faktor yang dicoret tidak mengembalikan titik yang sejak awal dilarang oleh domain.",
+        "Untuk logₐ u(x), diperlukan a > 0, a ≠ 1, dan u(x) > 0. Fungsi nilai mutlak |x| sama dengan x untuk x ≥ 0 dan −x untuk x < 0.",
+        "Bedakan lubang pada grafik dari asimtot vertikal. Pada (x²−1)/(x−1), titik x = 1 dilarang tetapi limitnya berhingga; pada 1/(x−1), nilai tidak terbatas di sekitar x = 1.",
+        "Fungsi akar memerlukan argumen tak negatif untuk keluaran real. Fungsi tangga seperti lantai ⌊x⌋ mengambil bilangan bulat terbesar yang tidak melebihi x. Fungsi piecewise memakai aturan berbeda pada bagian domain yang berbeda; perhatikan titik batas dan apakah interval menyertakan batasnya."
+      ],
+      "formulas": [
+        "Domain rasional: penyebut ≠ 0",
+        "Domain logaritma real: argumen > 0",
+        "|x| = x jika x ≥ 0; |x| = −x jika x < 0"
+      ],
+      "example": {
+        "problem": "Tentukan domain real f(x) = log₂(x − 3).",
+        "steps": [
+          "Argumen logaritma harus positif: x − 3 > 0.",
+          "Diperoleh x > 3.",
+          "Domain (3,∞); x = 3 tidak disertakan."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Sederhanakan (x²−1)/(x−1) dan nyatakan domain asal.",
+          "steps": [
+            "Faktorkan pembilang menjadi (x−1)(x+1).",
+            "Untuk x ≠ 1, hasilnya x + 1.",
+            "Domain asal tetap x ≠ 1; grafik mempunyai lubang di (1,2)."
+          ]
+        },
+        {
+          "problem": "Tentukan ⌊−1,2⌋ dan jelaskan artinya.",
+          "steps": [
+            "Cari bilangan bulat terbesar yang masih ≤ −1,2.",
+            "−1 lebih besar dari −1,2, sehingga tidak memenuhi syarat.",
+            "Hasilnya −2; fungsi lantai bukan pembulatan menuju nol."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Mencoret faktor tidak menghapus syarat domain asal."
+      ],
+      "quiz": {
+        "prompt": "Domain f(x) = 1/(x − 2) adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "Semua real"
+          },
+          {
+            "id": "b",
+            "text": "x ≥ 2"
+          },
+          {
+            "id": "c",
+            "text": "Semua real kecuali 2"
+          },
+          {
+            "id": "d",
+            "text": "x > 2"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Penyebut tidak boleh nol, sehingga hanya x = 2 yang dilarang."
+      }
+    },
+    {
+      "id": "advanced-conics",
+      "grade": 12,
+      "title": "Persamaan lingkaran dan elips",
+      "summary": "Baca pusat, jari-jari, sumbu, dan fokus dari persamaan.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-quadratic",
+        "x-linear"
+      ],
+      "bankTopicIds": [
+        "a-conics"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 2",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Mengidentifikasi pusat dan jari-jari lingkaran",
+        "Membaca sumbu elips sejajar sumbu koordinat"
+      ],
+      "explanation": [
+        "Lingkaran adalah himpunan titik yang berjarak sama dari satu pusat. Bentuk (x−h)² + (y−k)² = r² menunjukkan pusat (h,k) dan jari-jari r > 0.",
+        "Elips adalah himpunan titik dengan jumlah jarak tetap ke dua fokus. Bentuk sejajar sumbu memakai dua kuadrat penyebut yang dapat berbeda; sumbu utama sesuai penyebut yang lebih besar.",
+        "Untuk elips horizontal ((x−h)²/a²)+((y−k)²/b²)=1 dengan a ≥ b > 0, jarak fokus ke pusat c memenuhi c² = a² − b². Jangan mengartikan a² sebagai panjang semisumbu a."
+      ],
+      "formulas": [
+        "(x−h)² + (y−k)² = r²",
+        "Elips horizontal: (x−h)²/a² + (y−k)²/b² = 1",
+        "c² = a² − b²",
+        "Garis singgung x²+y²=r² di (x₀,y₀): x₀x+y₀y=r²"
+      ],
+      "example": {
+        "problem": "Tentukan pusat dan jari-jari (x−2)² + (y+1)² = 9.",
+        "steps": [
+          "Bandingkan dengan (x−h)² + (y−k)² = r².",
+          "Pusatnya (2,−1).",
+          "Jari-jari r = √9 = 3."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan fokus elips x²/25 + y²/9 = 1.",
+          "steps": [
+            "a = 5 dan b = 3; sumbu utama horizontal.",
+            "c² = 25 − 9 = 16 sehingga c = 4.",
+            "Fokusnya (−4,0) dan (4,0)."
+          ]
+        },
+        {
+          "problem": "Tentukan garis singgung lingkaran x²+y²=25 di (3,4).",
+          "steps": [
+            "Periksa titik: 3²+4²=25.",
+            "Vektor jari-jari (3,4) menjadi normal garis singgung.",
+            "Garis singgung 3x+4y=25 melewati (3,4) dan tegak lurus jari-jari."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Perhatikan kuadrat dan tanda dalam bentuk baku sebelum membaca pusat atau panjang."
+      ],
+      "quiz": {
+        "prompt": "Pada elips x²/25 + y²/9 = 1, panjang semisumbu utama adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "3"
+          },
+          {
+            "id": "b",
+            "text": "4"
+          },
+          {
+            "id": "c",
+            "text": "5"
+          },
+          {
+            "id": "d",
+            "text": "25"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Penyebut terbesar 25 = a², sehingga a = 5."
+      }
+    },
+    {
+      "id": "advanced-binomial",
+      "grade": 12,
+      "title": "Distribusi binomial",
+      "summary": "Modelkan banyak keberhasilan dalam percobaan yang memenuhi asumsi.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "xii-conditional-probability",
+        "xii-combinatorics"
+      ],
+      "bankTopicIds": [
+        "a-binomial"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 3",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Memeriksa asumsi model binomial",
+        "Menghitung peluang tepat k keberhasilan"
+      ],
+      "explanation": [
+        "Variabel acak binomial menghitung keberhasilan dalam n percobaan: n tetap, tiap percobaan dua kategori, percobaan saling bebas, dan peluang keberhasilan p tetap.",
+        "Peluang tepat k keberhasilan mengalikan peluang suatu susunan dengan banyak susunannya. Faktor kombinasi C(n,k) menghitung posisi keberhasilan yang berbeda.",
+        "Rata-rata model adalah np dan varians np(1−p). Pengambilan tanpa pengembalian dari populasi kecil umumnya tidak memenuhi independensi dan p tetap."
+      ],
+      "formulas": [
+        "P(X = k) = C(n,k)pᵏ(1−p)^(n−k)",
+        "E(X) = np; Var(X) = np(1−p)"
+      ],
+      "example": {
+        "problem": "Koin adil dilempar 3 kali secara bebas. Berapa peluang tepat 2 gambar?",
+        "steps": [
+          "n = 3, k = 2, p = 1/2.",
+          "Ada C(3,2) = 3 posisi untuk dua gambar.",
+          "P(X=2) = 3(1/2)²(1/2) = 3/8."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Dua bola diambil tanpa pengembalian dari kantong kecil berisi merah dan biru. Apakah jumlah merah otomatis binomial?",
+          "steps": [
+            "Pengambilan pertama mengubah komposisi kantong.",
+            "Peluang merah pada pengambilan berikutnya bergantung pada hasil sebelumnya.",
+            "Asumsi independensi dan p tetap tidak terpenuhi; jangan langsung memakai binomial."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Istilah keberhasilan adalah kategori model, bukan penilaian baik-buruk hasil."
+      ],
+      "quiz": {
+        "prompt": "Jika X binomial dengan n = 10 dan p = 0,3, berapa E(X)?",
+        "options": [
+          {
+            "id": "a",
+            "text": "0,3"
+          },
+          {
+            "id": "b",
+            "text": "2,1"
+          },
+          {
+            "id": "c",
+            "text": "3"
+          },
+          {
+            "id": "d",
+            "text": "7"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "Nilai harapan np = 10 × 0,3 = 3."
+      }
+    },
+    {
+      "id": "advanced-normal",
+      "grade": 12,
+      "title": "Distribusi normal dan standardisasi",
+      "summary": "Tafsirkan skor baku dan peluang sebagai luas kurva.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "x-statistics",
+        "x-quartiles"
+      ],
+      "bankTopicIds": [
+        "a-normal"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 3",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menghitung z dengan simpangan baku positif",
+        "Membedakan kerapatan, peluang interval, dan peluang titik"
+      ],
+      "explanation": [
+        "Distribusi normal adalah model kontinu berbentuk lonceng yang simetris terhadap mean μ. Simpangan baku σ > 0 menentukan sebaran; model harus sesuai dengan konteks data, bukan diasumsikan untuk semua data.",
+        "Standardisasi z = (x−μ)/σ mengukur berapa simpangan baku suatu nilai dari mean. Nilai di bawah mean memiliki z negatif, dan perubahan satuan perlu konsisten.",
+        "Peluang adalah luas di bawah kurva pada interval. Pada distribusi kontinu, peluang tepat satu nilai adalah nol; tinggi kurva merupakan kerapatan, bukan peluang titik."
+      ],
+      "formulas": [
+        "Z = (X − μ)/σ, σ > 0",
+        "P(a < X < b) = Φ((b−μ)/σ) − Φ((a−μ)/σ)",
+        "E(X)=μ; Var(X)=σ²"
+      ],
+      "example": {
+        "problem": "Pada model normal dengan μ = 70 dan σ = 10, tentukan z untuk x = 85.",
+        "steps": [
+          "Kurangi mean: 85 − 70 = 15.",
+          "Bagi dengan simpangan baku 10.",
+          "z = 1,5, artinya 1,5 simpangan baku di atas mean."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Jika X berdistribusi normal dengan mean 50, berapa P(X < 50)?",
+          "steps": [
+            "Kurva simetris terhadap mean 50.",
+            "Total luas di bawah kurva adalah 1.",
+            "Luas di sebelah kiri mean = 1/2."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan menyamakan tinggi kurva dengan peluang pada satu nilai."
+      ],
+      "quiz": {
+        "prompt": "Pada model normal, berapa peluang X tepat sama dengan mean?",
+        "options": [
+          {
+            "id": "a",
+            "text": "0"
+          },
+          {
+            "id": "b",
+            "text": "1/2"
+          },
+          {
+            "id": "c",
+            "text": "1"
+          },
+          {
+            "id": "d",
+            "text": "Tergantung σ dan selalu positif"
+          }
+        ],
+        "correctOption": "a",
+        "explanation": "Untuk variabel kontinu, peluang tepat satu titik adalah 0; setengah peluang berada di setiap sisi mean."
+      }
+    },
+    {
+      "id": "advanced-limits",
+      "grade": 12,
+      "title": "Limit dan kontinuitas",
+      "summary": "Bedakan nilai fungsi di titik dari perilakunya di sekitar titik.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "advanced-polynomials",
+        "advanced-rational-log-functions"
+      ],
+      "bankTopicIds": [
+        "a-limits"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 4 · supporting concept for derivatives",
+        "kind": "prerequisite-support",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menentukan limit lewat substitusi atau faktorisasi yang sah",
+        "Memeriksa syarat kontinuitas dan limit dua sisi"
+      ],
+      "explanation": [
+        "Limit f(x) saat x mendekati a menjelaskan keluaran di sekitar a; nilai f(a) dapat berbeda atau bahkan tidak terdefinisi. Tabel dan grafik memberi petunjuk, bukan selalu bukti.",
+        "Untuk polinomial dan fungsi kontinu pada a, substitusi langsung sah. Bentuk 0/0 adalah bentuk tak tentu: sederhanakan untuk x ≠ a sebelum menilai limit.",
+        "Limit dua sisi ada jika limit kiri dan kanan ada dan sama. Kontinu di a memerlukan f(a) terdefinisi dan limit dua sisi sama dengan f(a)."
+      ],
+      "formulas": [
+        "lim(x→a) P(x) = P(a) untuk polinomial",
+        "Kontinu di a: lim(x→a) f(x) = f(a)"
+      ],
+      "example": {
+        "problem": "Tentukan lim(x→1) (x²−1)/(x−1).",
+        "steps": [
+          "Faktorkan pembilang menjadi (x−1)(x+1).",
+          "Untuk x ≠ 1, hasilnya x + 1.",
+          "Limit = 2 walaupun bentuk fungsi asal tidak terdefinisi di x = 1."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Untuk x < 0, f(x) = −1; untuk x ≥ 0, f(x) = 1. Apakah limit di 0 ada?",
+          "steps": [
+            "Limit kiri adalah −1.",
+            "Limit kanan adalah 1.",
+            "Karena berbeda, limit dua sisi di 0 tidak ada."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "0/0 bukan jawaban akhir dan tidak berarti limitnya nol."
+      ],
+      "quiz": {
+        "prompt": "Nilai lim(x→2) (3x + 1) adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "2"
+          },
+          {
+            "id": "b",
+            "text": "3"
+          },
+          {
+            "id": "c",
+            "text": "6"
+          },
+          {
+            "id": "d",
+            "text": "7"
+          }
+        ],
+        "correctOption": "d",
+        "explanation": "Fungsi linear kontinu, sehingga substitusi langsung memberi 3(2) + 1 = 7."
+      }
+    },
+    {
+      "id": "advanced-derivatives",
+      "grade": 12,
+      "title": "Turunan dan garis singgung",
+      "summary": "Dari gradien sekan menuju laju perubahan sesaat.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "advanced-limits",
+        "advanced-trigonometry"
+      ],
+      "bankTopicIds": [
+        "a-derivatives"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menghubungkan definisi limit dengan turunan",
+        "Menerapkan aturan pangkat, hasil kali, dan rantai sederhana"
+      ],
+      "explanation": [
+        "Turunan pada a adalah limit gradien sekan [f(a+h)−f(a)]/h saat h mendekati nol, jika limit tersebut ada dan berhingga. Turunan memberi gradien garis singgung dan laju perubahan sesaat.",
+        "Untuk polinomial, aturan pangkat menurunkan pangkat menjadi faktor dan mengurangi pangkat satu. Hasil kali fungsi tidak diturunkan dengan sekadar mengalikan turunannya; gunakan aturan hasil kali.",
+        "Pada komposisi, aturan rantai mengalikan turunan fungsi luar dengan turunan fungsi dalam. Rumus turunan sinus dan kosinus memakai radian. Turunan dapat tidak ada di sudut tajam seperti |x| di 0."
+      ],
+      "formulas": [
+        "f′(a) = lim(h→0) [f(a+h)−f(a)]/h",
+        "d(xⁿ)/dx = nx^(n−1) untuk pangkat bulat positif",
+        "(uv)′ = u′v + uv′; (f∘g)′ = f′(g(x))g′(x)",
+        "d(eˣ)/dx = eˣ; d(aˣ)/dx = aˣ ln a untuk a > 0",
+        "d(sin x)/dx = cos x; d(cos x)/dx = −sin x, x dalam radian"
+      ],
+      "example": {
+        "problem": "Turunkan f(x) = x² dengan definisi.",
+        "steps": [
+          "[f(x+h)−f(x)]/h = [(x+h)²−x²]/h.",
+          "Untuk h ≠ 0, sederhanakan menjadi 2x + h.",
+          "Saat h→0, diperoleh f′(x) = 2x."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan turunan (2x + 1)³.",
+          "steps": [
+            "Fungsi luar u³ berturunan 3u².",
+            "Fungsi dalam u = 2x + 1 berturunan 2.",
+            "Aturan rantai memberi 6(2x + 1)²."
+          ]
+        },
+        {
+          "problem": "Turunkan f(x)=eˣ+sin x untuk x dalam radian.",
+          "steps": [
+            "Turunan eˣ adalah eˣ.",
+            "Turunan sin x adalah cos x.",
+            "Aturan penjumlahan memberi f′(x)=eˣ+cos x."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan menghilangkan faktor turunan fungsi dalam."
+      ],
+      "quiz": {
+        "prompt": "Jika f(x) = x³ − 2x, maka f′(x) adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "3x² − 2"
+          },
+          {
+            "id": "b",
+            "text": "3x² − 2x"
+          },
+          {
+            "id": "c",
+            "text": "x² − 2"
+          },
+          {
+            "id": "d",
+            "text": "3x − 2"
+          }
+        ],
+        "correctOption": "a",
+        "explanation": "Turunan x³ adalah 3x² dan turunan −2x adalah −2, sehingga f′(x) = 3x² − 2."
+      }
+    },
+    {
+      "id": "advanced-derivative-applications",
+      "grade": 12,
+      "title": "Aplikasi turunan: singgung, gerak, dan optimasi",
+      "summary": "Gunakan laju perubahan sambil memeriksa domain dan satuan.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "advanced-derivatives",
+        "x-quadratic"
+      ],
+      "bankTopicIds": [
+        "a-derivative-applications"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Menyusun persamaan garis singgung",
+        "Membedakan titik stasioner dari ekstrem yang teruji"
+      ],
+      "explanation": [
+        "Garis singgung di x = a melewati (a,f(a)) dengan gradien f′(a). Dalam gerak satu dimensi, turunan posisi terhadap waktu adalah kecepatan; besar kecepatan adalah nilai mutlak kecepatan.",
+        "Untuk optimasi pada interval tertutup, evaluasi titik kritis di bagian dalam dan titik ujung. Syarat f′(x)=0 membantu menemukan kandidat, tetapi tidak menjamin maksimum atau minimum.",
+        "Periksa perubahan tanda turunan atau nilai fungsi. Pada f(x)=x³, turunan nol di 0 tetapi bukan ekstrem lokal. Model fisik juga harus mematuhi domain dan satuan."
+      ],
+      "formulas": [
+        "y − f(a) = f′(a)(x − a)",
+        "v(t) = s′(t); a(t) = v′(t)",
+        "Kandidat ekstrem: titik kritis dan batas domain"
+      ],
+      "example": {
+        "problem": "Tentukan garis singgung y = x² di x = 2.",
+        "steps": [
+          "Titik pada kurva adalah (2,4).",
+          "f′(x)=2x, sehingga gradien di 2 adalah 4.",
+          "y − 4 = 4(x − 2), jadi y = 4x − 4."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Tentukan minimum f(x)=(x−3)²+2 pada [0,5].",
+          "steps": [
+            "f′(x)=2(x−3)=0 memberi kandidat x=3.",
+            "Nilai batas: f(0)=11, f(5)=6; kandidat f(3)=2.",
+            "Minimum adalah 2 pada x=3."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Titik stasioner hanyalah kandidat; periksa tanda atau nilai dan batas interval."
+      ],
+      "quiz": {
+        "prompt": "Posisi s(t)=t²+3t dalam meter. Berapa kecepatan saat t=2 detik?",
+        "options": [
+          {
+            "id": "a",
+            "text": "4 m/s"
+          },
+          {
+            "id": "b",
+            "text": "5 m/s"
+          },
+          {
+            "id": "c",
+            "text": "7 m/s"
+          },
+          {
+            "id": "d",
+            "text": "10 m/s"
+          }
+        ],
+        "correctOption": "c",
+        "explanation": "v(t) = s′(t) = 2t + 3, maka v(2) = 7 m/s."
+      }
+    },
+    {
+      "id": "advanced-integrals",
+      "grade": 12,
+      "title": "Integral, luas, dan teorema dasar kalkulus",
+      "summary": "Hubungkan antiturunan dengan akumulasi dan luas bertanda.",
+      "duration": "15–20 menit",
+      "track": "advanced",
+      "phase": "F",
+      "gradePlacement": "suggested",
+      "contentVersion": "2026.10.21-v2",
+      "prerequisites": [
+        "advanced-derivatives"
+      ],
+      "bankTopicIds": [
+        "a-integrals"
+      ],
+      "reviewStatus": "editorial-pilot",
+      "alignment": {
+        "sourceUrl": "https://bpmpbabel.kemendikdasmen.go.id/PPID/wp-content/uploads/2025/07/KepKaBSKAP-046_2025-ttg-CP.pdf",
+        "section": "Advanced 4",
+        "kind": "cp-topic",
+        "verification": "cp-text-checked",
+        "pdfPages": [
+          125,
+          126
+        ]
+      },
+      "objectives": [
+        "Membedakan integral tak tentu dan integral tentu",
+        "Menghitung akumulasi serta luas geometris sederhana"
+      ],
+      "explanation": [
+        "Integral tak tentu adalah keluarga antiturunan, sehingga konstanta C perlu ditulis. Untuk pangkat bulat tak negatif n, antiturunan xⁿ adalah x^(n+1)/(n+1) ditambah C.",
+        "Jika f kontinu pada [a,b] dan F′=f, teorema dasar kalkulus memberi integral tentu dari a ke b sebesar F(b)−F(a). Hasil ini adalah akumulasi bertanda, bukan selalu luas positif.",
+        "Luas geometris antara kurva dan sumbu x memakai integral |f|; pecah interval pada perubahan tanda. Integral tentu tidak memerlukan tambahan +C karena konstanta saling meniadakan pada selisih batas."
+      ],
+      "formulas": [
+        "∫xⁿ dx = x^(n+1)/(n+1) + C, n bilangan bulat ≥ 0",
+        "∫ₐᵇ f(x) dx = F(b) − F(a), bila f kontinu dan F′=f",
+        "Luas geometris = ∫ₐᵇ |f(x)| dx",
+        "∫eˣ dx = eˣ + C; ∫cos x dx = sin x + C"
+      ],
+      "example": {
+        "problem": "Hitung ∫₀² 3x² dx.",
+        "steps": [
+          "Antiturunan 3x² adalah x³.",
+          "Evaluasi pada batas: 2³ − 0³.",
+          "Nilai integral tentu adalah 8."
+        ]
+      },
+      "additionalExamples": [
+        {
+          "problem": "Bandingkan integral dan luas y=x pada [−1,1].",
+          "steps": [
+            "Integral tentu = [x²/2] dari −1 ke 1 = 0.",
+            "Dua daerah segitiga masing-masing luasnya 1/2.",
+            "Luas geometris total = 1; nilai integral bertanda adalah 0."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Jangan menyamakan integral bertanda dengan luas geometris ketika fungsi berubah tanda."
+      ],
+      "quiz": {
+        "prompt": "Nilai ∫₀¹ 2x dx adalah…",
+        "options": [
+          {
+            "id": "a",
+            "text": "0"
+          },
+          {
+            "id": "b",
+            "text": "1"
+          },
+          {
+            "id": "c",
+            "text": "2"
+          },
+          {
+            "id": "d",
+            "text": "1 + C"
+          }
+        ],
+        "correctOption": "b",
+        "explanation": "Antiturunannya x². Selisih batas 1² − 0² = 1; integral tentu tidak ditulis +C."
+      }
+    }
+  ]
+}

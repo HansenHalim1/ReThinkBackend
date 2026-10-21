@@ -1,0 +1,315 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ReThink foundation assessment",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rethinkbackend.vercel.app"
+    }
+  ],
+  "paths": {
+    "/api/assessment": {
+      "get": {
+        "operationId": "getFoundationAssessment",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Current test with server-derived progress.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Assessment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid command"
+          },
+          "401": {
+            "description": "Supabase token required"
+          },
+          "409": {
+            "description": "Stale revision or bank version"
+          },
+          "413": {
+            "description": "Body too large"
+          },
+          "503": {
+            "description": "Auth/database unavailable or migration missing"
+          }
+        }
+      },
+      "post": {
+        "operationId": "saveFoundationAssessment",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Command"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Current test with server-derived progress.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Assessment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid command"
+          },
+          "401": {
+            "description": "Supabase token required"
+          },
+          "409": {
+            "description": "Stale revision or bank version"
+          },
+          "413": {
+            "description": "Body too large"
+          },
+          "503": {
+            "description": "Auth/database unavailable or migration missing"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Assessment": {
+        "type": "object",
+        "required": [
+          "schemaVersion",
+          "bankVersion",
+          "revision",
+          "status",
+          "answered",
+          "total",
+          "topicCount",
+          "checklistSaved",
+          "question",
+          "topics"
+        ],
+        "properties": {
+          "schemaVersion": {
+            "type": "integer",
+            "enum": [
+              1
+            ]
+          },
+          "bankVersion": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "not-started",
+              "in-progress",
+              "complete"
+            ]
+          },
+          "answered": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "topicCount": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "checklistSaved": {
+            "type": "boolean"
+          },
+          "question": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Question"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TopicResult"
+            }
+          }
+        }
+      },
+      "Question": {
+        "type": "object",
+        "required": [
+          "id",
+          "topicId",
+          "topicTitle",
+          "difficulty",
+          "prompt",
+          "options"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "topicId": {
+            "type": "string"
+          },
+          "topicTitle": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "text"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "TopicResult": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "correct",
+          "total",
+          "suggestedKnown",
+          "checked"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "correct": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "suggestedKnown": {
+            "type": "boolean"
+          },
+          "checked": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Command": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "action",
+              "expectedRevision",
+              "questionId",
+              "optionId"
+            ],
+            "properties": {
+              "action": {
+                "const": "answer"
+              },
+              "expectedRevision": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "questionId": {
+                "type": "string"
+              },
+              "optionId": {
+                "type": "string",
+                "description": "Current option id, or __unsure."
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "action",
+              "expectedRevision",
+              "knownTopicIds"
+            ],
+            "properties": {
+              "action": {
+                "const": "review"
+              },
+              "expectedRevision": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "knownTopicIds": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "securitySchemes": {
+      "supabaseBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

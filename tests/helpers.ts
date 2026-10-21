@@ -2,13 +2,16 @@ export const userA = '00000000-0000-0000-0000-000000000001';
 export const userB = '00000000-0000-0000-0000-000000000002';
 export function mockSupabase() {
   const originalFetch = globalThis.fetch;
-  const keys = ['SUPABASE_URL', 'SUPABASE_PUBLISHABLE_KEY', 'SUPABASE_SECRET_KEY', 'ALLOWED_ORIGINS', 'GEMINI_API_KEY'];
+  const keys = ['SUPABASE_URL', 'SUPABASE_PUBLISHABLE_KEY', 'SUPABASE_SECRET_KEY', 'ALLOWED_ORIGINS', 'GEMINI_API_KEY', 'AI_GATEWAY_API_KEY', 'AI_GATEWAY_MODEL', 'VERCEL_OIDC_TOKEN'];
   const env = Object.fromEntries(keys.map(key => [key, process.env[key]]));
   process.env.SUPABASE_URL = 'https://supabase.test';
   process.env.SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_test';
   process.env.SUPABASE_SECRET_KEY = 'sb_secret_test';
   process.env.ALLOWED_ORIGINS = 'https://learn.example.com,http://localhost:3000';
   delete process.env.GEMINI_API_KEY;
+  delete process.env.AI_GATEWAY_API_KEY;
+  delete process.env.AI_GATEWAY_MODEL;
+  delete process.env.VERCEL_OIDC_TOKEN;
   type Row = { user_id: string; concept: string; session: unknown; revision: number };
   const rows = new Map<string, Row>();
   const reply = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
@@ -34,6 +37,7 @@ export function mockSupabase() {
       const concept = url.searchParams.get('concept')?.slice(3);
       return reply([...rows.values()].filter(row => row.user_id === owner && (!concept || row.concept === concept)));
     }
+    if (url.pathname === '/rest/v1/foundation_assessments') return reply([]);
     if (url.pathname === '/rest/v1/profiles') return reply(uid ? [{ display_name: uid === userA ? 'Siswa A' : 'Siswa B', created_at: '2026-10-17T00:00:00Z' }] : []);
     throw Error(`Unexpected network request: ${url.origin}${url.pathname}`);
   };

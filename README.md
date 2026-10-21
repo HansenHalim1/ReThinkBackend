@@ -18,12 +18,12 @@ npm run dev
 
 On Windows PowerShell use `Copy-Item .env.example .env.local`; use `npm.cmd` if PowerShell blocks `npm`. The API runs at http://localhost:3001, alongside the website on port 3000.
 
-Without `GEMINI_API_KEY`, adaptive probe selection and feedback use curated fallbacks. Configure the key only in this backend. `GEMINI_MODEL` selects the model for provisional hypotheses and probe selection; live provider access/model availability must be verified with your Google account.
+Without `AI_GATEWAY_API_KEY`, adaptive probe selection and feedback use curated fallbacks. Configure the key only in this backend. `AI_GATEWAY_MODEL` selects the model for provisional hypotheses and probe selection; live provider access/model availability must be verified with your Vercel AI Gateway team.
 
 ## Deploy to Vercel
 
 1. Import HansenHalim1/ReThinkBackend as a new Vercel project, with framework preset Next.js and repository root as the root directory. Use the default build/output settings and Node.js 24.x.
-2. Set `GEMINI_API_KEY` if AI feedback is wanted, and `GEMINI_MODEL` to the model available to your account.
+2. Set `AI_GATEWAY_API_KEY` if AI feedback is wanted, and `AI_GATEWAY_MODEL` to the model available to your account.
 3. Set `ALLOWED_ORIGINS` to the exact website origins, for example `https://your-website.vercel.app,http://localhost:3000`. Separate origins with commas; omit paths and trailing slashes. Add preview domains explicitly when needed.
 4. Apply the Supabase migration and configure `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, and backend-only `SUPABASE_SECRET_KEY` as described in SETUP.md.
 5. Deploy and check `https://YOUR-BACKEND.vercel.app/api/health`. Redeploy after changing environment variables.
@@ -31,26 +31,26 @@ Without `GEMINI_API_KEY`, adaptive probe selection and feedback use curated fall
 ## API
 
 - `GET /`: service name and endpoint list.
-- `GET /api/health`: `{ "aiConfigured": false, "model": "gemini-3.8-flash" }`. `aiConfigured` indicates a key is present, not that a live provider request has succeeded.
+- `GET /api/health`: `{ "aiConfigured": false, "model": "deepseek/deepseek-v4.1-flash-1017" }`. `aiConfigured` indicates a key is present, not that a live provider request has succeeded.
 - `GET /api/me`: authenticated account/profile.
 - `GET /api/progress` and `POST /api/progress`: authenticated learning state and server-validated commands (see SETUP.md).
 - `POST /api/diagnostic`: development-only, local-origin endpoint for adaptive selection in demo mode. It is unavailable outside `NODE_ENV=development`.
-- `POST /api/feedback`: requires `Authorization: Bearer <access_token>` and accepts `{ "questionId": "...", "answer": "...", "reasoning": "..." }`. Returns `{ "feedback": "...", "source": "curated" | "gemini", "reason"?: "...", "model"?: "..." }`. See `lib/content.ts` for question IDs. No AI help is available on independent retry/transfer items.
+- `POST /api/feedback`: requires `Authorization: Bearer <access_token>` and accepts `{ "questionId": "...", "answer": "...", "reasoning": "..." }`. Returns `{ "feedback": "...", "source": "curated" | "gateway", "reason"?: "...", "model"?: "..." }`. See `lib/content.ts` for question IDs. No AI help is available on independent retry/transfer items.
 - `OPTIONS` supports browser CORS preflight where needed. Responses are not cached. Disallowed browser origins receive 403. Native clients may omit Origin on authenticated endpoints.
 
 Invalid JSON, unknown questions, missing fields, and unsupported math return 400. Bodies over 4,000 decoded characters return 413. Answer length is limited to 160 characters and reasoning to 1,200. Provider errors and invalid AI output return curated feedback with status 200.
 
 ## Connect clients
 
-The website should call `${NEXT_PUBLIC_API_BASE_URL}/api/health` and `${NEXT_PUBLIC_API_BASE_URL}/api/feedback`, with `NEXT_PUBLIC_API_BASE_URL` set to this deployment's origin (no trailing slash). The website now uses this shared API and Supabase Auth. Never place the Gemini key in the website or Swift app.
+The website should call `${NEXT_PUBLIC_API_BASE_URL}/api/health` and `${NEXT_PUBLIC_API_BASE_URL}/api/feedback`, with `NEXT_PUBLIC_API_BASE_URL` set to this deployment's origin (no trailing slash). The website now uses this shared API and Supabase Auth. Never place the DeepSeek key in the website or Swift app.
 
 Swift can use URLSession with the same JSON request and `Content-Type: application/json`. Send the Supabase access token in the Authorization Bearer header. Do not send a browser Origin header from the native app.
 
 ## Scope
 
-The backend owns grading and learning transitions and stores per-account progress in Supabase. It includes profiles, attempts inside session snapshots, and revision-based save conflicts. Gemini updates a private provisional, concept-specific hypothesis after each answer and selects the next unused foundation probe from the expanded bank, up to three probes. Deterministic rules decide whether evidence confirms, rejects, or leaves the suspected blocker uncertain. Learner API responses omit diagnosis, hypothesis, mastery, and error-pattern fields; only the service role can read stored assessments.
+The backend owns grading and learning transitions and stores per-account progress in Supabase. It includes profiles, attempts inside session snapshots, and revision-based save conflicts. DeepSeek updates a private provisional, concept-specific hypothesis after each answer and selects the next unused foundation probe from the expanded bank, up to three probes. Deterministic rules decide whether evidence confirms, rejects, or leaves the suspected blocker uncertain. Learner API responses omit diagnosis, hypothesis, mastery, and error-pattern fields; only the service role can read stored assessments.
 
-CORS restricts browser access; it is not authentication. Protected endpoints verify Supabase tokens. Distributed rate limiting is not included. Configure access/quota protection before broad public use. When Gemini is configured, diagnostic answers and reasoning are sent to Google. The unauthenticated demo selector is restricted to development and localhost browser origins; do not expose a development server to untrusted networks.
+CORS restricts browser access; it is not authentication. Protected endpoints verify Supabase tokens. Distributed rate limiting is not included. Configure access/quota protection before broad public use. When DeepSeek is configured, diagnostic answers and reasoning are sent through Vercel AI Gateway to its AI providers. The unauthenticated demo selector is restricted to development and localhost browser origins; do not expose a development server to untrusted networks.
 
 ## Verify
 
@@ -60,8 +60,34 @@ npm run typecheck
 npm run build
 ```
 
-Tests cover math/learning behavior, authenticated HTTP flows, cross-account isolation, concurrent saves, and the actual migration/RLS policies in embedded PostgreSQL. No live Gemini call is required by the tests.
+Tests cover math/learning behavior, authenticated HTTP flows, cross-account isolation, concurrent saves, and the actual migration/RLS policies in embedded PostgreSQL. No live DeepSeek call is required by the tests.
 
 ## SMA curriculum
 
 `GET/POST /api/curriculum` provides the kelas 10–12 catalogue and account-owned checkpoint progress for web and Swift. Access requires both existing foundation pretests to finish. The backend grades answers and persists completion with optimistic revision checks. Apply `supabase/migrations/202610180001_sma_curriculum.sql` before deploying the updated frontend; see [SETUP.md](SETUP.md#sma-curriculum-kelas-1012). Existing endpoints and pretest data remain compatible.
+
+## Concept video pilot
+
+`GET /api/videos?topicId=distribution` is a public, read-only catalog for three packaged Manim videos. Omit the filter to list all pilots. Web and Swift use the same absolute video/poster/caption URLs and JSON transcripts. No database migration is required. Optional `VIDEO_ASSET_BASE_URL` points to a public HTTPS media directory; by default files are served from this backend's `/videos/`. See [the Swift demo runbook](docs/swift-team-demo.md), [OpenAPI](docs/video-api.openapi.json), and [Swift examples](examples/swift/ReThinkAPI.swift). Videos are silent; captions/transcripts are Indonesian.
+
+## Questions about transcript passages
+
+`POST /api/video-help` requires a verified Supabase bearer token and accepts `{ videoId, videoVersion, cueIndex, question }`. The backend resolves the selected passage from its versioned catalog before asking DeepSeek. Responses explicitly identify `source: gateway` or `source: curated`; provider failures return a curated passage explanation. No conversation or learning progress is saved. The website has clickable transcript passages and a focused question panel; demo mode offers labeled local examples without calling the AI endpoint. See [the Swift guide](docs/swift-team-demo.md).
+
+## DeepSeek AI Gateway
+
+All AI requests use the shared backend DeepSeek transport: diagnostic selection, feedback, and transcript explanations. See [Gateway setup](docs/deepseek-gateway-setup.md) for credentials, monthly credit eligibility, and activation checks. No Google/Gemini request path remains.
+
+## Unified foundation assessment
+
+`GET/POST /api/assessment` provides one saved, mixed-topic pretest: 24 questions, eight topics, three difficulty rounds, and a separate editable self-assessment checklist. `GET/POST /api/assessment-demo` is stateless practice only. Apply `202610210001_foundation_assessment.sql` before publishing this flow. The curriculum accepts either unified completion or both legacy sessions. See [the assessment guide](docs/foundation-pretest.md) and [OpenAPI](docs/assessment-api.openapi.json). AI-targeted follow-ups remain future work.
+
+## Curriculum v2: general and advanced
+
+The shared catalog has 37 introductory lessons: 25 general (including two prerequisite support lessons) and 12 elective advanced. `GET /api/curriculum` adds `curriculumVersion`, `tracks`, and per-lesson metadata/examples/mistakes. Existing checkpoint grading and IDs remain unchanged. Apply `202610210002_curriculum_v2.sql` before saving new lesson IDs. See [the curriculum and Swift guide](docs/sma-curriculum-v2.md).
+
+## Complete media library
+
+`GET /api/videos` now covers all 39 topics with packaged MP4/JPEG/VTT assets and clickable transcript explanations. `GET /api/visualizations` adds 156 captioned native SVG stages. Optional `VIDEO_ASSET_BASE_URL` serves the same directory layout externally, including `visuals/`. No new database migration. See [the media guide](docs/complete-concept-media.md) and [native visualization example](examples/swift/ConceptVisualizationDemo.swift).
+
+Chatbot endpoints: `POST /api/chat` and `POST /api/youtube-transcript`. See [chatbot and video context](docs/chatbot-video-context.md). Set backend-only `SUPADATA_API_KEY` to enable native YouTube captions; timed SRT/VTT import works without this provider.

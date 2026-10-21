@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.999
+Dua titik pada kurva y = x² menentukan garis sekan.
+
+2
+00:00:06.000 --> 00:00:11.999
+Titik pertama berada di (1, 1). Dekatkan titik kedua ke titik pertama.
+
+3
+00:00:12.000 --> 00:00:18.999
+Saat jarak horizontal mendekati nol, gradien sekan mendekati gradien garis singgung.
+
+4
+00:00:19.000 --> 00:00:29.000
+Turunan f(x) = x² adalah f′(x) = 2x. Pada x = 1, gradien garis singgung adalah 2.

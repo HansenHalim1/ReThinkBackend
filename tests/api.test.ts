@@ -8,7 +8,7 @@ import { getConcept } from '../lib/content.ts';
 test('API supports browser preflight, Swift, validation, and curated fallback', async () => {
   const mock = mockSupabase();
   process.env.ALLOWED_ORIGINS = 'https://learn.example.com/,http://localhost:3000/';
-  delete process.env.GEMINI_API_KEY;
+  delete process.env.AI_GATEWAY_API_KEY;
   const url = 'http://localhost:3001/api/feedback';
   const origin = 'https://learn.example.com';
   const questionId = getConcept('distribution').questions.diagnosis.id;

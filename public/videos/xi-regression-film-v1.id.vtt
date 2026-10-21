@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.999
+Garis model dipakai untuk memprediksi keluaran dari masukan.
+
+2
+00:00:09.000 --> 00:00:17.999
+Titik pengamatan tetap, tetapi prediksi berubah saat gradien berubah.
+
+3
+00:00:18.000 --> 00:00:26.999
+Residu adalah nilai teramati dikurangi nilai prediksi.
+
+4
+00:00:27.000 --> 00:00:36.000
+Garis yang dekat dengan satu titik belum tentu paling cocok untuk seluruh data.

@@ -1,0 +1,416 @@
+{
+  "x-exponents": {
+    "prompt": "Berapakah nilai 3² × 3³?",
+    "options": [
+      {
+        "id": "a",
+        "text": "3⁶"
+      },
+      {
+        "id": "b",
+        "text": "3⁵"
+      },
+      {
+        "id": "c",
+        "text": "6⁵"
+      },
+      {
+        "id": "d",
+        "text": "9⁶"
+      }
+    ],
+    "correctOption": "b",
+    "explanation": "Basisnya sama, sehingga pangkat dijumlahkan: 3² × 3³ = 3²⁺³ = 3⁵."
+  },
+  "x-linear": {
+    "prompt": "Jika x + y = 9 dan x − y = 3, berapakah x?",
+    "options": [
+      {
+        "id": "a",
+        "text": "3"
+      },
+      {
+        "id": "b",
+        "text": "4"
+      },
+      {
+        "id": "c",
+        "text": "6"
+      },
+      {
+        "id": "d",
+        "text": "12"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Jumlahkan kedua persamaan: 2x = 12. Jadi x = 6 dan y = 3."
+  },
+  "x-quadratic": {
+    "prompt": "Apa akar-akar dari x² − 7x + 12 = 0?",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 dan 6"
+      },
+      {
+        "id": "b",
+        "text": "−3 dan −4"
+      },
+      {
+        "id": "c",
+        "text": "1 dan 12"
+      },
+      {
+        "id": "d",
+        "text": "3 dan 4"
+      }
+    ],
+    "correctOption": "d",
+    "explanation": "x² − 7x + 12 = (x − 3)(x − 4), sehingga akarnya 3 dan 4."
+  },
+  "x-trigonometry": {
+    "prompt": "Sisi depan sudut θ adalah 6 dan sisi sampingnya 8. Berapa tan θ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "3/4"
+      },
+      {
+        "id": "b",
+        "text": "4/3"
+      },
+      {
+        "id": "c",
+        "text": "3/5"
+      },
+      {
+        "id": "d",
+        "text": "4/5"
+      }
+    ],
+    "correctOption": "a",
+    "explanation": "Tangen membandingkan sisi depan dengan samping: 6/8 = 3/4."
+  },
+  "x-statistics": {
+    "prompt": "Berapa mean dari data 4, 6, 8, dan 10?",
+    "options": [
+      {
+        "id": "a",
+        "text": "6"
+      },
+      {
+        "id": "b",
+        "text": "8"
+      },
+      {
+        "id": "c",
+        "text": "7"
+      },
+      {
+        "id": "d",
+        "text": "28"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Jumlah data adalah 28, banyak data 4. Mean = 28/4 = 7."
+  },
+  "x-probability": {
+    "prompt": "Pada satu lemparan dadu adil, berapa peluang mendapat angka lebih dari 4?",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/6"
+      },
+      {
+        "id": "b",
+        "text": "1/3"
+      },
+      {
+        "id": "c",
+        "text": "1/2"
+      },
+      {
+        "id": "d",
+        "text": "2/3"
+      }
+    ],
+    "correctOption": "b",
+    "explanation": "Angka yang memenuhi adalah 5 dan 6, jadi peluangnya 2/6 = 1/3."
+  },
+  "xi-functions": {
+    "prompt": "Nilai mana yang harus dikeluarkan dari domain f(x) = 1/(x − 2)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "0"
+      },
+      {
+        "id": "b",
+        "text": "−2"
+      },
+      {
+        "id": "c",
+        "text": "1"
+      },
+      {
+        "id": "d",
+        "text": "2"
+      }
+    ],
+    "correctOption": "d",
+    "explanation": "Untuk x = 2, penyebut menjadi nol. Maka domainnya semua bilangan real kecuali 2."
+  },
+  "xi-composition": {
+    "prompt": "Jika f(x) = 3x − 6, berapakah f⁻¹(9)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "1"
+      },
+      {
+        "id": "b",
+        "text": "5"
+      },
+      {
+        "id": "c",
+        "text": "9"
+      },
+      {
+        "id": "d",
+        "text": "21"
+      }
+    ],
+    "correctOption": "b",
+    "explanation": "Selesaikan 3x − 6 = 9: 3x = 15 dan x = 5. Invers mengembalikan 9 ke masukan 5."
+  },
+  "xi-transformations": {
+    "prompt": "Grafik y = f(x) − 4 adalah grafik awal yang digeser…",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 satuan ke kiri"
+      },
+      {
+        "id": "b",
+        "text": "4 satuan ke kanan"
+      },
+      {
+        "id": "c",
+        "text": "4 satuan ke bawah"
+      },
+      {
+        "id": "d",
+        "text": "4 satuan ke atas"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Pengurangan 4 terjadi pada nilai keluaran, sehingga setiap titik bergeser 4 satuan ke bawah."
+  },
+  "xi-circles": {
+    "prompt": "Sudut pusat yang menghadap suatu busur adalah 100°. Berapa sudut keliling pada busur yang sama?",
+    "options": [
+      {
+        "id": "a",
+        "text": "25°"
+      },
+      {
+        "id": "b",
+        "text": "50°"
+      },
+      {
+        "id": "c",
+        "text": "100°"
+      },
+      {
+        "id": "d",
+        "text": "200°"
+      }
+    ],
+    "correctOption": "b",
+    "explanation": "Sudut keliling besarnya setengah sudut pusat: 100°/2 = 50°."
+  },
+  "xi-bivariate": {
+    "prompt": "Nilai r = 0,92 menunjukkan…",
+    "options": [
+      {
+        "id": "a",
+        "text": "hubungan linear positif kuat"
+      },
+      {
+        "id": "b",
+        "text": "hubungan linear negatif kuat"
+      },
+      {
+        "id": "c",
+        "text": "tidak ada hubungan linear"
+      },
+      {
+        "id": "d",
+        "text": "hubungan sebab akibat yang pasti"
+      }
+    ],
+    "correctOption": "a",
+    "explanation": "Nilai r dekat dengan +1 berarti hubungan linear positif kuat. Nilai ini tidak memastikan sebab akibat."
+  },
+  "xi-regression": {
+    "prompt": "Pada model ŷ = 20 + 5x, berapa kenaikan prediksi jika x bertambah 2?",
+    "options": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "20"
+      },
+      {
+        "id": "c",
+        "text": "10"
+      },
+      {
+        "id": "d",
+        "text": "30"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Gradien b = 5. Untuk kenaikan x sebesar 2, perubahan prediksi adalah 5 × 2 = 10."
+  },
+  "xii-sequences": {
+    "prompt": "Berapa jumlah lima suku pertama barisan 2, 4, 6, 8, …?",
+    "options": [
+      {
+        "id": "a",
+        "text": "10"
+      },
+      {
+        "id": "b",
+        "text": "20"
+      },
+      {
+        "id": "c",
+        "text": "30"
+      },
+      {
+        "id": "d",
+        "text": "32"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Lima sukunya adalah 2, 4, 6, 8, 10. Jumlahnya 30."
+  },
+  "xii-interest": {
+    "prompt": "Modal 200 mendapat bunga tunggal 5% per tahun selama 3 tahun. Nilai akhirnya?",
+    "options": [
+      {
+        "id": "a",
+        "text": "210"
+      },
+      {
+        "id": "b",
+        "text": "230"
+      },
+      {
+        "id": "c",
+        "text": "231,525"
+      },
+      {
+        "id": "d",
+        "text": "250"
+      }
+    ],
+    "correctOption": "b",
+    "explanation": "M = 200(1 + 3 × 0,05) = 200 × 1,15 = 230."
+  },
+  "xii-annuities": {
+    "prompt": "Sisa pokok 500, bunga periode 2%, dan pembayaran 60. Berapa angsuran pokoknya?",
+    "options": [
+      {
+        "id": "a",
+        "text": "10"
+      },
+      {
+        "id": "b",
+        "text": "50"
+      },
+      {
+        "id": "c",
+        "text": "60"
+      },
+      {
+        "id": "d",
+        "text": "70"
+      }
+    ],
+    "correctOption": "b",
+    "explanation": "Bunga = 0,02 × 500 = 10. Angsuran pokok = 60 − 10 = 50."
+  },
+  "xii-counting": {
+    "prompt": "Kode dua digit dibuat dari 1, 2, 3, 4 tanpa pengulangan. Ada berapa kode?",
+    "options": [
+      {
+        "id": "a",
+        "text": "4"
+      },
+      {
+        "id": "b",
+        "text": "8"
+      },
+      {
+        "id": "c",
+        "text": "12"
+      },
+      {
+        "id": "d",
+        "text": "16"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Digit pertama memiliki 4 pilihan, digit kedua tinggal 3. Jumlah kode = 4 × 3 = 12."
+  },
+  "xii-combinatorics": {
+    "prompt": "Dari 4 siswa dipilih satu ketua dan satu wakil yang berbeda. Ada berapa susunan?",
+    "options": [
+      {
+        "id": "a",
+        "text": "6"
+      },
+      {
+        "id": "b",
+        "text": "8"
+      },
+      {
+        "id": "c",
+        "text": "12"
+      },
+      {
+        "id": "d",
+        "text": "16"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Jabatan membuat urutan penting: 4 pilihan ketua × 3 pilihan wakil = 12."
+  },
+  "xii-compound-probability": {
+    "prompt": "Kantong berisi 3 bola merah dan 2 biru. Setelah satu merah diambil tanpa dikembalikan, peluang bola berikutnya merah adalah…",
+    "options": [
+      {
+        "id": "a",
+        "text": "3/5"
+      },
+      {
+        "id": "b",
+        "text": "2/5"
+      },
+      {
+        "id": "c",
+        "text": "1/2"
+      },
+      {
+        "id": "d",
+        "text": "3/4"
+      }
+    ],
+    "correctOption": "c",
+    "explanation": "Tersisa 2 merah dan 2 biru, total 4 bola. Peluang merah berikutnya = 2/4 = 1/2."
+  }
+}

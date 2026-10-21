@@ -47,7 +47,7 @@ ALLOWED_ORIGINS=https://re-think-test.vercel.app,http://localhost:3000
 
 The backend also accepts legacy `SUPABASE_ANON_KEY` / `SUPABASE_SERVICE_ROLE_KEY` equivalents. Never expose the secret/service-role key in the web bundle, Swift binary, logs, or Git. Add keys in each Vercel project's environment settings and local ignored environment files. The dashboard link alone is not a credential.
 
-Keep Gemini settings in the backend. After each diagnostic answer, Gemini updates a private provisional hypothesis and selects the next unused foundation probe from the bank, for at most three probes. Deterministic backend rules still decide the final diagnosis. Deploy the backend first, apply `202610170002_private_learning_progress.sql`, then deploy the website. `/api/feedback` and progress still require sign-in. This work does not automatically push, migrate, or deploy either repository.
+Keep DeepSeek settings in the backend. After each diagnostic answer, DeepSeek updates a private provisional hypothesis and selects the next unused foundation probe from the bank, for at most three probes. Deterministic backend rules still decide the final diagnosis. Deploy the backend first, apply `202610170002_private_learning_progress.sql`, then deploy the website. `/api/feedback` and progress still require sign-in. This work does not automatically push, migrate, or deploy either repository.
 
 ## API used by both web and Swift
 
@@ -97,3 +97,11 @@ Both website and Swift clients use the same Supabase Bearer access token:
 The RPC checks and locks both pretest rows in the same transaction as the save. Browser and Swift credentials cannot access this table or invoke its write function directly. Deleting an Auth account cascades to its curriculum progress. The material IDs and questions in `lib/curriculum.ts` must match the frontend copy; adding IDs also requires a constraint migration.
 
 The roadmap contains 18 introductory lessons and one checkpoint per material. These completion flags do not claim validated mastery. The grade ordering is ReThink's learning sequence; schools may distribute Fase F topics differently.
+
+## Unified pretest migration
+
+The current website uses one mixed foundation test. Apply `supabase/migrations/202610210001_foundation_assessment.sql` after the migrations above, then deploy backend and frontend. This adds private saved assessment/checklist storage and updates the curriculum RPC to accept unified completion or both legacy sessions. No new environment variables. Older two-session instructions above describe backward-compatible endpoints. See [the current assessment contract](docs/foundation-pretest.md). The anonymous demo works without the new table, but signed-in assessment requests require it.
+
+## Expanded curriculum migration
+
+After the unified-assessment migration, apply `supabase/migrations/202610210002_curriculum_v2.sql`. It expands the module-ID constraint to the 37 current lessons without deleting existing progress. Deploy backend then frontend. `GET /api/curriculum` retains its existing fields and adds pathway/version metadata; POST keeps the same command shape and account/revision checks. See [curriculum v2](docs/sma-curriculum-v2.md).

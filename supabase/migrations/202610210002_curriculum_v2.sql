@@ -1,0 +1,4 @@
+begin;
+alter table public.curriculum_progress drop constraint curriculum_progress_module_id_check;
+alter table public.curriculum_progress add constraint curriculum_progress_module_id_check check (module_id in ('x-exponents', 'x-linear', 'x-inequalities', 'x-quadratic', 'x-exponential-functions', 'x-trigonometry', 'x-statistics', 'x-quartiles', 'x-scatterplots', 'x-probability', 'xi-functions', 'xi-composition', 'xi-inverse-functions', 'xi-transformations', 'xi-circles', 'xi-bivariate', 'xi-regression', 'xii-sequences', 'xii-geometric-series', 'xii-interest', 'xii-annuities', 'xii-counting', 'xii-combinatorics', 'xii-compound-probability', 'xii-conditional-probability', 'advanced-polynomials', 'advanced-matrices', 'advanced-vectors', 'advanced-trigonometry', 'advanced-rational-log-functions', 'advanced-conics', 'advanced-binomial', 'advanced-normal', 'advanced-limits', 'advanced-derivatives', 'advanced-derivative-applications', 'advanced-integrals'));
+commit;

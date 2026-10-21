@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.999
+Ada empat percobaan bebas dengan peluang sukses yang sama pada setiap percobaan.
+
+2
+00:00:09.000 --> 00:00:17.999
+Setiap batang adalah peluang tepat k keberhasilan.
+
+3
+00:00:18.000 --> 00:00:26.999
+Ketika p naik, pusat sebaran bergerak ke jumlah keberhasilan yang lebih besar.
+
+4
+00:00:27.000 --> 00:00:36.000
+Nilai harapan adalah empat kali p, tetapi hasil satu rangkaian tidak harus sama dengan nilai harapan.

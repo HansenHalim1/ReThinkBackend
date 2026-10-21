@@ -42,7 +42,10 @@ test('SMA API verifies pretests, grades server-side, isolates accounts and rejec
     finish('inverse');
     const catalogue = await (await GET(req())).json();
     assert.equal(catalogue.unlocked, true);
-    assert.equal(catalogue.modules.length, 18);
+    assert.equal(catalogue.modules.length, 37);
+    assert.equal(catalogue.curriculumVersion, '2026.10.21-v2');
+    assert.equal(catalogue.tracks.length, 2);
+    assert.equal(catalogue.modules.filter((m: { track: string }) => m.track === 'advanced').length, 12);
     assert.equal('correctOption' in catalogue.modules[0].quiz, false);
     const failed = await (await POST(req(command))).json();
     assert.equal(failed.correct, false);
@@ -60,6 +63,14 @@ test('SMA API verifies pretests, grades server-side, isolates accounts and rejec
     assert.equal(retry.correct, false);
     assert.equal(retry.progress.completed, true);
     for (const body of [{ ...command, answerId: 'unknown' }, { ...command, moduleId: 'unknown' }, { ...command, expectedRevision: -1 }]) assert.equal((await POST(req(body))).status, 400);
+    for (const id of ['x-inequalities','x-exponential-functions','advanced-limits','advanced-derivatives','advanced-integrals']) {
+      const lesson = materials.find(m => m.id === id)!;
+      const wrongAnswer = lesson.quiz.options.find(o => o.id !== lesson.quiz.correctOption)!.id;
+      const failed = await (await POST(req({ moduleId: id, answerId: wrongAnswer, expectedRevision: 0, correct: true }))).json();
+      assert.equal(failed.correct, false);
+      const passed = await (await POST(req({ moduleId: id, answerId: lesson.quiz.correctOption, expectedRevision: 1 }))).json();
+      assert.equal(passed.correct, true); assert.equal(passed.progress.completed, true);
+    }
     const preflight = await OPTIONS(new Request('http://localhost:3001/api/curriculum', { method: 'OPTIONS', headers: { Origin: 'https://learn.example.com', 'Access-Control-Request-Method': 'POST' } }));
     assert.equal(preflight.status, 204);
   } finally { mock.restore(); }

@@ -1,0 +1,236 @@
+{
+  "distribution-v1": [
+    "3(x + 2) berarti ada tiga kelompok yang sama. Isi setiap kelompok adalah x ditambah 2 satuan. Kita belum perlu mengetahui nilai x untuk menghitung banyak bagian x dan banyak satuannya.",
+    "Bayangkan tiga kantong. Setiap kantong berisi x kelereng biru dan 2 kelereng merah. Mengambil tiga kantong berarti mengambil semua isi tiap kantong, sehingga bagian x dan bagian 2 sama-sama muncul tiga kali.",
+    "Bagian x dijumlahkan menjadi x + x + x = 3x. Satuannya menjadi 2 + 2 + 2 = 6. Kita tidak menggabungkan 3x dengan 6 sebagai suku sejenis, karena nilai x belum ditentukan.",
+    "Pengali 3 berlaku pada seluruh isi kurung: 3 × x + 3 × 2 = 3x + 6. Sebagai pemeriksaan, pilih x = 4: 3(4 + 2) = 18 dan 3 × 4 + 6 = 18. Bentuk 3x + 2 tidak menghitung dua satuan dari setiap kelompok."
+  ],
+  "quadratic-v1": [
+    "Untuk y = x², kuadrat bilangan real tidak negatif. Nilai terkecilnya 0, yang terjadi saat x = 0. Itulah sebabnya titik paling bawah, atau puncak parabola ini, berada di (0, 0).",
+    "Pada y = (x − 2)², bagian yang dikuadratkan menjadi nol ketika x = 2. Jadi puncak berpindah ke kanan, dari x = 0 ke x = 2. Contohnya, nilai y yang dahulu dicapai pada x = 1 kini dicapai pada x = 3, sebab 3 − 2 = 1.",
+    "Tambahan 1 berada di luar kuadrat sehingga bekerja pada keluaran y. Pada setiap x, hasil baru satu lebih besar daripada sebelumnya. Misalnya, di x = 2, nilai (2 − 2)² = 0 berubah menjadi 0 + 1 = 1.",
+    "Bentuk y = (x − h)² + k memiliki puncak (h, k). Pada contoh ini h = 2 dan k = 1. Pergeseran tidak mengubah koefisien kuadrat, jadi parabola tetap sama lebar dan tetap membuka ke atas."
+  ],
+  "tangent-v1": [
+    "Garis sekan melalui dua titik berbeda pada kurva. Gradiennya membandingkan perubahan tinggi dengan perubahan mendatar: perubahan y dibagi perubahan x. Ini adalah laju perubahan rata-rata di antara kedua titik, bukan laju sesaat di satu titik.",
+    "Titik pertama adalah (1, 1). Jika jarak mendatarnya h, titik kedua adalah (1 + h, (1 + h)²). Untuk h ≠ 0, gradien sekan = [(1 + h)² − 1]/h = (2h + h²)/h = 2 + h.",
+    "Ketika h = 0,5, gradien sekan adalah 2,5; ketika h = 0,1, gradiennya 2,1. Nilai itu mendekati 2 saat h mendekati nol. Kita tidak membagi dengan h = 0: kita mempelajari limit gradien saat dua titik saling mendekat.",
+    "Untuk f(x) = x², aturan turunan memberikan f′(x) = 2x. Di x = 1, f′(1) = 2. Artinya kemiringan garis singgung di (1, 1) adalah 2; nilai fungsi di sana tetap f(1) = 1. Nilai fungsi dan nilai turunannya menjawab pertanyaan yang berbeda."
+  ],
+  "inverse-film-v1": [
+    "Pada x ditambah satu sama dengan tujuh, kurangi satu pada kedua sisi. Periksa: 6 + 1 = 7. Untuk x + a = 7, lakukan pengurangan a pada kedua ruas.",
+    "Jika tambahannya dua, kurangi dua pada kedua sisi. Periksa: 5 + 2 = 7. Untuk x + a = 7, lakukan pengurangan a pada kedua ruas.",
+    "Operasi kebalikan harus dilakukan pada kedua sisi persamaan. Periksa: 3 + 4 = 7. Untuk x + a = 7, lakukan pengurangan a pada kedua ruas.",
+    "Periksa nilai x dengan memasukkannya ke persamaan semula. Periksa: 1 + 6 = 7. Untuk x + a = 7, lakukan pengurangan a pada kedua ruas."
+  ],
+  "x-exponents-film-v1": [
+    "Dua pangkat nol bernilai satu. 2^0 = 1; naik satu pangkat → dikali 2. Eksponen menghitung banyak faktor, bukan penambahan biasa.",
+    "Dua pangkat satu bernilai dua. 2^1 = 2; naik satu pangkat → dikali 2. Eksponen menghitung banyak faktor, bukan penambahan biasa.",
+    "Dua pangkat tiga berarti tiga faktor dua, bukan dua kali tiga. 2^3 = 8; naik satu pangkat → dikali 2. Eksponen menghitung banyak faktor, bukan penambahan biasa.",
+    "Setiap kenaikan satu pada pangkat menggandakan hasil sebelumnya. 2^5 = 32; naik satu pangkat → dikali 2. Eksponen menghitung banyak faktor, bukan penambahan biasa."
+  ],
+  "x-linear-film-v1": [
+    "Garis pertama menyatakan jumlah x dan y. Garis kedua menjaga selisihnya dua. Titik potong (3, 1) memenuhi keduanya. Solusi SPLDV adalah pasangan yang memenuhi semua persamaan.",
+    "Mengubah jumlah memindahkan garis pertama dan titik potongnya. Titik potong (4, 2) memenuhi keduanya. Solusi SPLDV adalah pasangan yang memenuhi semua persamaan.",
+    "Titik potong memenuhi kedua persamaan sekaligus. Titik potong (5, 3) memenuhi keduanya. Solusi SPLDV adalah pasangan yang memenuhi semua persamaan.",
+    "Periksa koordinat pada kedua persamaan, bukan hanya salah satunya. Titik potong (7, 5) memenuhi keduanya. Solusi SPLDV adalah pasangan yang memenuhi semua persamaan."
+  ],
+  "x-inequalities-film-v1": [
+    "Daerah berwarna memenuhi x ditambah y paling besar enam, dengan koordinat tidak negatif. (0, 2): 0 + 2 = 2 → di daerah solusi. Solusi sistem pertidaksamaan adalah irisan semua daerah.",
+    "Titik dua koma dua berada di dalam semua batas. (2, 2): 2 + 2 = 4 → di daerah solusi. Solusi sistem pertidaksamaan adalah irisan semua daerah.",
+    "Titik empat koma dua berada tepat pada batas yang disertakan. (4, 2): 4 + 2 = 6 → di daerah solusi. Solusi sistem pertidaksamaan adalah irisan semua daerah.",
+    "Titik enam koma dua melanggar batas jumlah, sehingga tidak termasuk solusi. (6, 2): 6 + 2 = 8 → di luar daerah solusi. Solusi sistem pertidaksamaan adalah irisan semua daerah."
+  ],
+  "x-exponential-functions-film-v1": [
+    "Model dimulai dengan seratus satuan pada periode nol. N(0) = 100 × 2^0 = 100. Faktor pertumbuhan tetap menghasilkan perubahan eksponensial.",
+    "Setelah satu periode, nilainya menjadi dua kali lipat. N(1) = 100 × 2^1 = 200. Faktor pertumbuhan tetap menghasilkan perubahan eksponensial.",
+    "Tiga periode berarti mengalikan dua sebanyak tiga kali. N(3) = 100 × 2^3 = 800. Faktor pertumbuhan tetap menghasilkan perubahan eksponensial.",
+    "Grafik makin curam karena pertambahan bergantung pada nilai terakhir. N(5) = 100 × 2^5 = 3.200. Faktor pertumbuhan tetap menghasilkan perubahan eksponensial."
+  ],
+  "x-trigonometry-film-v1": [
+    "Sisi miring dibuat satu. Sisi depan dan samping dibaca terhadap sudut yang ditandai. sin θ = 0,259; cos θ = 0,966; tan θ = 0,268. Tentukan sudut acuan sebelum memilih sisi depan dan samping.",
+    "Sinus adalah sisi depan dibagi sisi miring. sin θ = 0,5; cos θ = 0,866; tan θ = 0,577. Tentukan sudut acuan sebelum memilih sisi depan dan samping.",
+    "Pada sudut empat puluh lima derajat, sisi depan dan samping sama panjang. sin θ = 0,707; cos θ = 0,707; tan θ = 1. Tentukan sudut acuan sebelum memilih sisi depan dan samping.",
+    "Saat sudut membesar, sinus naik dan kosinus turun pada rentang sudut lancip. sin θ = 0,866; cos θ = 0,5; tan θ = 1,732. Tentukan sudut acuan sebelum memilih sisi depan dan samping."
+  ],
+  "x-statistics-film-v1": [
+    "Empat nilai pertama tetap. Nilai kelima bisa diubah. Data 4, 6, 8, 10, 8 → mean 7,2, median 8. Gunakan ukuran pusat bersama informasi sebaran dan konteks.",
+    "Mean menggunakan semua nilai, sedangkan median adalah nilai tengah setelah diurutkan. Data 4, 6, 8, 10, 10 → mean 7,6, median 8. Gunakan ukuran pusat bersama informasi sebaran dan konteks.",
+    "Nilai besar menarik mean ke kanan. Data 4, 6, 8, 10, 16 → mean 8,8, median 8. Gunakan ukuran pusat bersama informasi sebaran dan konteks.",
+    "Bandingkan mean dan median sebelum menyimpulkan pusat data. Data 4, 6, 8, 10, 20 → mean 9,6, median 8. Gunakan ukuran pusat bersama informasi sebaran dan konteks."
+  ],
+  "x-quartiles-film-v1": [
+    "Kotak memuat lima puluh persen data tengah. Garis di dalamnya adalah median. Nilai terbesar 12; batas atas 16,5 → masih dalam whisker. Whisker memakai aturan satu koma lima IQR; pencilan tidak otomatis salah.",
+    "Q satu empat dan Q tiga sembilan, sehingga IQR bernilai lima. Nilai terbesar 16; batas atas 16,5 → masih dalam whisker. Whisker memakai aturan satu koma lima IQR; pencilan tidak otomatis salah.",
+    "Nilai di atas enam belas setengah ditandai sebagai calon pencilan. Nilai terbesar 24; batas atas 16,5 → calon pencilan. Whisker memakai aturan satu koma lima IQR; pencilan tidak otomatis salah.",
+    "Nilai ekstrem dapat bergerak jauh sementara kotak data tengah tetap. Nilai terbesar 40; batas atas 16,5 → calon pencilan. Whisker memakai aturan satu koma lima IQR; pencilan tidak otomatis salah."
+  ],
+  "x-scatterplots-film-v1": [
+    "Pola turun menunjukkan hubungan negatif pada pasangan data. Arah negatif pada contoh; asosiasi ≠ sebab-akibat. Diagram pencar menunjukkan asosiasi; penjelasan kausal memerlukan bukti lain.",
+    "Ketika tidak ada arah linear jelas, jangan memaksakan garis naik. Arah tidak linear jelas pada contoh; asosiasi ≠ sebab-akibat. Diagram pencar menunjukkan asosiasi; penjelasan kausal memerlukan bukti lain.",
+    "Pola naik menunjukkan hubungan positif. Arah positif pada contoh; asosiasi ≠ sebab-akibat. Diagram pencar menunjukkan asosiasi; penjelasan kausal memerlukan bukti lain.",
+    "Hubungan kuat tetap tidak membuktikan bahwa satu variabel menyebabkan yang lain. Arah positif pada contoh; asosiasi ≠ sebab-akibat. Diagram pencar menunjukkan asosiasi; penjelasan kausal memerlukan bukti lain."
+  ],
+  "x-probability-film-v1": [
+    "Setiap bola sama mungkin dipilih dan jumlah seluruh bola sepuluh. P(merah) = 2/10 = 0,2; P(biru) = 8/10. Rumus perbandingan jumlah berlaku jika hasil elementer sama mungkin.",
+    "Peluang merah adalah banyak bola merah dibagi sepuluh. P(merah) = 4/10 = 0,4; P(biru) = 6/10. Rumus perbandingan jumlah berlaku jika hasil elementer sama mungkin.",
+    "Menambah bola merah meningkatkan peluang merah. P(merah) = 6/10 = 0,6; P(biru) = 4/10. Rumus perbandingan jumlah berlaku jika hasil elementer sama mungkin.",
+    "Peluang merah dan biru bersama-sama berjumlah satu. P(merah) = 8/10 = 0,8; P(biru) = 2/10. Rumus perbandingan jumlah berlaku jika hasil elementer sama mungkin."
+  ],
+  "xi-functions-film-v1": [
+    "Masukan nol menghasilkan penyebut negatif dua. f(0) = 1/(0 − 2) = -0,5. Periksa domain sebelum menghitung atau menggambar sebuah titik.",
+    "Mendekati dua membuat besar hasil berubah tajam. f(1) = 1/(1 − 2) = -1. Periksa domain sebelum menghitung atau menggambar sebuah titik.",
+    "Pada dua, penyebut nol. Fungsi tidak terdefinisi di titik ini. x = 2: penyebut nol → tidak terdefinisi. Periksa domain sebelum menghitung atau menggambar sebuah titik.",
+    "Di sisi kanan dua, keluaran positif. Dua cabang tidak tersambung melalui titik terlarang. f(3) = 1/(3 − 2) = 1. Periksa domain sebelum menghitung atau menggambar sebuah titik."
+  ],
+  "xi-composition-film-v1": [
+    "Jalankan g terlebih dahulu: tambahkan tiga. f(g(0)) = 6, tetapi g(f(0)) = 3. f komposisi g berarti f(g(x)), sehingga g dijalankan lebih dahulu.",
+    "Keluaran g menjadi masukan f, yang mengalikan dua. f(g(1)) = 8, tetapi g(f(1)) = 5. f komposisi g berarti f(g(x)), sehingga g dijalankan lebih dahulu.",
+    "Pada masukan tiga, keluaran akhirnya dua belas. f(g(3)) = 12, tetapi g(f(3)) = 9. f komposisi g berarti f(g(x)), sehingga g dijalankan lebih dahulu.",
+    "Urutan sebaliknya memberi hasil lain; komposisi biasanya tidak komutatif. f(g(5)) = 16, tetapi g(f(5)) = 13. f komposisi g berarti f(g(x)), sehingga g dijalankan lebih dahulu."
+  ],
+  "xi-inverse-functions-film-v1": [
+    "Fungsi pertama mengalikan dua lalu menambahkan satu. f⁻¹(f(-2)) = (-3 − 1)/2 = -2. Invers fungsi berbeda dari kebalikan pecahan satu dibagi fungsi.",
+    "Invers membatalkan tambah satu, lalu membagi dua. f⁻¹(f(0)) = (1 − 1)/2 = 0. Invers fungsi berbeda dari kebalikan pecahan satu dibagi fungsi.",
+    "Keluaran invers kembali sama dengan masukan awal. f⁻¹(f(2)) = (5 − 1)/2 = 2. Invers fungsi berbeda dari kebalikan pecahan satu dibagi fungsi.",
+    "Domain dan range bertukar; contoh linear ini satu-ke-satu pada bilangan real. f⁻¹(f(4)) = (9 − 1)/2 = 4. Invers fungsi berbeda dari kebalikan pecahan satu dibagi fungsi."
+  ],
+  "xi-transformations-film-v1": [
+    "Parabola contoh berada dua satuan di atas grafik dasar. y = (x − (-2))² + 2; puncak (-2, 2). Pada y = (x − h)² + 2, puncaknya adalah (h, 2).",
+    "Nilai h nol mempertahankan puncak pada sumbu vertikal. y = (x − (0))² + 2; puncak (0, 2). Pada y = (x − h)² + 2, puncaknya adalah (h, 2).",
+    "h positif menggeser grafik ke kanan. y = (x − (2))² + 2; puncak (2, 2). Pada y = (x − h)² + 2, puncaknya adalah (h, 2).",
+    "Jarak vertikal tetap dua; bentuk parabola tidak berubah. y = (x − (3))² + 2; puncak (3, 2). Pada y = (x − h)² + 2, puncaknya adalah (h, 2)."
+  ],
+  "xi-circles-film-v1": [
+    "Busur berwarna dan juring menghadap sudut pusat yang sama. Bagian putaran 60/360; busur = 1,33π; luas juring = 2,67π. Dengan jari-jari tetap, panjang busur sebanding dengan sudut pusat.",
+    "Sembilan puluh derajat adalah seperempat putaran. Bagian putaran 90/360; busur = 2π; luas juring = 4π. Dengan jari-jari tetap, panjang busur sebanding dengan sudut pusat.",
+    "Seratus delapan puluh derajat adalah setengah lingkaran. Bagian putaran 180/360; busur = 4π; luas juring = 8π. Dengan jari-jari tetap, panjang busur sebanding dengan sudut pusat.",
+    "Bagian putaran yang sama mengalikan keliling untuk busur dan luas untuk juring. Bagian putaran 270/360; busur = 6π; luas juring = 12π. Dengan jari-jari tetap, panjang busur sebanding dengan sudut pusat."
+  ],
+  "xi-bivariate-film-v1": [
+    "Setiap titik menyatakan dua pengukuran dari pengamatan yang sama. Arah negatif pada contoh; asosiasi ≠ sebab-akibat. Pertahankan pasangan data dan periksa cara data dikumpulkan.",
+    "Pola tanpa arah linear tetap dapat menyimpan struktur lain. Arah tidak linear jelas pada contoh; asosiasi ≠ sebab-akibat. Pertahankan pasangan data dan periksa cara data dikumpulkan.",
+    "Kemiringan positif menunjukkan asosiasi pada data contoh. Arah positif pada contoh; asosiasi ≠ sebab-akibat. Pertahankan pasangan data dan periksa cara data dikumpulkan.",
+    "Variabel perancu dapat menjelaskan pola; hubungan bukan bukti sebab-akibat. Arah positif pada contoh; asosiasi ≠ sebab-akibat. Pertahankan pasangan data dan periksa cara data dikumpulkan."
+  ],
+  "xi-regression-film-v1": [
+    "Garis model dipakai untuk memprediksi keluaran dari masukan. ŷ = 10 + 1x; pada x = 4 → ŷ = 14, residu = 10. Residu bertanda menunjukkan arah kesalahan prediksi; regresi bukan bukti kausal.",
+    "Titik pengamatan tetap, tetapi prediksi berubah saat gradien berubah. ŷ = 10 + 2x; pada x = 4 → ŷ = 18, residu = 6. Residu bertanda menunjukkan arah kesalahan prediksi; regresi bukan bukti kausal.",
+    "Residu adalah nilai teramati dikurangi nilai prediksi. ŷ = 10 + 3x; pada x = 4 → ŷ = 22, residu = 2. Residu bertanda menunjukkan arah kesalahan prediksi; regresi bukan bukti kausal.",
+    "Garis yang dekat dengan satu titik belum tentu paling cocok untuk seluruh data. ŷ = 10 + 4x; pada x = 4 → ŷ = 26, residu = -2. Residu bertanda menunjukkan arah kesalahan prediksi; regresi bukan bukti kausal."
+  ],
+  "xii-sequences-film-v1": [
+    "Suku pertama selalu dua. U₅ = 2 + 4(1) = 6; S₅ = 20. Barisan aritmetika memiliki selisih tetap, bukan rasio tetap.",
+    "Beda dua berarti setiap suku bertambah dua. U₅ = 2 + 4(2) = 10; S₅ = 30. Barisan aritmetika memiliki selisih tetap, bukan rasio tetap.",
+    "Suku kelima dihitung dari empat kali penambahan beda. U₅ = 2 + 4(3) = 14; S₅ = 40. Barisan aritmetika memiliki selisih tetap, bukan rasio tetap.",
+    "Jumlah suku berbeda dari nilai satu suku; perhatikan apa yang ditanyakan. U₅ = 2 + 4(4) = 18; S₅ = 50. Barisan aritmetika memiliki selisih tetap, bukan rasio tetap."
+  ],
+  "xii-geometric-series-film-v1": [
+    "Rasio satu membuat keempat suku sama besar. 1 + 1 + 1 + 1 = 4 (empat suku). Contoh ini deret berhingga; rumus tak hingga memerlukan nilai mutlak rasio kurang dari satu.",
+    "Rasio dua menggandakan setiap suku sebelumnya. 1 + 2 + 4 + 8 = 15 (empat suku). Contoh ini deret berhingga; rumus tak hingga memerlukan nilai mutlak rasio kurang dari satu.",
+    "Rasio tiga mempercepat pertumbuhan suku-suku. 1 + 3 + 9 + 27 = 40 (empat suku). Contoh ini deret berhingga; rumus tak hingga memerlukan nilai mutlak rasio kurang dari satu.",
+    "Jumlah empat suku adalah penjumlahan semua batang, bukan hanya batang terakhir. 1 + 2 + 4 + 8 = 15 (empat suku). Contoh ini deret berhingga; rumus tak hingga memerlukan nilai mutlak rasio kurang dari satu."
+  ],
+  "xii-interest-film-v1": [
+    "Kedua model dimulai dari seratus satuan dengan bunga sepuluh persen per tahun. Tahun 0: tunggal 100; majemuk 100 satuan. Ini model pembelajaran, dengan satuan waktu dan suku bunga yang harus sesuai.",
+    "Pada tahun pertama, hasil kedua model sama. Tahun 1: tunggal 110; majemuk 110 satuan. Ini model pembelajaran, dengan satuan waktu dan suku bunga yang harus sesuai.",
+    "Pada model majemuk, bunga berikutnya dihitung atas saldo yang sudah bertambah. Tahun 4: tunggal 140; majemuk 146,41 satuan. Ini model pembelajaran, dengan satuan waktu dan suku bunga yang harus sesuai.",
+    "Selisih makin besar ketika waktu bertambah, dengan asumsi bunga tetap dan tanpa biaya. Tahun 8: tunggal 180; majemuk 214,36 satuan. Ini model pembelajaran, dengan satuan waktu dan suku bunga yang harus sesuai."
+  ],
+  "xii-annuities-film-v1": [
+    "Bunga periode pertama adalah dua persen dari saldo awal lima ratus. Periode 1: bunga 10; pokok 10; saldo 490. Saldo minimum 0.. Setiap pembayaran menutup bunga lebih dahulu, lalu mengurangi pokok.",
+    "Pembayaran lebih besar menyisakan lebih banyak bagian untuk pokok. Periode 1: bunga 10; pokok 30; saldo 470. Saldo minimum 0.. Setiap pembayaran menutup bunga lebih dahulu, lalu mengurangi pokok.",
+    "Bunga berikutnya dihitung dari saldo tersisa, bukan saldo awal terus-menerus. Periode 1: bunga 10; pokok 50; saldo 450. Saldo minimum 0.. Setiap pembayaran menutup bunga lebih dahulu, lalu mengurangi pokok.",
+    "Grafik berhenti di nol saat lunas; pembayaran terakhir dibatasi oleh tagihan yang tersisa. Periode 1: bunga 10; pokok 90; saldo 410. Saldo minimum 0.. Setiap pembayaran menutup bunga lebih dahulu, lalu mengurangi pokok."
+  ],
+  "xii-counting-film-v1": [
+    "Satu baju dapat dipasangkan dengan tiga celana. 1 baju × 3 celana = 3 pasangan. Aturan ini menghitung pasangan baju-celana yang berbeda, bukan penjumlahan pilihan.",
+    "Dua baju menghasilkan dua kelompok pasangan. 2 baju × 3 celana = 6 pasangan. Aturan ini menghitung pasangan baju-celana yang berbeda, bukan penjumlahan pilihan.",
+    "Setiap tambahan baju menambah tiga pasangan baru. 3 baju × 3 celana = 9 pasangan. Aturan ini menghitung pasangan baju-celana yang berbeda, bukan penjumlahan pilihan.",
+    "Aturan perkalian menghitung tahapan yang semuanya dilakukan. 4 baju × 3 celana = 12 pasangan. Aturan ini menghitung pasangan baju-celana yang berbeda, bukan penjumlahan pilihan."
+  ],
+  "xii-combinatorics-film-v1": [
+    "Ketua dan wakil adalah jabatan berbeda, sehingga urutan pemilihan penting. P(3,2) = 6; C(3,2) = 3. Permutasi membedakan urutan; kombinasi hanya memilih anggota.",
+    "Ada n pilihan pertama dan n kurang satu pilihan kedua. P(4,2) = 12; C(4,2) = 6. Permutasi membedakan urutan; kombinasi hanya memilih anggota.",
+    "Untuk tim tanpa jabatan, setiap pasangan dihitung dua kali jika urutannya dibedakan. P(5,2) = 20; C(5,2) = 10. Permutasi membedakan urutan; kombinasi hanya memilih anggota.",
+    "Bagi dua untuk tim dua orang tanpa urutan; jangan membagi jika jabatannya berbeda. P(6,2) = 30; C(6,2) = 15. Permutasi membedakan urutan; kombinasi hanya memilih anggota."
+  ],
+  "xii-compound-probability-film-v1": [
+    "A adalah angka genap pada dadu adil. B ditentukan oleh batas bawah yang dipilih. P(A ∪ B) = 3/6; irisan 1/6 dihitung satu kali. Peluang gabungan adalah jumlah peluang dikurangi peluang irisan.",
+    "Angka enam berada pada kedua kejadian dan hanya boleh dihitung sekali. P(A ∪ B) = 4/6; irisan 1/6 dihitung satu kali. Peluang gabungan adalah jumlah peluang dikurangi peluang irisan.",
+    "Gabungkan anggota kedua kejadian, lalu hilangkan hitungan ganda pada irisan. P(A ∪ B) = 5/6; irisan 2/6 dihitung satu kali. Peluang gabungan adalah jumlah peluang dikurangi peluang irisan.",
+    "Jika B memuat semua hasil, peluang gabungan menjadi satu. P(A ∪ B) = 6/6; irisan 3/6 dihitung satu kali. Peluang gabungan adalah jumlah peluang dikurangi peluang irisan."
+  ],
+  "xii-conditional-probability-film-v1": [
+    "Mula-mula ada sepuluh bola. Diketahui bola pertama merah dan tidak dikembalikan. Setelah satu merah keluar: P(merah berikutnya) = 1/9 ≈ 0,111. Model ini bersyarat pada merah pertama, dan pengambilan dilakukan tanpa pengembalian.",
+    "Sekarang penyebutnya sembilan, bukan sepuluh. Setelah satu merah keluar: P(merah berikutnya) = 2/9 ≈ 0,222. Model ini bersyarat pada merah pertama, dan pengambilan dilakukan tanpa pengembalian.",
+    "Pembilangnya juga berkurang satu karena sebuah merah sudah keluar. Setelah satu merah keluar: P(merah berikutnya) = 4/9 ≈ 0,444. Model ini bersyarat pada merah pertama, dan pengambilan dilakukan tanpa pengembalian.",
+    "Ubah komposisi awal dan bandingkan peluang sebelum dan sesudah informasi tersebut. Setelah satu merah keluar: P(merah berikutnya) = 7/9 ≈ 0,778. Model ini bersyarat pada merah pertama, dan pengambilan dilakukan tanpa pengembalian."
+  ],
+  "advanced-polynomials-film-v1": [
+    "Sisa pembagian polinomial oleh x kurang a sama dengan nilai P(a). P(0) = -2 → x − (0) bukan faktor. Teorema faktor berlaku ketika nilai polinomial pada a sama dengan nol.",
+    "Sisa yang bukan nol berarti x kurang a bukan faktor. P(3) = 4 → x − (3) bukan faktor. Teorema faktor berlaku ketika nilai polinomial pada a sama dengan nol.",
+    "Pada a sama dengan dua, grafik memotong sumbu dan sisanya nol. P(2) = 0 → x − (2) adalah faktor. Teorema faktor berlaku ketika nilai polinomial pada a sama dengan nol.",
+    "Pada a sama dengan negatif satu, sisanya juga nol dan faktor lain ditemukan. P(-1) = 0 → x − (-1) adalah faktor. Teorema faktor berlaku ketika nilai polinomial pada a sama dengan nol."
+  ],
+  "advanced-matrices-film-v1": [
+    "Matriks diagonal dengan skala satu mempertahankan persegi satuan. (x,y) → (1x,y); det A = 1; luas dikali 1. Contoh matriks diagonal ini mengalikan koordinat x dengan k dan mempertahankan y.",
+    "Skala horizontal dua menggandakan luas tanpa mengubah tinggi. (x,y) → (2x,y); det A = 2; luas dikali 2. Contoh matriks diagonal ini mengalikan koordinat x dengan k dan mempertahankan y.",
+    "Skala nol meruntuhkan daerah menjadi garis: determinan nol dan invers tidak ada. (x,y) → (0x,y); det A = 0 → singular, tanpa invers. Contoh matriks diagonal ini mengalikan koordinat x dengan k dan mempertahankan y.",
+    "Skala horizontal tiga menghasilkan luas tiga kali luas semula. (x,y) → (3x,y); det A = 3; luas dikali 3. Contoh matriks diagonal ini mengalikan koordinat x dengan k dan mempertahankan y."
+  ],
+  "advanced-vectors-film-v1": [
+    "Vektor contoh selalu bergerak tiga satuan ke kanan. |u| = √(3² + 0²) = 3. Komponen memiliki tanda dan arah; panjang vektor selalu tidak negatif.",
+    "Komponen vertikal membentuk segitiga siku-siku bersama komponen horizontal. |u| = √(3² + 2²) = 3,606. Komponen memiliki tanda dan arah; panjang vektor selalu tidak negatif.",
+    "Pada komponen tiga dan empat, panjangnya lima. |u| = √(3² + 4²) = 5. Komponen memiliki tanda dan arah; panjang vektor selalu tidak negatif.",
+    "Jika komponen berubah, hitung ulang panjang dengan jumlah kuadrat komponen. |u| = √(3² + 3²) = 4,243. Komponen memiliki tanda dan arah; panjang vektor selalu tidak negatif."
+  ],
+  "advanced-trigonometry-film-v1": [
+    "Koordinat titik pada lingkaran satuan adalah kosinus dan sinus sudutnya. Titik (cos θ, sin θ) = (1, 0). Satu putaran sama dengan dua pi radian; mode sudut harus konsisten.",
+    "Pada sembilan puluh derajat, titik berada di puncak lingkaran. Titik (cos θ, sin θ) = (0, 1). Satu putaran sama dengan dua pi radian; mode sudut harus konsisten.",
+    "Pada seratus delapan puluh derajat, kosinus negatif satu dan sinus nol. Titik (cos θ, sin θ) = (-1, 0). Satu putaran sama dengan dua pi radian; mode sudut harus konsisten.",
+    "Pada dua ratus tujuh puluh derajat, sinus negatif satu. Tanda mengikuti kuadran. Titik (cos θ, sin θ) = (0, -1). Satu putaran sama dengan dua pi radian; mode sudut harus konsisten."
+  ],
+  "advanced-rational-log-functions-film-v1": [
+    "Penyebut x kurang a tidak boleh nol. Garis putus-putus menandai nilai yang dilarang. f(x) = 1/(x − (-2)); domain x ≠ -2. Contoh fungsi rasional ini mempunyai asimtot vertikal, bukan titik keluaran pada penyebut nol.",
+    "Mengubah a memindahkan kedua cabang grafik. f(x) = 1/(x − (-1)); domain x ≠ -1. Contoh fungsi rasional ini mempunyai asimtot vertikal, bukan titik keluaran pada penyebut nol.",
+    "Untuk a nol, fungsinya satu dibagi x dan nol dikeluarkan dari domain. f(x) = 1/(x − (0)); domain x ≠ 0. Contoh fungsi rasional ini mempunyai asimtot vertikal, bukan titik keluaran pada penyebut nol.",
+    "Jangan menghubungkan cabang kiri dan kanan melalui asimtot. f(x) = 1/(x − (2)); domain x ≠ 2. Contoh fungsi rasional ini mempunyai asimtot vertikal, bukan titik keluaran pada penyebut nol."
+  ],
+  "advanced-conics-film-v1": [
+    "Ketika kedua semisumbu sama, bentuknya lingkaran dan kedua fokus berimpit. x²/4 + y²/4 = 1; c = √(4 − 4) = 0. Pada contoh ini b tetap dua dan sumbu utama sejajar sumbu horizontal.",
+    "Semisumbu horizontal yang lebih besar meregangkan elips. x²/9 + y²/4 = 1; c = √(9 − 4) = 2,236. Pada contoh ini b tetap dua dan sumbu utama sejajar sumbu horizontal.",
+    "Fokus menjauh dari pusat dengan c kuadrat sama dengan a kuadrat kurang b kuadrat. x²/16 + y²/4 = 1; c = √(16 − 4) = 3,464. Pada contoh ini b tetap dua dan sumbu utama sejajar sumbu horizontal.",
+    "Penyebut persamaan adalah kuadrat semisumbu, bukan panjang semisumbunya langsung. x²/25 + y²/4 = 1; c = √(25 − 4) = 4,583. Pada contoh ini b tetap dua dan sumbu utama sejajar sumbu horizontal."
+  ],
+  "advanced-binomial-film-v1": [
+    "Ada empat percobaan bebas dengan peluang sukses yang sama pada setiap percobaan. X ~ Binomial(4, 0,2); E(X) = 0,8; jumlah peluang = 1. Binomial memerlukan jumlah percobaan tetap, independensi, dan peluang sukses yang tetap.",
+    "Setiap batang adalah peluang tepat k keberhasilan. X ~ Binomial(4, 0,4); E(X) = 1,6; jumlah peluang = 1. Binomial memerlukan jumlah percobaan tetap, independensi, dan peluang sukses yang tetap.",
+    "Ketika p naik, pusat sebaran bergerak ke jumlah keberhasilan yang lebih besar. X ~ Binomial(4, 0,6); E(X) = 2,4; jumlah peluang = 1. Binomial memerlukan jumlah percobaan tetap, independensi, dan peluang sukses yang tetap.",
+    "Nilai harapan adalah empat kali p, tetapi hasil satu rangkaian tidak harus sama dengan nilai harapan. X ~ Binomial(4, 0,8); E(X) = 3,2; jumlah peluang = 1. Binomial memerlukan jumlah percobaan tetap, independensi, dan peluang sukses yang tetap."
+  ],
+  "advanced-normal-film-v1": [
+    "Kurva normal contoh memiliki simpangan baku satu. μ = 0; untuk x = 1 → z = 1. Luas kiri μ = 1/2.. Peluang normal adalah luas interval; peluang tepat satu titik adalah nol.",
+    "Menggeser mean memindahkan pusat kurva, tanpa mengubah simpangan baku. μ = 1; untuk x = 1 → z = 0. Luas kiri μ = 1/2.. Peluang normal adalah luas interval; peluang tepat satu titik adalah nol.",
+    "Untuk nilai x tetap satu, skor bakunya bergantung pada letak mean. μ = -1; untuk x = 1 → z = 2. Luas kiri μ = 1/2.. Peluang normal adalah luas interval; peluang tepat satu titik adalah nol.",
+    "Setengah luas selalu berada di kiri mean; tinggi kurva bukan peluang pada satu titik. μ = 2; untuk x = 1 → z = -1. Luas kiri μ = 1/2.. Peluang normal adalah luas interval; peluang tepat satu titik adalah nol."
+  ],
+  "advanced-limits-film-v1": [
+    "Untuk x bukan satu, bentuk pecahan dapat disederhanakan menjadi x ditambah satu. h = 0,1; f(1+h) = 2,1 → 2; f(1) tidak terdefinisi. Mendekati suatu titik berbeda dari membagi dengan nol di titik tersebut.",
+    "Titik contoh mendekati satu, sementara keluarannya mendekati dua. h = 0,01; f(1+h) = 2,01 → 2; f(1) tidak terdefinisi. Mendekati suatu titik berbeda dari membagi dengan nol di titik tersebut.",
+    "Titik kosong di satu koma dua tetap tidak menjadi nilai fungsi asal. h = 0,001; f(1+h) = 2,001 → 2; f(1) tidak terdefinisi. Mendekati suatu titik berbeda dari membagi dengan nol di titik tersebut.",
+    "Limitnya dua, walaupun nilai pada x sama dengan satu tidak terdefinisi. h = 0,0001; f(1+h) = 2,0001 → 2; f(1) tidak terdefinisi. Mendekati suatu titik berbeda dari membagi dengan nol di titik tersebut."
+  ],
+  "advanced-derivative-applications-film-v1": [
+    "Pada parabola kuadrat, titik di kiri nol memiliki gradien negatif. a = -1; f′(a) = -2; garis y = (-2)x − 1. Untuk f(x) = x², garis singgung di a memiliki gradien dua a.",
+    "Di puncak, garis singgung mendatar. a = 0; f′(a) = 0; garis y = (0)x − 0. Untuk f(x) = x², garis singgung di a memiliki gradien dua a.",
+    "Di kanan nol, garis singgung menanjak. a = 1; f′(a) = 2; garis y = (2)x − 1. Untuk f(x) = x², garis singgung di a memiliki gradien dua a.",
+    "Gunakan titik pada kurva dan gradien turunannya untuk menyusun persamaan garis. a = 2; f′(a) = 4; garis y = (4)x − 4. Untuk f(x) = x², garis singgung di a memiliki gradien dua a."
+  ],
+  "advanced-integrals-film-v1": [
+    "Pada batas nol, belum ada luas yang terkumpul. ∫ dari 0 ke 0 atas x dx = 0²/2 = 0 satuan luas. Integral bertanda sama dengan luas geometris pada contoh positif ini; jika fungsi berubah tanda, bedakan keduanya.",
+    "Di bawah y sama dengan x, daerahnya segitiga dengan alas dan tinggi sama. ∫ dari 0 ke 1 atas x dx = 1²/2 = 0,5 satuan luas. Integral bertanda sama dengan luas geometris pada contoh positif ini; jika fungsi berubah tanda, bedakan keduanya.",
+    "Pada batas dua, luasnya dua satuan persegi. ∫ dari 0 ke 2 atas x dx = 2²/2 = 2 satuan luas. Integral bertanda sama dengan luas geometris pada contoh positif ini; jika fungsi berubah tanda, bedakan keduanya.",
+    "Pada batas empat, luasnya delapan. Fungsi di interval contoh tidak negatif. ∫ dari 0 ke 4 atas x dx = 4²/2 = 8 satuan luas. Integral bertanda sama dengan luas geometris pada contoh positif ini; jika fungsi berubah tanda, bedakan keduanya."
+  ]
+}

@@ -1,0 +1,1644 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "2026.10.21-v2",
+  "videos": [
+    {
+      "id": "distribution-v1",
+      "topicId": "distribution",
+      "skillIds": [
+        "f-distribution.distribute-positive"
+      ],
+      "title": "Mengapa pengali berlaku untuk setiap suku?",
+      "summary": "Tiga kelompok memperlihatkan mengapa 3(x + 2) menjadi 3x + 6.",
+      "durationSeconds": 26,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 4,
+          "text": "Kita akan memahami 3(x + 2) menggunakan kelompok."
+        },
+        {
+          "startSeconds": 4,
+          "endSeconds": 10,
+          "text": "Ada tiga kelompok. Setiap kelompok berisi satu bagian x dan dua satuan."
+        },
+        {
+          "startSeconds": 10,
+          "endSeconds": 19,
+          "text": "Seluruhnya ada tiga bagian x dan enam satuan."
+        },
+        {
+          "startSeconds": 19,
+          "endSeconds": 26,
+          "text": "Jadi 3(x + 2) = 3x + 6. Pengali 3 berlaku untuk x dan juga untuk 2."
+        }
+      ],
+      "version": 1,
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/distribution-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/distribution-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/distribution-v1.id.vtt"
+    },
+    {
+      "id": "quadratic-v1",
+      "topicId": "x-quadratic",
+      "skillIds": [
+        "e-quadratic-graphs.vertex-form"
+      ],
+      "title": "Puncak parabola bergerak ke mana?",
+      "summary": "Ikuti perubahan y = x² menjadi y = (x − 2)² + 1.",
+      "durationSeconds": 27,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 6,
+          "text": "Grafik awal y = x² mempunyai titik puncak (0, 0)."
+        },
+        {
+          "startSeconds": 6,
+          "endSeconds": 13,
+          "text": "Mengganti x dengan x − 2 menggeser grafik dua satuan ke kanan."
+        },
+        {
+          "startSeconds": 13,
+          "endSeconds": 20,
+          "text": "Menambahkan 1 menaikkan setiap titik satu satuan."
+        },
+        {
+          "startSeconds": 20,
+          "endSeconds": 27,
+          "text": "Grafik y = (x − 2)² + 1 mempunyai puncak (2, 1). Bentuk parabolanya tetap."
+        }
+      ],
+      "version": 1,
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/quadratic-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/quadratic-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/quadratic-v1.id.vtt"
+    },
+    {
+      "id": "tangent-v1",
+      "topicId": "advanced-derivatives",
+      "skillIds": [
+        "a-derivative-applications.tangent-slope"
+      ],
+      "title": "Dari garis sekan ke garis singgung",
+      "summary": "Lihat gradien rata-rata mendekati turunan pada kurva y = x².",
+      "durationSeconds": 29,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 6,
+          "text": "Dua titik pada kurva y = x² menentukan garis sekan."
+        },
+        {
+          "startSeconds": 6,
+          "endSeconds": 12,
+          "text": "Titik pertama berada di (1, 1). Dekatkan titik kedua ke titik pertama."
+        },
+        {
+          "startSeconds": 12,
+          "endSeconds": 19,
+          "text": "Saat jarak horizontal mendekati nol, gradien sekan mendekati gradien garis singgung."
+        },
+        {
+          "startSeconds": 19,
+          "endSeconds": 29,
+          "text": "Turunan f(x) = x² adalah f′(x) = 2x. Pada x = 1, gradien garis singgung adalah 2."
+        }
+      ],
+      "version": 1,
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/tangent-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/tangent-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/tangent-v1.id.vtt"
+    },
+    {
+      "id": "inverse-film-v1",
+      "version": 1,
+      "topicId": "inverse",
+      "skillIds": [
+        "inverse.visual-example"
+      ],
+      "title": "Menjaga persamaan seimbang",
+      "summary": "Bagaimana menemukan x tanpa mengubah keseimbangan?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Pada x ditambah satu sama dengan tujuh, kurangi satu pada kedua sisi."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Jika tambahannya dua, kurangi dua pada kedua sisi."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Operasi kebalikan harus dilakukan pada kedua sisi persamaan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Periksa nilai x dengan memasukkannya ke persamaan semula."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/inverse-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/inverse-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/inverse-film-v1.id.vtt"
+    },
+    {
+      "id": "x-exponents-film-v1",
+      "version": 1,
+      "topicId": "x-exponents",
+      "skillIds": [
+        "x-exponents.visual-example"
+      ],
+      "title": "Pangkat menghitung faktor",
+      "summary": "Apa yang berubah ketika pangkat bertambah satu?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Dua pangkat nol bernilai satu."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Dua pangkat satu bernilai dua."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Dua pangkat tiga berarti tiga faktor dua, bukan dua kali tiga."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Setiap kenaikan satu pada pangkat menggandakan hasil sebelumnya."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-exponents-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-exponents-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-exponents-film-v1.id.vtt"
+    },
+    {
+      "id": "x-linear-film-v1",
+      "version": 1,
+      "topicId": "x-linear",
+      "skillIds": [
+        "x-linear.visual-example"
+      ],
+      "title": "Dua garis, satu solusi",
+      "summary": "Titik mana yang memenuhi kedua persamaan?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Garis pertama menyatakan jumlah x dan y. Garis kedua menjaga selisihnya dua."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Mengubah jumlah memindahkan garis pertama dan titik potongnya."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Titik potong memenuhi kedua persamaan sekaligus."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Periksa koordinat pada kedua persamaan, bukan hanya salah satunya."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-linear-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-linear-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-linear-film-v1.id.vtt"
+    },
+    {
+      "id": "x-inequalities-film-v1",
+      "version": 1,
+      "topicId": "x-inequalities",
+      "skillIds": [
+        "x-inequalities.visual-example"
+      ],
+      "title": "Satu daerah, beberapa batas",
+      "summary": "Kapan titik (x, 2) berada di daerah solusi?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Daerah berwarna memenuhi x ditambah y paling besar enam, dengan koordinat tidak negatif."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Titik dua koma dua berada di dalam semua batas."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Titik empat koma dua berada tepat pada batas yang disertakan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Titik enam koma dua melanggar batas jumlah, sehingga tidak termasuk solusi."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-inequalities-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-inequalities-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-inequalities-film-v1.id.vtt"
+    },
+    {
+      "id": "x-exponential-functions-film-v1",
+      "version": 1,
+      "topicId": "x-exponential-functions",
+      "skillIds": [
+        "x-exponential-functions.visual-example"
+      ],
+      "title": "Pertumbuhan yang berlipat",
+      "summary": "Apa bedanya bertambah tetap dan berlipat tetap?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Model dimulai dengan seratus satuan pada periode nol."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Setelah satu periode, nilainya menjadi dua kali lipat."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Tiga periode berarti mengalikan dua sebanyak tiga kali."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Grafik makin curam karena pertambahan bergantung pada nilai terakhir."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-exponential-functions-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-exponential-functions-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-exponential-functions-film-v1.id.vtt"
+    },
+    {
+      "id": "x-trigonometry-film-v1",
+      "version": 1,
+      "topicId": "x-trigonometry",
+      "skillIds": [
+        "x-trigonometry.visual-example"
+      ],
+      "title": "Sisi berubah, rasio menjelaskan",
+      "summary": "Bagaimana sudut menentukan sisi pada segitiga siku-siku?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Sisi miring dibuat satu. Sisi depan dan samping dibaca terhadap sudut yang ditandai."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Sinus adalah sisi depan dibagi sisi miring."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada sudut empat puluh lima derajat, sisi depan dan samping sama panjang."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Saat sudut membesar, sinus naik dan kosinus turun pada rentang sudut lancip."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-trigonometry-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-trigonometry-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-trigonometry-film-v1.id.vtt"
+    },
+    {
+      "id": "x-statistics-film-v1",
+      "version": 1,
+      "topicId": "x-statistics",
+      "skillIds": [
+        "x-statistics.visual-example"
+      ],
+      "title": "Satu nilai mengubah ringkasan",
+      "summary": "Bagaimana pencilan memengaruhi mean dan median?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Empat nilai pertama tetap. Nilai kelima bisa diubah."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Mean menggunakan semua nilai, sedangkan median adalah nilai tengah setelah diurutkan."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Nilai besar menarik mean ke kanan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Bandingkan mean dan median sebelum menyimpulkan pusat data."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-statistics-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-statistics-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-statistics-film-v1.id.vtt"
+    },
+    {
+      "id": "x-quartiles-film-v1",
+      "version": 1,
+      "topicId": "x-quartiles",
+      "skillIds": [
+        "x-quartiles.visual-example"
+      ],
+      "title": "Membaca kotak dan pencilan",
+      "summary": "Mengapa IQR tidak langsung mengikuti nilai terbesar?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Kotak memuat lima puluh persen data tengah. Garis di dalamnya adalah median."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Q satu empat dan Q tiga sembilan, sehingga IQR bernilai lima."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Nilai di atas enam belas setengah ditandai sebagai calon pencilan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Nilai ekstrem dapat bergerak jauh sementara kotak data tengah tetap."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-quartiles-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-quartiles-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-quartiles-film-v1.id.vtt"
+    },
+    {
+      "id": "x-scatterplots-film-v1",
+      "version": 1,
+      "topicId": "x-scatterplots",
+      "skillIds": [
+        "x-scatterplots.visual-example"
+      ],
+      "title": "Baca pasangan, bukan sebab-akibat",
+      "summary": "Apa yang bisa disimpulkan dari pola titik?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Pola turun menunjukkan hubungan negatif pada pasangan data."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Ketika tidak ada arah linear jelas, jangan memaksakan garis naik."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pola naik menunjukkan hubungan positif."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Hubungan kuat tetap tidak membuktikan bahwa satu variabel menyebabkan yang lain."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-scatterplots-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-scatterplots-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-scatterplots-film-v1.id.vtt"
+    },
+    {
+      "id": "x-probability-film-v1",
+      "version": 1,
+      "topicId": "x-probability",
+      "skillIds": [
+        "x-probability.visual-example"
+      ],
+      "title": "Kejadian dibanding semua hasil",
+      "summary": "Bagaimana komposisi kantong menentukan peluang?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Setiap bola sama mungkin dipilih dan jumlah seluruh bola sepuluh."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Peluang merah adalah banyak bola merah dibagi sepuluh."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Menambah bola merah meningkatkan peluang merah."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Peluang merah dan biru bersama-sama berjumlah satu."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/x-probability-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/x-probability-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/x-probability-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-functions-film-v1",
+      "version": 1,
+      "topicId": "xi-functions",
+      "skillIds": [
+        "xi-functions.visual-example"
+      ],
+      "title": "Domain menyaring masukan",
+      "summary": "Mengapa x = 2 dilarang untuk 1/(x − 2)?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Masukan nol menghasilkan penyebut negatif dua."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Mendekati dua membuat besar hasil berubah tajam."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada dua, penyebut nol. Fungsi tidak terdefinisi di titik ini."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Di sisi kanan dua, keluaran positif. Dua cabang tidak tersambung melalui titik terlarang."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-functions-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-functions-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-functions-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-composition-film-v1",
+      "version": 1,
+      "topicId": "xi-composition",
+      "skillIds": [
+        "xi-composition.visual-example"
+      ],
+      "title": "Jalankan fungsi dalam dahulu",
+      "summary": "Mengapa urutan fungsi dapat mengubah hasil?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Jalankan g terlebih dahulu: tambahkan tiga."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Keluaran g menjadi masukan f, yang mengalikan dua."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada masukan tiga, keluaran akhirnya dua belas."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Urutan sebaliknya memberi hasil lain; komposisi biasanya tidak komutatif."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-composition-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-composition-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-composition-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-inverse-functions-film-v1",
+      "version": 1,
+      "topicId": "xi-inverse-functions",
+      "skillIds": [
+        "xi-inverse-functions.visual-example"
+      ],
+      "title": "Pergi lalu kembali",
+      "summary": "Bagaimana invers mengembalikan masukan awal?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Fungsi pertama mengalikan dua lalu menambahkan satu."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Invers membatalkan tambah satu, lalu membagi dua."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Keluaran invers kembali sama dengan masukan awal."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Domain dan range bertukar; contoh linear ini satu-ke-satu pada bilangan real."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-inverse-functions-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-inverse-functions-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-inverse-functions-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-transformations-film-v1",
+      "version": 1,
+      "topicId": "xi-transformations",
+      "skillIds": [
+        "xi-transformations.visual-example"
+      ],
+      "title": "Geser tanpa mengubah bentuk",
+      "summary": "Bagaimana pergeseran mengubah letak grafik?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Parabola contoh berada dua satuan di atas grafik dasar."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Nilai h nol mempertahankan puncak pada sumbu vertikal."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "h positif menggeser grafik ke kanan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Jarak vertikal tetap dua; bentuk parabola tidak berubah."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-transformations-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-transformations-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-transformations-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-circles-film-v1",
+      "version": 1,
+      "topicId": "xi-circles",
+      "skillIds": [
+        "xi-circles.visual-example"
+      ],
+      "title": "Juring adalah bagian lingkaran",
+      "summary": "Bagaimana sudut pusat menentukan panjang busur?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Busur berwarna dan juring menghadap sudut pusat yang sama."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Sembilan puluh derajat adalah seperempat putaran."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Seratus delapan puluh derajat adalah setengah lingkaran."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Bagian putaran yang sama mengalikan keliling untuk busur dan luas untuk juring."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-circles-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-circles-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-circles-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-bivariate-film-v1",
+      "version": 1,
+      "topicId": "xi-bivariate",
+      "skillIds": [
+        "xi-bivariate.visual-example"
+      ],
+      "title": "Pola hubungan perlu konteks",
+      "summary": "Apakah arah pola cukup membuktikan sebab-akibat?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Setiap titik menyatakan dua pengukuran dari pengamatan yang sama."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Pola tanpa arah linear tetap dapat menyimpan struktur lain."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Kemiringan positif menunjukkan asosiasi pada data contoh."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Variabel perancu dapat menjelaskan pola; hubungan bukan bukti sebab-akibat."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-bivariate-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-bivariate-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-bivariate-film-v1.id.vtt"
+    },
+    {
+      "id": "xi-regression-film-v1",
+      "version": 1,
+      "topicId": "xi-regression",
+      "skillIds": [
+        "xi-regression.visual-example"
+      ],
+      "title": "Prediksi dan residu",
+      "summary": "Apa arti selisih titik pengamatan terhadap garis?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Garis model dipakai untuk memprediksi keluaran dari masukan."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Titik pengamatan tetap, tetapi prediksi berubah saat gradien berubah."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Residu adalah nilai teramati dikurangi nilai prediksi."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Garis yang dekat dengan satu titik belum tentu paling cocok untuk seluruh data."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xi-regression-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xi-regression-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xi-regression-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-sequences-film-v1",
+      "version": 1,
+      "topicId": "xii-sequences",
+      "skillIds": [
+        "xii-sequences.visual-example"
+      ],
+      "title": "Tambah selisih yang sama",
+      "summary": "Bagaimana beda tetap menentukan suku berikutnya?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Suku pertama selalu dua."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Beda dua berarti setiap suku bertambah dua."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Suku kelima dihitung dari empat kali penambahan beda."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Jumlah suku berbeda dari nilai satu suku; perhatikan apa yang ditanyakan."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-sequences-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-sequences-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-sequences-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-geometric-series-film-v1",
+      "version": 1,
+      "topicId": "xii-geometric-series",
+      "skillIds": [
+        "xii-geometric-series.visual-example"
+      ],
+      "title": "Kalikan rasio yang sama",
+      "summary": "Bagaimana rasio tetap mengubah jumlah suku?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Rasio satu membuat keempat suku sama besar."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Rasio dua menggandakan setiap suku sebelumnya."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Rasio tiga mempercepat pertumbuhan suku-suku."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Jumlah empat suku adalah penjumlahan semua batang, bukan hanya batang terakhir."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-geometric-series-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-geometric-series-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-geometric-series-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-interest-film-v1",
+      "version": 1,
+      "topicId": "xii-interest",
+      "skillIds": [
+        "xii-interest.visual-example"
+      ],
+      "title": "Bunga di atas saldo yang berubah",
+      "summary": "Mengapa tunggal dan majemuk akhirnya berbeda?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Kedua model dimulai dari seratus satuan dengan bunga sepuluh persen per tahun."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Pada tahun pertama, hasil kedua model sama."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada model majemuk, bunga berikutnya dihitung atas saldo yang sudah bertambah."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Selisih makin besar ketika waktu bertambah, dengan asumsi bunga tetap dan tanpa biaya."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-interest-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-interest-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-interest-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-annuities-film-v1",
+      "version": 1,
+      "topicId": "xii-annuities",
+      "skillIds": [
+        "xii-annuities.visual-example"
+      ],
+      "title": "Pembayaran bukan seluruhnya pokok",
+      "summary": "Bagaimana pembayaran tetap mengurangi utang?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Bunga periode pertama adalah dua persen dari saldo awal lima ratus."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Pembayaran lebih besar menyisakan lebih banyak bagian untuk pokok."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Bunga berikutnya dihitung dari saldo tersisa, bukan saldo awal terus-menerus."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Grafik berhenti di nol saat lunas; pembayaran terakhir dibatasi oleh tagihan yang tersisa."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-annuities-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-annuities-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-annuities-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-counting-film-v1",
+      "version": 1,
+      "topicId": "xii-counting",
+      "skillIds": [
+        "xii-counting.visual-example"
+      ],
+      "title": "Pasangkan setiap pilihan",
+      "summary": "Kapan banyak pilihan dikalikan?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Satu baju dapat dipasangkan dengan tiga celana."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Dua baju menghasilkan dua kelompok pasangan."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Setiap tambahan baju menambah tiga pasangan baru."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Aturan perkalian menghitung tahapan yang semuanya dilakukan."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-counting-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-counting-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-counting-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-combinatorics-film-v1",
+      "version": 1,
+      "topicId": "xii-combinatorics",
+      "skillIds": [
+        "xii-combinatorics.visual-example"
+      ],
+      "title": "Urutan dapat menggandakan hitungan",
+      "summary": "Apa bedanya tim dua orang dan dua jabatan?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Ketua dan wakil adalah jabatan berbeda, sehingga urutan pemilihan penting."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Ada n pilihan pertama dan n kurang satu pilihan kedua."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Untuk tim tanpa jabatan, setiap pasangan dihitung dua kali jika urutannya dibedakan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Bagi dua untuk tim dua orang tanpa urutan; jangan membagi jika jabatannya berbeda."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-combinatorics-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-combinatorics-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-combinatorics-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-compound-probability-film-v1",
+      "version": 1,
+      "topicId": "xii-compound-probability",
+      "skillIds": [
+        "xii-compound-probability.visual-example"
+      ],
+      "title": "Jangan hitung irisan dua kali",
+      "summary": "Bagaimana mencari peluang A atau B?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "A adalah angka genap pada dadu adil. B ditentukan oleh batas bawah yang dipilih."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Angka enam berada pada kedua kejadian dan hanya boleh dihitung sekali."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Gabungkan anggota kedua kejadian, lalu hilangkan hitungan ganda pada irisan."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Jika B memuat semua hasil, peluang gabungan menjadi satu."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-compound-probability-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-compound-probability-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-compound-probability-film-v1.id.vtt"
+    },
+    {
+      "id": "xii-conditional-probability-film-v1",
+      "version": 1,
+      "topicId": "xii-conditional-probability",
+      "skillIds": [
+        "xii-conditional-probability.visual-example"
+      ],
+      "title": "Informasi mengubah ruang acuan",
+      "summary": "Apa yang berubah setelah satu merah diambil?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Mula-mula ada sepuluh bola. Diketahui bola pertama merah dan tidak dikembalikan."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Sekarang penyebutnya sembilan, bukan sepuluh."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pembilangnya juga berkurang satu karena sebuah merah sudah keluar."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Ubah komposisi awal dan bandingkan peluang sebelum dan sesudah informasi tersebut."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/xii-conditional-probability-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/xii-conditional-probability-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/xii-conditional-probability-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-polynomials-film-v1",
+      "version": 1,
+      "topicId": "advanced-polynomials",
+      "skillIds": [
+        "advanced-polynomials.visual-example"
+      ],
+      "title": "Sisa menjadi uji faktor",
+      "summary": "Kapan x − a benar-benar menjadi faktor?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Sisa pembagian polinomial oleh x kurang a sama dengan nilai P(a)."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Sisa yang bukan nol berarti x kurang a bukan faktor."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada a sama dengan dua, grafik memotong sumbu dan sisanya nol."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Pada a sama dengan negatif satu, sisanya juga nol dan faktor lain ditemukan."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-polynomials-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-polynomials-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-polynomials-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-matrices-film-v1",
+      "version": 1,
+      "topicId": "advanced-matrices",
+      "skillIds": [
+        "advanced-matrices.visual-example"
+      ],
+      "title": "Matriks mengubah suatu daerah",
+      "summary": "Apa arti determinan pada transformasi sederhana?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Matriks diagonal dengan skala satu mempertahankan persegi satuan."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Skala horizontal dua menggandakan luas tanpa mengubah tinggi."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Skala nol meruntuhkan daerah menjadi garis: determinan nol dan invers tidak ada."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Skala horizontal tiga menghasilkan luas tiga kali luas semula."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-matrices-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-matrices-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-matrices-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-vectors-film-v1",
+      "version": 1,
+      "topicId": "advanced-vectors",
+      "skillIds": [
+        "advanced-vectors.visual-example"
+      ],
+      "title": "Komponen membentuk perpindahan",
+      "summary": "Bagaimana panjang vektor muncul dari komponen?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Vektor contoh selalu bergerak tiga satuan ke kanan."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Komponen vertikal membentuk segitiga siku-siku bersama komponen horizontal."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada komponen tiga dan empat, panjangnya lima."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Jika komponen berubah, hitung ulang panjang dengan jumlah kuadrat komponen."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-vectors-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-vectors-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-vectors-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-trigonometry-film-v1",
+      "version": 1,
+      "topicId": "advanced-trigonometry",
+      "skillIds": [
+        "advanced-trigonometry.visual-example"
+      ],
+      "title": "Satu putaran, semua kuadran",
+      "summary": "Bagaimana lingkaran satuan memberi tanda sinus dan kosinus?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Koordinat titik pada lingkaran satuan adalah kosinus dan sinus sudutnya."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Pada sembilan puluh derajat, titik berada di puncak lingkaran."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada seratus delapan puluh derajat, kosinus negatif satu dan sinus nol."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Pada dua ratus tujuh puluh derajat, sinus negatif satu. Tanda mengikuti kuadran."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-trigonometry-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-trigonometry-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-trigonometry-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-rational-log-functions-film-v1",
+      "version": 1,
+      "topicId": "advanced-rational-log-functions",
+      "skillIds": [
+        "advanced-rational-log-functions.visual-example"
+      ],
+      "title": "Penyebut memberi batas domain",
+      "summary": "Bagaimana asimtot bergerak ketika rumus berubah?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Penyebut x kurang a tidak boleh nol. Garis putus-putus menandai nilai yang dilarang."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Mengubah a memindahkan kedua cabang grafik."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Untuk a nol, fungsinya satu dibagi x dan nol dikeluarkan dari domain."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Jangan menghubungkan cabang kiri dan kanan melalui asimtot."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-rational-log-functions-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-rational-log-functions-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-rational-log-functions-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-conics-film-v1",
+      "version": 1,
+      "topicId": "advanced-conics",
+      "skillIds": [
+        "advanced-conics.visual-example"
+      ],
+      "title": "Dari lingkaran menuju elips",
+      "summary": "Apa yang berubah ketika semisumbu utama membesar?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Ketika kedua semisumbu sama, bentuknya lingkaran dan kedua fokus berimpit."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Semisumbu horizontal yang lebih besar meregangkan elips."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Fokus menjauh dari pusat dengan c kuadrat sama dengan a kuadrat kurang b kuadrat."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Penyebut persamaan adalah kuadrat semisumbu, bukan panjang semisumbunya langsung."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-conics-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-conics-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-conics-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-binomial-film-v1",
+      "version": 1,
+      "topicId": "advanced-binomial",
+      "skillIds": [
+        "advanced-binomial.visual-example"
+      ],
+      "title": "Hitung banyak keberhasilan",
+      "summary": "Bagaimana peluang satu percobaan mengubah sebaran jumlah sukses?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Ada empat percobaan bebas dengan peluang sukses yang sama pada setiap percobaan."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Setiap batang adalah peluang tepat k keberhasilan."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Ketika p naik, pusat sebaran bergerak ke jumlah keberhasilan yang lebih besar."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Nilai harapan adalah empat kali p, tetapi hasil satu rangkaian tidak harus sama dengan nilai harapan."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-binomial-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-binomial-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-binomial-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-normal-film-v1",
+      "version": 1,
+      "topicId": "advanced-normal",
+      "skillIds": [
+        "advanced-normal.visual-example"
+      ],
+      "title": "Pusat berubah, skor baku ikut berubah",
+      "summary": "Apa arti z terhadap mean yang dipilih?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Kurva normal contoh memiliki simpangan baku satu."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Menggeser mean memindahkan pusat kurva, tanpa mengubah simpangan baku."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Untuk nilai x tetap satu, skor bakunya bergantung pada letak mean."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Setengah luas selalu berada di kiri mean; tinggi kurva bukan peluang pada satu titik."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-normal-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-normal-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-normal-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-limits-film-v1",
+      "version": 1,
+      "topicId": "advanced-limits",
+      "skillIds": [
+        "advanced-limits.visual-example"
+      ],
+      "title": "Mendekati titik yang hilang",
+      "summary": "Bagaimana limit ada walau fungsi tidak terdefinisi di titik?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Untuk x bukan satu, bentuk pecahan dapat disederhanakan menjadi x ditambah satu."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Titik contoh mendekati satu, sementara keluarannya mendekati dua."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Titik kosong di satu koma dua tetap tidak menjadi nilai fungsi asal."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Limitnya dua, walaupun nilai pada x sama dengan satu tidak terdefinisi."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-limits-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-limits-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-limits-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-derivative-applications-film-v1",
+      "version": 1,
+      "topicId": "advanced-derivative-applications",
+      "skillIds": [
+        "advanced-derivative-applications.visual-example"
+      ],
+      "title": "Garis singgung mengikuti titik",
+      "summary": "Mengapa titik yang berbeda memberi gradien berbeda?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Pada parabola kuadrat, titik di kiri nol memiliki gradien negatif."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Di puncak, garis singgung mendatar."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Di kanan nol, garis singgung menanjak."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Gunakan titik pada kurva dan gradien turunannya untuk menyusun persamaan garis."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-derivative-applications-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-derivative-applications-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-derivative-applications-film-v1.id.vtt"
+    },
+    {
+      "id": "advanced-integrals-film-v1",
+      "version": 1,
+      "topicId": "advanced-integrals",
+      "skillIds": [
+        "advanced-integrals.visual-example"
+      ],
+      "title": "Luas sebagai akumulasi",
+      "summary": "Bagaimana luas bertambah ketika batas kanan bergerak?",
+      "durationSeconds": 36,
+      "transcript": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "text": "Pada batas nol, belum ada luas yang terkumpul."
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "text": "Di bawah y sama dengan x, daerahnya segitiga dengan alas dan tinggi sama."
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 27,
+          "text": "Pada batas dua, luasnya dua satuan persegi."
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 36,
+          "text": "Pada batas empat, luasnya delapan. Fungsi di interval contoh tidak negatif."
+        }
+      ],
+      "language": "id-ID",
+      "renderer": "manim-community",
+      "hasAudio": false,
+      "width": 960,
+      "height": 540,
+      "mimeType": "video/mp4",
+      "videoUrl": "https://rethinkbackend.vercel.app/videos/advanced-integrals-film-v1.mp4",
+      "posterUrl": "https://rethinkbackend.vercel.app/videos/advanced-integrals-film-v1.jpg",
+      "captionsUrl": "https://rethinkbackend.vercel.app/videos/advanced-integrals-film-v1.id.vtt"
+    }
+  ]
+}

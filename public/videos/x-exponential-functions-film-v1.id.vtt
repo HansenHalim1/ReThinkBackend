@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.999
+Model dimulai dengan seratus satuan pada periode nol.
+
+2
+00:00:09.000 --> 00:00:17.999
+Setelah satu periode, nilainya menjadi dua kali lipat.
+
+3
+00:00:18.000 --> 00:00:26.999
+Tiga periode berarti mengalikan dua sebanyak tiga kali.
+
+4
+00:00:27.000 --> 00:00:36.000
+Grafik makin curam karena pertambahan bergantung pada nilai terakhir.

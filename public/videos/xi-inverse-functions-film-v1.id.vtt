@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.999
+Fungsi pertama mengalikan dua lalu menambahkan satu.
+
+2
+00:00:09.000 --> 00:00:17.999
+Invers membatalkan tambah satu, lalu membagi dua.
+
+3
+00:00:18.000 --> 00:00:26.999
+Keluaran invers kembali sama dengan masukan awal.
+
+4
+00:00:27.000 --> 00:00:36.000
+Domain dan range bertukar; contoh linear ini satu-ke-satu pada bilangan real.

@@ -1,0 +1,1355 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "ReThink concept media and study chatbot",
+    "version": "1.5.0",
+    "description": "39 topic videos and public, captioned native visualization stages. Videos are silent with Indonesian captions. Synchronized transcripts, authenticated chat context and YouTube native caption import."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Local demo"
+    },
+    {
+      "url": "https://rethinkbackend.vercel.app",
+      "description": "Production after deployment"
+    }
+  ],
+  "paths": {
+    "/api/videos": {
+      "get": {
+        "operationId": "listConceptVideos",
+        "summary": "List public Manim concept videos",
+        "security": [],
+        "parameters": [
+          {
+            "name": "topicId",
+            "in": "query",
+            "required": false,
+            "description": "Omit for all pilots. Known topic with no clip returns an empty array. Pilot topic IDs: distribution, x-quadratic, advanced-derivatives.",
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{0,79}$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Public catalog. No account data. Media URLs are absolute.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VideoCatalog"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/video-help": {
+      "post": {
+        "operationId": "explainTranscriptPassage",
+        "summary": "Ask about one canonical video passage",
+        "description": "Read-only assistance. Server validates video version and zero-based cue index. Questions are not persisted. AI may be unavailable; inspect source.",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VideoHelpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "AI explanation or explicitly labeled curated fallback.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VideoHelpResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/visualizations": {
+      "get": {
+        "operationId": "getVisualizations",
+        "summary": "Read native SVG stages for all topics or one topic",
+        "parameters": [
+          {
+            "name": "topicId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Four ordered stages per topic",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VisualizationCatalog"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed query"
+          },
+          "403": {
+            "description": "Browser origin denied"
+          },
+          "404": {
+            "description": "Unknown topic"
+          },
+          "503": {
+            "description": "Invalid media-host configuration"
+          }
+        }
+      }
+    },
+    "/api/chat": {
+      "post": {
+        "operationId": "studyChat",
+        "summary": "Authenticated multi-turn tutor with explicit catalog or student-supplied YouTube transcript context",
+        "description": "Authenticated multi-turn tutor with explicit catalog or student-supplied YouTube transcript context. Catalog passages are resolved server-side; whole transcript uses cueIndex:null. Context and recent history each have a 24,000 character budget. Chat is not persisted. YouTube supports playbackSeconds and a nullable numeric cueIndex for explicit focus. The backend derives currentPassage and selectedPassage from the supplied transcript. Clients must not send derived passages. Use transcriptScope=excerpt for long-video context windows.",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyChatRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyChatReply"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/youtube-transcript": {
+      "post": {
+        "operationId": "importYouTubeTranscript",
+        "summary": "Authenticated native-caption import using backend SUPADATA_API_KEY",
+        "description": "Authenticated native-caption import using backend SUPADATA_API_KEY. Validated YouTube HTTPS links only. No forced AI transcription. Missing configuration, unavailable captions and pending jobs return explicit errors; offer SRT/VTT import. Optional language en (default) or id selects native captions; provider fallback in another language returns 422.",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/YouTubeTranscriptRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/YouTubeTranscriptReply"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Request or service error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VideoCatalog": {
+        "type": "object",
+        "required": [
+          "schemaVersion",
+          "catalogVersion",
+          "videos"
+        ],
+        "properties": {
+          "schemaVersion": {
+            "type": "integer",
+            "enum": [
+              1
+            ]
+          },
+          "catalogVersion": {
+            "type": "string"
+          },
+          "videos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConceptVideo"
+            }
+          }
+        }
+      },
+      "ConceptVideo": {
+        "type": "object",
+        "required": [
+          "id",
+          "version",
+          "topicId",
+          "skillIds",
+          "title",
+          "summary",
+          "language",
+          "durationSeconds",
+          "renderer",
+          "hasAudio",
+          "width",
+          "height",
+          "mimeType",
+          "videoUrl",
+          "posterUrl",
+          "captionsUrl",
+          "transcript"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "topicId": {
+            "type": "string"
+          },
+          "skillIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "durationSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "renderer": {
+            "type": "string"
+          },
+          "hasAudio": {
+            "type": "boolean"
+          },
+          "width": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "mimeType": {
+            "type": "string",
+            "enum": [
+              "video/mp4"
+            ]
+          },
+          "videoUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "posterUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "captionsUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "transcript": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TranscriptCue"
+            }
+          }
+        }
+      },
+      "TranscriptCue": {
+        "type": "object",
+        "required": [
+          "startSeconds",
+          "endSeconds",
+          "text"
+        ],
+        "properties": {
+          "startSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "endSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "VideoHelpRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "videoId",
+          "videoVersion",
+          "cueIndex",
+          "question"
+        ],
+        "properties": {
+          "videoId": {
+            "type": "string"
+          },
+          "videoVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "cueIndex": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 800
+          }
+        }
+      },
+      "VideoHelpResponse": {
+        "type": "object",
+        "required": [
+          "videoId",
+          "videoVersion",
+          "cueIndex",
+          "explanation",
+          "source"
+        ],
+        "properties": {
+          "videoId": {
+            "type": "string"
+          },
+          "videoVersion": {
+            "type": "integer"
+          },
+          "cueIndex": {
+            "type": "integer"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "gateway",
+              "curated"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "description": "Present for curated fallback: not-configured, invalid-configuration, invalid-api-key, credits-exhausted, model-access-denied, rate-limited, provider-unavailable, or invalid-response."
+          },
+          "model": {
+            "type": "string",
+            "description": "Configured DeepSeek Gateway model identifier; does not prove a live provider call succeeded."
+          }
+        }
+      },
+      "VisualizationCatalog": {
+        "type": "object",
+        "required": [
+          "schemaVersion",
+          "catalogVersion",
+          "visualizations"
+        ],
+        "properties": {
+          "schemaVersion": {
+            "const": 1
+          },
+          "catalogVersion": {
+            "type": "string"
+          },
+          "visualizations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "version",
+                "topicId",
+                "title",
+                "question",
+                "takeaway",
+                "interaction",
+                "width",
+                "height",
+                "parameter",
+                "stages"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "topicId": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "question": {
+                  "type": "string"
+                },
+                "takeaway": {
+                  "type": "string"
+                },
+                "interaction": {
+                  "const": "stage-selector"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "parameter": {
+                  "type": "object",
+                  "required": [
+                    "label",
+                    "min",
+                    "max",
+                    "step",
+                    "initial"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "min": {
+                      "type": "number"
+                    },
+                    "max": {
+                      "type": "number"
+                    },
+                    "step": {
+                      "type": "number"
+                    },
+                    "initial": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "stages": {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "index",
+                      "value",
+                      "caption",
+                      "result",
+                      "svgUrl"
+                    ],
+                    "properties": {
+                      "index": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 3
+                      },
+                      "value": {
+                        "type": "number"
+                      },
+                      "caption": {
+                        "type": "string"
+                      },
+                      "result": {
+                        "type": "string"
+                      },
+                      "svgUrl": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ChatMessage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          }
+        },
+        "required": [
+          "role",
+          "content"
+        ]
+      },
+      "CatalogChatContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "catalog"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "cueIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "nullable": true
+          }
+        },
+        "required": [
+          "kind",
+          "id",
+          "version",
+          "cueIndex"
+        ]
+      },
+      "ChatTranscriptCue": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "startSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "endSeconds": {
+            "type": "number",
+            "maximum": 86400
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "startSeconds",
+          "endSeconds",
+          "text"
+        ]
+      },
+      "YouTubeChatContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "youtube"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{11}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "cueIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "nullable": true,
+            "description": "Optional explicit focus index in the supplied transcript; null uses the current playback passage."
+          },
+          "transcript": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3000,
+            "items": {
+              "$ref": "#/components/schemas/ChatTranscriptCue"
+            }
+          },
+          "playbackSeconds": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 86400,
+            "description": "Snapshot of current player time in seconds when the student submits the question."
+          },
+          "transcriptScope": {
+            "type": "string",
+            "enum": [
+              "full",
+              "excerpt"
+            ],
+            "default": "full",
+            "description": "Long videos may send relevant excerpts around playback and explicit focus within the context budget."
+          }
+        },
+        "required": [
+          "kind",
+          "id",
+          "title",
+          "cueIndex",
+          "transcript"
+        ]
+      },
+      "StudyChatRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1600
+          },
+          "messages": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {
+              "$ref": "#/components/schemas/ChatMessage"
+            }
+          },
+          "context": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CatalogChatContext"
+              },
+              {
+                "$ref": "#/components/schemas/YouTubeChatContext"
+              },
+              {
+                "type": "object",
+                "nullable": true,
+                "enum": [
+                  null
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "question",
+          "messages"
+        ]
+      },
+      "StudyChatReply": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "answer": {
+            "type": "string",
+            "maxLength": 6000
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "gateway",
+              "curated"
+            ]
+          },
+          "model": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "answer",
+          "source"
+        ]
+      },
+      "YouTubeTranscriptRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "maxLength": 2048
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "en",
+              "id"
+            ],
+            "default": "en",
+            "description": "Preferred native caption language; mismatched provider fallback returns 422."
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "YouTubeTranscriptReply": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "en",
+              "id"
+            ]
+          },
+          "transcriptOrigin": {
+            "type": "string",
+            "enum": [
+              "provider"
+            ]
+          },
+          "transcript": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3000,
+            "items": {
+              "$ref": "#/components/schemas/ChatTranscriptCue"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "language",
+          "transcriptOrigin",
+          "transcript"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "supabaseBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Supabase access token from the same project used by web."
+      }
+    }
+  }
+}

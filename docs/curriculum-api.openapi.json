@@ -1,0 +1,446 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ReThink shared SMA curriculum",
+    "version": "2.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rethinkbackend.vercel.app"
+    }
+  ],
+  "paths": {
+    "/api/curriculum": {
+      "get": {
+        "operationId": "getCurriculum",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Server result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Catalog"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Supabase token required"
+          },
+          "403": {
+            "description": "Pretest required or browser origin denied"
+          },
+          "409": {
+            "description": "Stale revision; reload and review"
+          },
+          "413": {
+            "description": "Body too large"
+          },
+          "503": {
+            "description": "Auth/database unavailable or migration missing"
+          }
+        }
+      },
+      "post": {
+        "operationId": "answerCurriculum",
+        "security": [
+          {
+            "supabaseBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Server result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerReply"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Supabase token required"
+          },
+          "403": {
+            "description": "Pretest required or browser origin denied"
+          },
+          "409": {
+            "description": "Stale revision; reload and review"
+          },
+          "413": {
+            "description": "Body too large"
+          },
+          "503": {
+            "description": "Auth/database unavailable or migration missing"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Catalog": {
+        "type": "object",
+        "required": [
+          "curriculumVersion",
+          "tracks",
+          "unlocked",
+          "modules",
+          "progress"
+        ],
+        "properties": {
+          "curriculumVersion": {
+            "type": "string"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "unlocked": {
+            "type": "boolean"
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Lesson"
+            }
+          },
+          "progress": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Progress"
+            }
+          }
+        }
+      },
+      "Lesson": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "duration",
+          "contentVersion",
+          "grade",
+          "track",
+          "phase",
+          "gradePlacement",
+          "reviewStatus",
+          "alignment",
+          "prerequisites",
+          "bankTopicIds",
+          "objectives",
+          "explanation",
+          "formulas",
+          "example",
+          "additionalExamples",
+          "commonMistakes",
+          "quiz"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "contentVersion": {
+            "type": "string"
+          },
+          "grade": {
+            "type": "integer",
+            "enum": [
+              10,
+              11,
+              12
+            ]
+          },
+          "track": {
+            "type": "string",
+            "enum": [
+              "general",
+              "advanced"
+            ]
+          },
+          "phase": {
+            "type": "string",
+            "enum": [
+              "E",
+              "F",
+              "prerequisite"
+            ]
+          },
+          "gradePlacement": {
+            "const": "suggested"
+          },
+          "reviewStatus": {
+            "const": "editorial-pilot"
+          },
+          "alignment": {
+            "type": "object",
+            "required": [
+              "sourceUrl",
+              "section",
+              "kind",
+              "verification"
+            ],
+            "properties": {
+              "sourceUrl": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uri"
+              },
+              "section": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "cp-topic",
+                  "prerequisite-support"
+                ]
+              },
+              "verification": {
+                "type": "string"
+              },
+              "pdfPages": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          },
+          "prerequisites": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "bankTopicIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "objectives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "explanation": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "formulas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "example": {
+            "type": "object",
+            "required": [
+              "problem",
+              "steps"
+            ],
+            "properties": {
+              "problem": {
+                "type": "string"
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "additionalExamples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "problem",
+                "steps"
+              ],
+              "properties": {
+                "problem": {
+                  "type": "string"
+                },
+                "steps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "commonMistakes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "quiz": {
+            "type": "object",
+            "required": [
+              "prompt",
+              "options"
+            ],
+            "properties": {
+              "prompt": {
+                "type": "string"
+              },
+              "options": {
+                "type": "array",
+                "minItems": 4,
+                "maxItems": 4,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "text"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Progress": {
+        "type": "object",
+        "required": [
+          "moduleId",
+          "completed",
+          "attempts",
+          "revision"
+        ],
+        "properties": {
+          "moduleId": {
+            "type": "string"
+          },
+          "completed": {
+            "type": "boolean"
+          },
+          "attempts": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      },
+      "AnswerCommand": {
+        "type": "object",
+        "required": [
+          "moduleId",
+          "answerId",
+          "expectedRevision"
+        ],
+        "properties": {
+          "moduleId": {
+            "type": "string"
+          },
+          "answerId": {
+            "type": "string"
+          },
+          "expectedRevision": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483646
+          }
+        }
+      },
+      "AnswerReply": {
+        "type": "object",
+        "required": [
+          "correct",
+          "explanation",
+          "progress"
+        ],
+        "properties": {
+          "correct": {
+            "type": "boolean"
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "progress": {
+            "$ref": "#/components/schemas/Progress"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "supabaseBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
